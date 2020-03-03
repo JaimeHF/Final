@@ -3,7 +3,16 @@ const Schema   = mongoose.Schema;
 
 const userSchema = new Schema({
   username: String,
-  password: String
+  password: String,
+  imgPath: {
+    type: String,
+    default: `../images/default.png`
+  },
+  position: {
+    type: [String],
+    enum:[`Portero`,`Defensa`,`Lateral`, `Centrocampista`, `Extremo`, `Delantero`]
+  },
+  match:[Array]
 }, {
   timestamps: {
     createdAt: 'created_at',

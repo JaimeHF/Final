@@ -55,6 +55,15 @@ router.post("/signup", (req, res, next) => {
   });
 });
 
+router.get('/currentuser', (req,res,next) => {
+  if(req.user){
+    res.status(200).json(req.user);
+  }else{
+    next(new Error('Not logged in'))
+  }
+})
+
+
 router.get("/logout", (req, res) => {
   req.logout();
   res.redirect("/");
