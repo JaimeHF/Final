@@ -6,50 +6,13 @@ import { Switch, Route, Redirect } from "react-router-dom";
 // import Login from "../auth/Login";
 // import AuthService from "../auth/AuthService";
 // import Contents from "../contents/Contents";
-import axios from "axios"
+import axios from "axios";
+import Containpost from "../containpost";
 
-class User extends Component {
-   
-  state={
-    allPost:[]
-    
+class User extends React.Component {
+      render() {
+        return <h1>User login</h1>
+      }
 }
-    componentDidMount(){
-        axios.get("http://localhost:4000/post")
-        .then(allPost =>  this.setState({allPost: allPost}),
-        
-        )}
 
-
-
-    render() {
-
-      return(
-          <div>
-            <h1>wooolaaaa</h1>
-            {this.state.allPost.map(post =>(
-           <Containbeer id={post._id} club_id={post.club_id} title={post.title} date={post.date} ={post.image_url} flag={post.flag} contributed_by={post.contributed_by} ></Containbeer>
-          ))}   
-
-          </div>
-      )
-     
-    }
-  }
-  
-  
-  export default User;
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
+export default User;

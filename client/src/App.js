@@ -7,16 +7,16 @@ import Login from "./components/auth/Login";
 import AuthService from "./components/auth/AuthService";
 import Contents from "./components/contents/Contents";
 import User from "./components/user/User";
-// import Home from "./components/Home";
-// import Club from "./components/club/Club";
-// import axios from "axios"
+import Home from "./components/Home";
+import Club from "./components/club/Club";
+import axios from "axios"
 
 class App extends Component {
  
 
   constructor(props) {
     super(props);
-    this.state = { loggedInUser: null };
+    this.state = { loggedInUser: null, chosenFlow: null };
     this.service = new AuthService();
 
     this.fetchUser()
@@ -54,6 +54,13 @@ class App extends Component {
   //   .then(allBeers =>  this.setState({allBeers: allBeers.data}),
   //   )}
 
+  setFlow(flowType){
+    this.setState({
+      ...this.state, 
+      chosenFlow: flowType
+    })
+  }
+
 render(){
    //aqui hacemos rendering condicional dependiendo de si tenemos un usuario logeado o no
       if (this.state.loggedInUser) {
@@ -75,14 +82,15 @@ render(){
         //si no estás logeado, mostrar opcionalmente o login o signup
         return (
           <React.Fragment>
-            <Redirect to="/login" />
-  
+            {/* <Redirect to="/login" /> */}
+            Has elegido: {this.state.chosenFlow}
             <div className="App">
               <header className="App-header">
                 <Navbar userInSession={this.state.loggedInUser} logout={this.logout} />
                 <Switch>
-                  <Route exact path="/signup" render={() => <Signup getUser={this.getUser} />} />
-                  <Route exact path="/login" render={() => <Login getUser={this.getUser} />} />
+                  <Route exact path="/welcome" render={() => <Home setFlow={(flow) => this.setFlow(flow)}/>} />
+                  <Route exact path="/club" render={() => <Club getUser={this.getUser} />} />
+                  <Route exact path="/user" render={() => <User getUser={this.getUser} />} />
                 </Switch>
               </header>
             </div>
@@ -119,7 +127,7 @@ export default App;
   //               path="/"
   //               render={() => {
   //                 // let allMovies = this.state.movies
-  //                 return <Home></Home>;
+  //                 return <Home ></Home>;
   //               }}
   //             />
   //              <Route
