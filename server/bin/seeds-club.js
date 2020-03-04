@@ -27,7 +27,7 @@ let clubs =[{
     clubname: "ALICATES FS",
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     imgPath: `../public/images/alicates.png`,
-    description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
+    description: "Wooolaaa!! Somos un equipo formado por un grupo de amigos que jugamos la liga local de tres cantos, estamos en la segunda categoria y nuestras intenciones son de ascenso. No solo quedamos para jugar al futbol, despues de cada partido toca un poco de cerveza con el equipo, no todo va a ser cansarse corriendo!!",
   },
   {
     _id:`${arrClub[1]}`,
@@ -99,7 +99,7 @@ let post =[
     {
     title: "VEN A PROBAR SUERTE",
      location: [40.4462334,-3.7091072],
-     description:"Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
+     description:"C.D. ALONSO CANO anuncia que con el comienzo de la pretenmporada el proximo dia 15 de agosto ha decidido abrir sus puertas a todo el mundo que quiera venir a entrenar y probas suerte para conseguir plaza en el equipo para la temporada.Somos un equipo con un muy buen ambiente y lo primordial venir con muchas ganas de pasarlo bien y trabajar",
      date: new Date(2020,07,10),
      club_id: `${arrClub[8]}`,
 },
