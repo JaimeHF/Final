@@ -96,6 +96,19 @@ app.use('/', index);
 
 const authRoutes = require('./routes/auth');
 app.use('/auth', authRoutes);
+
+const userRoutes = require('./routes/user');
+app.use('/user', userRoutes);
+
+const postRoutes = require('./routes/post');
+app.use('/post', postRoutes);
+
+const matchRoutes = require('./routes/match');
+app.use('/match', matchRoutes);
+
+
+const clubRoutes = require('./routes/club');
+app.use('/club', clubRoutes);
       
 
 module.exports = app;

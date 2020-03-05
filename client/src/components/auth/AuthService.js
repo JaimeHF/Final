@@ -15,6 +15,11 @@ class AuthService {
     .then(response => response.data)
   }
 
+  signup = (username, password) => {
+    return this.service.post('/clubsignup', {username, password})
+    .then(response => response.data)
+  }
+
   login = (username, password) => {
     return this.service.post('/login', {username, password})
     .then(response => response.data)

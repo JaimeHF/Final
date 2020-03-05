@@ -1,4 +1,4 @@
-  
+import "./home.css";
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -15,7 +15,7 @@ class Containpost extends React.Component {
     <div>
     <h2>{this.props.title}</h2>
       <h1>{this.props.date}</h1>
-    <p>Created by:{this.props.description} </p>
+    <p>Created by:{this.props.des} </p>
 </div> 
 
       </div>

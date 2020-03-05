@@ -1,16 +1,31 @@
 import React  from "react";
-import { Switch, Route, Redirect } from "react-router-dom";
+import { Link ,Switch, Route, Redirect } from "react-router-dom";
 import Navbar from "../navbar/Navbar";
-import Signup from "../auth/Signup";
-import Login from "../auth/Login";
 import AuthService from "../auth/AuthService";
 import Contents from "../contents/Contents";
-
 import "./club.css";
+import Clubsignup from "../auth/Clubsignup";
+import Clublogin from "../auth/Clublogin";
+
 class Club extends React.Component {
+
+  
       render() {
-        return <h1>Club login</h1>
-      }
+        return (
+        <div>
+          
+        <h1>Club login</h1>
+        <div className="App">
+            <header className="App-header">
+              {/* <Navbar/> */}
+            
+                <Link  to="/Clubsignup" render={() => <Clubsignup getUser={this.getUser} />} >sigmup</Link>
+                <Link  to="/Clublogin" render={() => <Clublogin getUser={this.getUser} />} >login</Link>
+
+            </header>
+          </div>
+        </div>
+        )}
 }
 
 export default Club;

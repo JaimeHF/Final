@@ -5,3 +5,7 @@ body{
 .name{
     background-color: blue;
 }
+
+.containpost{
+    border: saddlebrown solid;
+}

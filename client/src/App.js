@@ -10,49 +10,53 @@ import User from "./components/user/User";
 import Home from "./components/Home";
 import Club from "./components/club/Club";
 import axios from "axios"
+import Clubsignup from "./components/auth/Clubsignup";
+import Clublogin from "./components/auth/Clublogin";
 
 class App extends Component {
  
 
   constructor(props) {
     super(props);
-    this.state = { loggedInUser: null, chosenFlow: null };
+    this.state = { loggedInUser: null, chosenFlow: null, allPost:[]};
     this.service = new AuthService();
 
-    this.fetchUser()
+    // this.fetchUser()
   }
 
-  getUser = userObj => {
-    this.setState({
-      loggedInUser: userObj,
-    });
-  };
+  // getUser = userObj => {
+  //   this.setState({
+  //     loggedInUser: userObj,
+  //   });
+  // };
 
-  logout = () => {
-    this.service.logout().then(() => {
-      this.setState({ loggedInUser: null });
-    });
-  };
+  // logout = () => {
+  //   this.service.logout().then(() => {
+  //     this.setState({ loggedInUser: null });
+  //   });
+  // };
 
-  fetchUser() {
-    return this.service
-      .loggedin()
-      .then(response => {
-        this.setState({
-          loggedInUser: response,
-        });
-      })
-      .catch(err => {
-        this.setState({
-          loggedInUser: false,
-        });
-      });
-  }
+  // fetchUser() {
+  //   return this.service
+  //     .loggedin()
+  //     .then(response => {
+  //       this.setState({
+  //         loggedInUser: response,
+  //       });
+  //     })
+  //     .catch(err => {
+  //       this.setState({
+  //         loggedInUser: false,
+  //       });
+  //     });
+  // }
 
   // componentDidMount(){
-  //   axios.get("https://ih-beers-api2.herokuapp.com/beers")
-  //   .then(allBeers =>  this.setState({allBeers: allBeers.data}),
-  //   )}
+   
+  //     axios.get("http://localhost:4000/post")
+  //     .then(allPost =>  this.setState({allPost: allPost}),
+      
+  //     )}
 
   setFlow(flowType){
     this.setState({
@@ -62,43 +66,25 @@ class App extends Component {
   }
 
 render(){
-   //aqui hacemos rendering condicional dependiendo de si tenemos un usuario logeado o no
-      if (this.state.loggedInUser) {
-        //en este caso mostramos los contenidos ya que hay usuario
-        return (
-          <React.Fragment>
-            <Redirect to="/user" />
-  
+
+        return ( 
             <div className="App">
               <header className="App-header">
-                <Navbar userInSession={this.state.loggedInUser} logout={this.logout} />
-                {/* aqui simplemente se muestra un lorem ipsum genérico para que veáis contenidos que solo se muestran a usuarios logeados */}
-                <User />
-              </header>
-            </div>
-          </React.Fragment>
-        );
-      } else {
-        //si no estás logeado, mostrar opcionalmente o login o signup
-        return (
-          <React.Fragment>
-            {/* <Redirect to="/login" /> */}
-            Has elegido: {this.state.chosenFlow}
-            <div className="App">
-              <header className="App-header">
-                <Navbar userInSession={this.state.loggedInUser} logout={this.logout} />
                 <Switch>
-                  <Route exact path="/welcome" render={() => <Home setFlow={(flow) => this.setFlow(flow)}/>} />
-                  <Route exact path="/club" render={() => <Club getUser={this.getUser} />} />
-                  <Route exact path="/user" render={() => <User getUser={this.getUser} />} />
+                  <Route exact path="/" render={() => <Home setFlow={(flow) => this.setFlow(flow)}/>} />
+                  <Route exact path="/club" render={() => <Club allPost={this.state.allPost} getUser={this.getUser} />} />
+                  <Route exact path="/user" render={() => <User  allPost={this.state.allPost} getUser={this.getUser} />} />
+                  <Route exact path="/signup" render={() => <Signup getUser={this.getUser} />} />
+                  <Route exact path="/login" render={() => <Login getUser={this.getUser} />} />
+                  <Route exact path="/Clubsignup" render={() => <Clubsignup getUser={this.getUser} />} />
+                  <Route exact path="/Clublogin" render={() => <Clublogin getUser={this.getUser} />} />
                 </Switch>
               </header>
             </div>
-          </React.Fragment>
         );
       }
     }
-}
+// }
 
 export default App;
 

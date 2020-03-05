@@ -4,29 +4,29 @@ import AuthService from './AuthService'
 import Login from '../auth/Login';
 import { Link } from "react-router-dom";
 
-class Signup extends Component {
+class Clubsignup extends Component {
   constructor(props){
     super(props);
-    this.state = { username: '', password: '' };
+    this.state = { clubname: '', password: '' };
     this.service = new AuthService();
   }
     
   handleFormSubmit = (event) => {
     event.preventDefault();
-    const username = this.state.username;
+    const clubname = this.state.clubname;
     const password = this.state.password;
 
-    this.service.signup(username, password)
+    this.service.signup(clubname, password)
     .then( response => {
         this.setState({
-            username: "", 
+            clubname: "", 
             password: "",
         });
-        this.props.getUser(response.user)
+        this.props.getclub(response.club)
     })
     .catch(error => {
       this.setState({
-        username: username,
+        clubname: clubname,
         password: password,
         error: true
       });
@@ -46,8 +46,8 @@ class Signup extends Component {
 
         <form onSubmit={this.handleFormSubmit}>
           <fieldset>
-            <label>Username:</label>
-            <input type="text" name="username" value={this.state.username} onChange={ e => this.handleChange(e)}/>
+            <label>clubname:</label>
+            <input type="text" name="clubname" value={this.state.clubname} onChange={ e => this.handleChange(e)}/>
           </fieldset>
           
           <fieldset>
@@ -57,7 +57,7 @@ class Signup extends Component {
           
           <input type="submit" value="Sign up" />
         </form>
-        <Link  to="/login" >login</Link>
+        <Link  to="/Clublogin" >login</Link>
 
         <h1>{this.state.error ? 'Error' : ''}</h1>
       </div>
@@ -65,4 +65,4 @@ class Signup extends Component {
   }
 }
 
-export default Signup;
+export default Clubsignup;
