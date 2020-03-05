@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import "./App.css";
-import { Switch, Route , Redirect} from "react-router-dom";
-import Navbar from "./components/navbar/Navbar";
+import { Switch, Route } from "react-router-dom";
+// import Navbar from "./components/navbar/Navbar";
 import Signup from "./components/auth/Signup";
 import Login from "./components/auth/Login";
 import AuthService from "./components/auth/AuthService";
-import Contents from "./components/contents/Contents";
+// import Contents from "./components/contents/Contents";
 import User from "./components/user/User";
 import Home from "./components/Home";
 import Club from "./components/club/Club";
-import axios from "axios"
+// import axios from "axios"
 import Clubsignup from "./components/auth/Clubsignup";
 import Clublogin from "./components/auth/Clublogin";
 

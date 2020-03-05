@@ -1,14 +1,14 @@
 // auth/Signup.js
 import React, { Component } from 'react';
-import AuthService from './AuthService'
-import Login from '../auth/Login';
+import AuthServiceClub from './AuthServiceClub'
+// import Login from '../auth/Login';
 import { Link } from "react-router-dom";
 
 class Clubsignup extends Component {
   constructor(props){
     super(props);
     this.state = { clubname: '', password: '' };
-    this.service = new AuthService();
+    this.service = new AuthServiceClub();
   }
     
   handleFormSubmit = (event) => {
@@ -59,7 +59,7 @@ class Clubsignup extends Component {
         </form>
         <Link  to="/Clublogin" >login</Link>
 
-        <h1>{this.state.error ? 'Error' : ''}</h1>
+        <h1>{this.state.error ? 'yooooooo' : ''}</h1>
       </div>
     )
   }

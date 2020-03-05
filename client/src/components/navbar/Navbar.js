@@ -27,7 +27,7 @@ class Navbar extends Component {
         <nav className="nav-style">
           <ul>
             <li>
-              <a onClick={this.handleLogout}>Logout</a>
+              {/* <a onClick={this.handleLogout}>Logout</a> */}
             </li>
           </ul>
 

@@ -1,7 +1,7 @@
 // auth/Signup.js
 import React, { Component } from 'react';
 import AuthService from './AuthService'
-import Login from '../auth/Login';
+// import Login from '../auth/Login';
 import { Link } from "react-router-dom";
 
 class Signup extends Component {

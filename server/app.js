@@ -95,20 +95,24 @@ const index = require('./routes/index');
 app.use('/', index);
 
 const authRoutes = require('./routes/auth');
-app.use('/auth', authRoutes);
+app.use('/api/auth', authRoutes);
 
 const userRoutes = require('./routes/user');
-app.use('/user', userRoutes);
+app.use('/api/user', userRoutes);
 
 const postRoutes = require('./routes/post');
-app.use('/post', postRoutes);
+app.use('/api/post', postRoutes);
 
 const matchRoutes = require('./routes/match');
-app.use('/match', matchRoutes);
+app.use('/api/match', matchRoutes);
 
 
 const clubRoutes = require('./routes/club');
-app.use('/club', clubRoutes);
+app.use('/api/club', clubRoutes);
       
+app.use((req, res)=>{
+  res.sendFile(__dirname + "/public/index.html");
+});
+
 
 module.exports = app;

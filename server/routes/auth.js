@@ -59,7 +59,6 @@ router.post("/signup", (req, res, next) => {
 
 
 
-
 router.get("/clublogin", (req, res, next) => {
   res.render("auth/clublogin", { "message": req.flash("error") });
 });
@@ -107,13 +106,21 @@ router.post("/clubsignup", (req, res, next) => {
   });
 });
 
-router.get('/currentuser', (req,res,next) => {
-  if(req.user){
-    res.status(200).json(req.user);
+router.get('/currentclub', (req,res,next) => {
+  if(req.club){
+    res.status(200).json(req.club);
   }else{
     next(new Error('Not logged in'))
   }
 })
+
+// router.get('/currentuser', (req,res,next) => {
+//   if(req.user){
+//     res.status(200).json(req.user);
+//   }else{
+//     next(new Error('Not logged in'))
+//   }
+// })
 
 
 router.get("/logout", (req, res) => {

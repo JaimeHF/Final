@@ -1,7 +1,7 @@
 // auth/auth-service.js
 import axios from 'axios';
 
-class AuthService {
+class AuthServiceClub {
   constructor() {
     this.service = axios.create({
       baseURL: `${process.env.REACT_APP_API_URL}/auth`,
@@ -10,18 +10,20 @@ class AuthService {
   }
   
 
-  signup = (username, password) => {
-    return this.service.post('/signup', {username, password})
+
+
+  signup = (clubname, password) => {
+    return this.service.post('/clubsignup', {clubname, password})
     .then(response => response.data)
   }
 
-  login = (username, password) => {
-    return this.service.post('/login', {username, password})
+  login = (clubname, password) => {
+    return this.service.post('/clublogin', {clubname, password})
     .then(response => response.data)
   }
 
   loggedin = () => {
-    return this.service.get('/currentuser',)
+    return this.service.get('/currentclub',)
     .then(response => response.data)
   }
 
@@ -31,5 +33,4 @@ class AuthService {
   }
 }
 
-
-export default AuthService;
+export default AuthServiceClub;
