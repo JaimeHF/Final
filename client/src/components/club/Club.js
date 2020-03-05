@@ -19,8 +19,8 @@ class Club extends React.Component {
             <header className="App-header">
               {/* <Navbar/> */}
             
-                <Link  to="/Clubsignup" render={() => <Clubsignup getUser={this.getUser} />} >sigmup</Link>
-                <Link  to="/Clublogin" render={() => <Clublogin getUser={this.getUser} />} >login</Link>
+                <Link  to="/Clubsignup" render={() => <Clubsignup getUser={this.getClub} />} >sigmup</Link>
+                <Link  to="/Clublogin" render={() => <Clublogin getClub={this.getClub} />} >login</Link>
 
             </header>
           </div>

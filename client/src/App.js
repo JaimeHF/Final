@@ -21,35 +21,35 @@ class App extends Component {
     this.state = { loggedInUser: null, chosenFlow: null, allPost:[]};
     this.service = new AuthService();
 
-    // this.fetchUser()
+    this.fetchUser()
   }
 
-  // getUser = userObj => {
-  //   this.setState({
-  //     loggedInUser: userObj,
-  //   });
-  // };
+  getUser = userObj => {
+    this.setState({
+      loggedInUser: userObj,
+    });
+  };
 
-  // logout = () => {
-  //   this.service.logout().then(() => {
-  //     this.setState({ loggedInUser: null });
-  //   });
-  // };
+  logout = () => {
+    this.service.logout().then(() => {
+      this.setState({ loggedInUser: null });
+    });
+  };
 
-  // fetchUser() {
-  //   return this.service
-  //     .loggedin()
-  //     .then(response => {
-  //       this.setState({
-  //         loggedInUser: response,
-  //       });
-  //     })
-  //     .catch(err => {
-  //       this.setState({
-  //         loggedInUser: false,
-  //       });
-  //     });
-  // }
+  fetchUser() {
+    return this.service
+      .loggedin()
+      .then(response => {
+        this.setState({
+          loggedInUser: response,
+        });
+      })
+      .catch(err => {
+        this.setState({
+          loggedInUser: false,
+        });
+      });
+  }
 
   // componentDidMount(){
    
@@ -76,8 +76,8 @@ render(){
                   <Route exact path="/user" render={() => <User  allPost={this.state.allPost} getUser={this.getUser} />} />
                   <Route exact path="/signup" render={() => <Signup getUser={this.getUser} />} />
                   <Route exact path="/login" render={() => <Login getUser={this.getUser} />} />
-                  <Route exact path="/Clubsignup" render={() => <Clubsignup getUser={this.getUser} />} />
-                  <Route exact path="/Clublogin" render={() => <Clublogin getUser={this.getUser} />} />
+                  <Route exact path="/Clubsignup" render={() => <Clubsignup getClub={this.getClub} />} />
+                  <Route exact path="/Clublogin" render={() => <Clublogin getClub={this.getClub} />} />
                 </Switch>
               </header>
             </div>

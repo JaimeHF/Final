@@ -16,7 +16,6 @@ class User extends Component {
     
 }
     componentDidMount(){
-      debugger
         axios.get("http://localhost:4000/post")
         .then(allPost =>  this.setState({allPost: allPost}),
         
@@ -29,9 +28,9 @@ class User extends Component {
       return(
           <div>
             <h1>wooolaaaa</h1>
-            {this.state.allPost.map(post =>(
+            {/* {this.state.allPost.map(post =>(
            <Containpost id={post._id} club_id={post.club_id} title={post.title} date={post.date}  description={post.description}  ></Containpost>
-          ))}   
+          ))}    */}
           
           </div>
       )

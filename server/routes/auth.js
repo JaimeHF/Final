@@ -57,6 +57,9 @@ router.post("/signup", (req, res, next) => {
 });
 
 
+
+
+
 router.get("/clublogin", (req, res, next) => {
   res.render("auth/clublogin", { "message": req.flash("error") });
 });
