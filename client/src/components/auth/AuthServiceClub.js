@@ -11,7 +11,6 @@ class AuthServiceClub {
   
 
 
-
   signup = (clubname, password) => {
     return this.service.post('/clubsignup', {clubname, password})
     .then(response => response.data)

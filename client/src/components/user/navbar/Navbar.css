@@ -1,9 +1,13 @@
-.nav-style .header {
+.nav-style {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	color: black;
+	background-color: black;
 }
 
 .nav-style .header img {
 	margin-right: 20px;
+	
 }
+

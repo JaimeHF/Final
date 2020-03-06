@@ -8,7 +8,8 @@ class AuthService {
       withCredentials: true
     });
   }
-  
+   
+
 
   signup = (username, password) => {
     return this.service.post('/signup', {username, password})
@@ -30,6 +31,5 @@ class AuthService {
     .then(response => response.data)
   }
 }
-
 
 export default AuthService;

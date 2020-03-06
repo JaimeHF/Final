@@ -1,7 +1,5 @@
-// auth/Signup.js
 import React, { Component } from 'react';
 import AuthService from './AuthService'
-// import Signup from './Signup';
 import { Link } from "react-router-dom";
 
 class Login extends Component {
@@ -57,7 +55,7 @@ class Login extends Component {
           <input type="password" name="password" value={this.state.password} onChange={e => this.handleChange(e)} />
         </fieldset>
 
-        <input type="submit" value="Login"    onClick={()=>this.props.goHome()}/>
+        <input type="submit" value="Login" />
       </form>
       <Link to="/signup" >signup</Link>
 

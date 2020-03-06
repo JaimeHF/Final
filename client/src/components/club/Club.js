@@ -1,29 +1,39 @@
 import React  from "react";
-import { Link, Switch  } from "react-router-dom";
-// import Navbar from "../navbar/Navbar";
-// import AuthService from "../auth/AuthService";
-// import Contents from "../contents/Contents";
+import { Link  } from "react-router-dom";
 import "./club.css";
 import Clubsignup from "../auth/Clubsignup";
 import Clublogin from "../auth/Clublogin";
+import Navbarclub from "./navbar/Navbarclub";
+
 
 class Club extends React.Component {
-
+  
+  state={
+    loggedInClub: null,
+  }
+  
   
       render() {
         return (
-        <div className="club">
+<div>
+<Navbarclub userInSession={this.state.loggedInClub} logout={this.logout}/>
+<div className="club">
           
-        <h1>Club login</h1>
-        <div >
-           
-                <Link  to="/Clubsignup" render={() => <Clubsignup getUser={this.getClub} />} >sigmup</Link>
-                <Link  to="/Clublogin" render={() => <Clublogin getClub={this.getClub} />} >login</Link>
 
-           
-          </div>
-        </div>
+  <div className="box">
+  <h1>Club login</h1>
+    <div>
+    <Link  to="/Clubsignup" render={() => <Clubsignup getUser={this.getClub} />} >sigmup</Link>
+    </div>
+    <div>
+    <Link  to="/Clublogin" render={() => <Clublogin getClub={this.getClub} />} >login</Link>
+    </div>
+  </div>
+</div>
+</div>
         )}
 }
 
 export default Club;
+
+

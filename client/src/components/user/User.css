@@ -9,3 +9,14 @@
   flex-direction: column;
   background-position: center;
 }
+
+.box{
+  background-color: rgba(211, 238, 185 , 0.5);
+  border: solid rebeccapurple;
+  width: 30%;
+  height:30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

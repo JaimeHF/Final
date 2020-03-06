@@ -1,11 +1,9 @@
-// navbar/Navbar.js
-
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import AuthService from "../auth/AuthService";
-import "./Navbar.css"
+import AuthService from "../../auth/AuthService";
+// import "./Navbar.css"
 
-class Navbar extends Component {
+class Navbarclub extends Component {
   constructor(props) {
     super(props);
     this.state = { loggedInUser: null };
@@ -27,13 +25,9 @@ class Navbar extends Component {
         <nav className="nav-style">
           <ul>
             <li>
-              {/* <a onClick={this.handleLogout}>Logout</a> */}
+              <h1 onClick={this.handleLogout}>Logout</h1>
             </li>
           </ul>
-
-          <div className="header">
-            <h2>Welcome {this.state.loggedInUser.username} - Ironhacker</h2>
-          </div>
         </nav>
       );
     } else {
@@ -42,11 +36,11 @@ class Navbar extends Component {
           <nav className="nav-style">
             <ul>
               <li>
-                <Link to="/signup">Signup</Link>
-              </li>
+                <Link to="/">Home(aqui logo)</Link>
+              </li>  
               <li>
-                <Link to="/login">Login</Link>
-              </li>
+                <Link to="/user">User</Link>
+              </li>     
             </ul>
           </nav>
         </div>
@@ -55,4 +49,4 @@ class Navbar extends Component {
   }
 }
 
-export default Navbar;
+export default Navbarclub;

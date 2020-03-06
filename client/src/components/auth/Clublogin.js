@@ -1,6 +1,4 @@
-// auth/Signup.js
 import React, { Component } from 'react';
-// import Signup from './Signup';
 import { Link } from "react-router-dom";
 import AuthServiceClub from './AuthServiceClub';
 
@@ -8,7 +6,7 @@ class Clublogin extends Component {
   constructor(props) {
     super(props);
     this.state = { clubname: '', password: '' };
-    this.service = new AuthServiceClub;
+    this.service = new AuthServiceClub();
   }
 
   handleFormSubmit = (event) => {
@@ -61,7 +59,7 @@ class Clublogin extends Component {
       </form>
       <Link to="/Clubsignup"  >signup</Link>
 
-      <h1>{this.state.error ? 'Error' : ''}</h1>
+      <h1>{this.state.error ? 'JAJAJAJAJ' : ''}</h1>
     </div>)
   }
 }

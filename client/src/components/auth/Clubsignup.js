@@ -1,7 +1,5 @@
-// auth/Signup.js
 import React, { Component } from 'react';
 import AuthServiceClub from './AuthServiceClub'
-// import Login from '../auth/Login';
 import { Link } from "react-router-dom";
 
 class Clubsignup extends Component {
