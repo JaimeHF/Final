@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route , Redirect} from "react-router-dom";
 // import Navbar from "./components/navbar/Navbar";
 import Signup from "./components/auth/Signup";
 import Login from "./components/auth/Login";
@@ -12,15 +12,18 @@ import Club from "./components/club/Club";
 // import axios from "axios"
 import Clubsignup from "./components/auth/Clubsignup";
 import Clublogin from "./components/auth/Clublogin";
+import Axios from "axios";
+import Clubhome from "./components/club/componentes/Clubhome";
+import AuthServiceClub from "./components/auth/AuthServiceClub";
 
 class App extends Component {
  
 
   constructor(props) {
     super(props);
-    this.state = { loggedInUser: null, chosenFlow: null, allPost:[]};
+    this.state = { loggedInUser: null, loggedInClub: null, chosenFlow: null, allPost:[], user:null};
     this.service = new AuthService();
-
+    this.serviceClub = new AuthServiceClub();
     this.fetchUser()
   }
 
@@ -35,6 +38,8 @@ class App extends Component {
       this.setState({ loggedInUser: null });
     });
   };
+
+
 
   fetchUser() {
     return this.service
@@ -51,6 +56,28 @@ class App extends Component {
       });
   }
 
+
+  goHome(){
+    console.log("woooolaaaaa")
+    debugger
+
+   
+         
+  }
+
+ 
+  
+
+  //   getClub(club){
+  //     this.clubService.getClub()
+  //     .then(clubFound => {
+  //     this.setState({
+  //       club:clubFound
+  //     },()=>{
+  //         <Redirect to="/club/home"/>
+  //     })
+  //    } )
+  // }
   // componentDidMount(){
    
   //     axios.get("http://localhost:4000/post")
@@ -73,11 +100,12 @@ render(){
                 <Switch>
                   <Route exact path="/" render={() => <Home setFlow={(flow) => this.setFlow(flow)}/>} />
                   <Route exact path="/club" render={() => <Club allPost={this.state.allPost} getUser={this.getUser} />} />
-                  <Route exact path="/user" render={() => <User  allPost={this.state.allPost} getUser={this.getUser} />} />
-                  <Route exact path="/signup" render={() => <Signup getUser={this.getUser} />} />
-                  <Route exact path="/login" render={() => <Login getUser={this.getUser} />} />
+                  <Route exact path="/user" render={() => this.state.loggedInUser ? <Clubhome loggedInUser={this.state.loggedInUser} /> : <Redirect to="/login" />} />
+                  <Route exact path="/signup" render={() => <Signup  getUser={this.getUser} />} />
+                  <Route exact path="/login" render={() => <Login goHome={(user)=> this.goHome()} getUser={this.getUser} />} />
                   <Route exact path="/Clubsignup" render={() => <Clubsignup getClub={this.getClub} />} />
                   <Route exact path="/Clublogin" render={() => <Clublogin getClub={this.getClub} />} />
+                  <Route exact path="/Club/home" render={() => <Clubhome/>} />
                 </Switch>
               </header>
             </div>
@@ -91,46 +119,4 @@ export default App;
 
 
 
-
-
-
-// state={
-  //     allPost:[]
-  // }
-  
-  //   componentDidMount(){
-  //     axios.get("")
-  //     .then(allPost =>  this.setState({allPost: allPost}),
-  //     )}
-  //   render() {
-  
-  
-  //     return(
-  //     <section >
-  //       <Switch>
-  //             <Route
-  //               exact
-  //               path="/"
-  //               render={() => {
-  //                 // let allMovies = this.state.movies
-  //                 return <Home ></Home>;
-  //               }}
-  //             />
-  //              <Route
-  //               exact
-  //               path="/user"
-  //               render={() => {
-  //                 // let allMovies = this.state.movies
-  //                 return <User></User>;
-  //               }}
-  //             />
-  //               <Route
-  //               exact
-  //               path="/clubs"
-  //               render={() => {
-  //                 return <Club></Club>;
-  //               }}
-  //             />
-  //              </Switch>
-  //              </section>
-  //     )
+// render={() => <User allPost={this.state.allPost} getUser={this.getUser} />}

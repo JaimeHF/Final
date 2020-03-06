@@ -1,14 +1,14 @@
 // auth/Signup.js
 import React, { Component } from 'react';
-import AuthService from './AuthService'
 // import Signup from './Signup';
 import { Link } from "react-router-dom";
+import AuthServiceClub from './AuthServiceClub';
 
 class Clublogin extends Component {
   constructor(props) {
     super(props);
     this.state = { clubname: '', password: '' };
-    this.service = new AuthService();
+    this.service = new AuthServiceClub;
   }
 
   handleFormSubmit = (event) => {
@@ -42,7 +42,8 @@ class Clublogin extends Component {
 
   render() {
 
-    return (<div>
+    return (
+    <div className="club">
       <h3>Please, login to our site</h3>
 
       <form onSubmit={this.handleFormSubmit}>

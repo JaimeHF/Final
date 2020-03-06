@@ -42,10 +42,11 @@ class Login extends Component {
 
   render() {
 
-    return (<div>
+    return (
+    <div className="user">
       <h3>Please, login to our site</h3>
 
-      <form onSubmit={this.handleFormSubmit}>
+      <form onSubmit={this.handleFormSubmit} >
         <fieldset>
           <label>Username:</label>
           <input type="text" name="username" value={this.state.username} onChange={e => this.handleChange(e)} />
@@ -56,7 +57,7 @@ class Login extends Component {
           <input type="password" name="password" value={this.state.password} onChange={e => this.handleChange(e)} />
         </fieldset>
 
-        <input type="submit" value="Login" />
+        <input type="submit" value="Login"    onClick={()=>this.props.goHome()}/>
       </form>
       <Link to="/signup" >signup</Link>
 

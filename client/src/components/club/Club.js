@@ -1,5 +1,5 @@
 import React  from "react";
-import { Link  } from "react-router-dom";
+import { Link, Switch  } from "react-router-dom";
 // import Navbar from "../navbar/Navbar";
 // import AuthService from "../auth/AuthService";
 // import Contents from "../contents/Contents";
@@ -17,8 +17,6 @@ class Club extends React.Component {
         <h1>Club login</h1>
         <div >
            
-             
-            
                 <Link  to="/Clubsignup" render={() => <Clubsignup getUser={this.getClub} />} >sigmup</Link>
                 <Link  to="/Clublogin" render={() => <Clublogin getClub={this.getClub} />} >login</Link>
 

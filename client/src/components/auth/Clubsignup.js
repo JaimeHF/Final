@@ -41,7 +41,7 @@ class Clubsignup extends Component {
 
   render() {
     return(
-      <div>
+      <div className="club">
         <h3>Welcome!, create your account next:</h3>
 
         <form onSubmit={this.handleFormSubmit}>

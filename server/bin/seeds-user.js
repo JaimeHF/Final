@@ -8,7 +8,7 @@ const Match = require("../models/Match");
 const bcryptSalt = 10;
 
 mongoose
-  .connect(`${process.env.DBURL}`, {useNewUrlParser: true})
+  .connect(`${process.env.DB_LOCAL}`, {useNewUrlParser: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })

@@ -10,11 +10,10 @@ class Home extends React.Component {
           <div className="col-sm-6">
             <div className="card">
               <div className="card-body">
-                <h5 className="card-title"> Special title treatment </h5>{" "}
+                <h5 className="card-title"> JUGADOR </h5>{" "}
                 <p className="card-text">
                   {" "}
-                  With supporting text below as a natural lead - in to
-                  additional content.{" "}
+                BUSCA UN PARTIDO CERCA DE TI{" "}
                 </p>{" "}
                 <Link to="/user" className="btn btn-primary">
                   <h1 onClick={() => this.props.setFlow("jugador")}>
@@ -28,11 +27,10 @@ class Home extends React.Component {
           <div className="col-sm-6">
             <div className="card">
               <div className="card-body">
-                <h5 className="card-title"> Special title treatment </h5>{" "}
+                <h5 className="card-title"> CLUB </h5>{" "}
                 <p className="card-text">
                   {" "}
-                  With supporting text below as a natural lead - in to
-                  additional content.{" "}
+                  BUSCA JUGADORES CERCA DE TI PARA COMPLETAR TU EQUIPO{" "}
                 </p>{" "}
                 <Link to="/club" className="btn btn-primary">
                   <h1 onClick={() => this.props.setFlow("club")}> CLUB </h1>

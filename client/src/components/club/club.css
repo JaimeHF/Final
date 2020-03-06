@@ -2,5 +2,11 @@
     width: 100vw;
     height: 100vh;
     background-image: url("/club.jpeg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-position: center;
 }
 
