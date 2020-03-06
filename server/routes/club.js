@@ -24,7 +24,7 @@ router.get(`/:id`,(req, res, next)=>{
         });
 })
 
-router.post(`/editclub/:id`,(req,res,next)=>{
+router.put(`/editclub/:id`,(req,res,next)=>{
     let {id} = req.params
     Club.findByIdAndUpdate(id,{
         clubname: req.body.clubname,

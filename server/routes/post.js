@@ -32,7 +32,7 @@ router.get(`/:id`,(req, res, next)=>{
 
 })
 
-router.post(`/editpost/:id`,(req,res,next)=>{
+router.put(`/editpost/:id`,(req,res,next)=>{
     let {id} = req.params
     Post.findByIdAndUpdate(id,{
         title: req.body.title,

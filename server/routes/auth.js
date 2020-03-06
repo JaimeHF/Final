@@ -8,33 +8,50 @@ const Club = require("../models/Club")
 const bcrypt = require("bcrypt");
 const bcryptSalt = 10;
 
+const login = (req, user) => {
+  return new Promise((resolve,reject) => {
+    req.login(user, err => {
+      console.log('req.login ')
+      console.log(user)
 
-router.get("/login", (req, res, next) => {
-  res.render("auth/login", { "message": req.flash("error") });
+      
+      if(err) {
+        reject(new Error('Something went wrong'))
+      }else{
+        resolve(user);
+      }
+    })
+  })
+}
+
+router.post('/login', (req, res, next) => {
+  passport.authenticate('local', (err, theUser, failureDetails) => {
+    
+    // Check for errors
+    if (err) next(new Error('Something went wrong')); 
+    if (!theUser) next(failureDetails)
+
+    // Return user and logged in
+    login(req, theUser).then(user => res.status(200).json(req.user));
+
+  })(req, res, next);
 });
 
-router.post("/login", passport.authenticate("local", {
-  successRedirect: "/",
-  failureRedirect: "/auth/login",
-  failureFlash: true,
-  passReqToCallback: true
-}));
-
 router.get("/signup", (req, res, next) => {
-  res.render("auth/signup");
+  res.json("auth/signup");
 });
 
 router.post("/signup", (req, res, next) => {
   const username = req.body.username;
   const password = req.body.password;
   if (username === "" || password === "") {
-    res.render("auth/signup", { message: "Indicate username and password" });
+    res.json({ message: "Indicate username and password" });
     return;
   }
 
   User.findOne({ username }, "username", (err, user) => {
     if (user !== null) {
-      res.render("auth/signup", { message: "The username already exists" });
+      res.json({ message: "The username already exists" });
       return;
     }
 
@@ -48,43 +65,74 @@ router.post("/signup", (req, res, next) => {
 
     newUser.save()
     .then(() => {
-      res.redirect("/");
+      res.json(newUser);
     })
     .catch(err => {
-      res.render("auth/signup", { message: "Something went wrong" });
+      res.json({ message: "Something went wrong" });
     })
   });
 });
 
 
 
+router.get('/currentuser', (req,res,next) => {
+  if(req.user){
+    res.status(200).json(req.user);
+    return;
+  }else{
+    res.status(403).json({ message: 'Unauthorized' })
+  }
+})
 
-router.get("/clublogin", (req, res, next) => {
-  res.render("auth/clublogin", { "message": req.flash("error") });
+
+
+//////login sign up CLUB///////////
+
+const loginclub = (req, club) => {
+  return new Promise((resolve,reject) => {
+    req.login(club, err => {
+      console.log('req.login ')
+      console.log(club)
+
+      
+      if(err) {
+        reject(new Error('Something went wrong'))
+      }else{
+        resolve(club);
+      }
+    })
+  })
+}
+
+router.post('/clublogin', (req, res, next) => {
+  passport.authenticate('local', (err, theClub, failureDetails) => {
+    
+    // Check for errors
+    if (err) next(new Error('Something went wrong')); 
+    if (!theClub) next(failureDetails)
+
+    // Return user and logged in
+    loginclub(req, theClub).then(club => res.status(200).json(req.club));
+
+  })(req, res, next);
 });
 
-router.post("/clublogin", passport.authenticate("local", {
-  successRedirect: "/",
-  failureRedirect: "/auth/clublogin",
-  failureFlash: true,
-  passReqToCallback: true
-}));
 
 router.get("/clubsignup", (req, res, next) => {
-  res.render("auth/signup");
+  res.json("auth/signup");
 });
 
 router.post("/clubsignup", (req, res, next) => {
   const clubname = req.body.clubname;
   const password = req.body.password;
   if (clubname === "" || password === "") {
-    res.render("auth/clubsignup", { message: "Indicate clubname and password" });
+    res.json({ message: "Indicate clubname and password" });
     return;
   }
 
   Club.findOne({ clubname }, "clubname", (err, club) => {
     if (club !== null) {
-      res.render("auth/clubsignup", { message: "The clubname already exists" });
+      res.json({ message: "The clubname already exists" });
       return;
     }
 
@@ -101,7 +149,7 @@ router.post("/clubsignup", (req, res, next) => {
       res.json(newClub);
     })
     .catch(err => {
-      res.render("auth/clubsignup", { message: "Something went wrong" });
+      res.json({ message: "Something went wrong" });
     })
   });
 });
@@ -109,23 +157,18 @@ router.post("/clubsignup", (req, res, next) => {
 router.get('/currentclub', (req,res,next) => {
   if(req.club){
     res.status(200).json(req.club);
+    return;
   }else{
-    next(new Error('Not logged in'))
+    res.status(403).json({ message: 'Unauthorized' })
   }
 })
 
-// router.get('/currentuser', (req,res,next) => {
-//   if(req.user){
-//     res.status(200).json(req.user);
-//   }else{
-//     next(new Error('Not logged in'))
-//   }
-// })
+
 
 
 router.get("/logout", (req, res) => {
   req.logout();
-  res.redirect("/");
+  res.json({ message: 'Log out success!' });
 });
 
 module.exports = router;

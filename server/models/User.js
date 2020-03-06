@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
-const Schema   = mongoose.Schema;
+const Schema = mongoose.Schema;
+const ClubModel = require("../models/Club")
+const ClubModel = require("../models")
 
 const userSchema = new Schema({
   username: String,
@@ -8,11 +10,14 @@ const userSchema = new Schema({
     type: String,
     default: `../images/default.png`
   },
-  position: {
-    type: [String],
-    enum:[`Portero`,`Defensa`,`Lateral`, `Centrocampista`, `Extremo`, `Delantero`]
-  },
-  match:[Array]
+  clubData: ClubModel,
+  userData: {
+    position: {
+      type: [String],
+      enum: [`Portero`, `Defensa`, `Lateral`, `Centrocampista`, `Extremo`, `Delantero`]
+    },
+    match: [Array]
+  }
 }, {
   timestamps: {
     createdAt: 'created_at',

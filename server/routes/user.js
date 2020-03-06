@@ -14,7 +14,7 @@ router.get(`/`, (req, res,next)=>{
     .catch(err => console.log(err))
 })
 
-router.get(`/edit/:id`,(req,res,next)=>{
+router.put(`/edit/:id`,(req,res,next)=>{
     let {id} = req.params
     User.findByIdAndUpdate(id,{
         username: req.body.username,
