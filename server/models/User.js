@@ -1,23 +1,14 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const ClubModel = require("../models/Club")
-const ClubModel = require("../models")
+const ClubModel = require("./subdocuments/Club")
+const PlayerModel = require("./subdocuments/Player")
 
 const userSchema = new Schema({
   username: String,
   password: String,
-  imgPath: {
-    type: String,
-    default: `../images/default.png`
-  },
+  role: {type: String, enum: ["player", "club"]},
   clubData: ClubModel,
-  userData: {
-    position: {
-      type: [String],
-      enum: [`Portero`, `Defensa`, `Lateral`, `Centrocampista`, `Extremo`, `Delantero`]
-    },
-    match: [Array]
-  }
+  playerData: PlayerModel,
 }, {
   timestamps: {
     createdAt: 'created_at',

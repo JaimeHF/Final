@@ -16,9 +16,15 @@ class Home extends React.Component {
                 BUSCA UN PARTIDO CERCA DE TI{" "}
                 </p>{" "}
                 <Link to="/user" className="btn btn-primary">
-                  <h1 onClick={() => this.props.setFlow("jugador")}>
+                  <h1 onClick={() => this.props.setFlow("entrar")}>
                     {" "}
-                    JUGADOR{" "}
+                    Entrar{" "}
+                  </h1>
+                </Link>
+                <Link to="/user" className="btn btn-primary">
+                  <h1 onClick={() => this.props.setFlow("crear")}>
+                    {" "}
+                    Crear{" "}
                   </h1>
                 </Link>
               </div>{" "}
@@ -33,7 +39,10 @@ class Home extends React.Component {
                   BUSCA JUGADORES CERCA DE TI PARA COMPLETAR TU EQUIPO{" "}
                 </p>{" "}
                 <Link to="/club" className="btn btn-primary">
-                  <h1 onClick={() => this.props.setFlow("club")}> CLUB </h1>
+                  <h1 onClick={() => this.props.setFlow("crear")}> Crear</h1>
+                </Link>{" "}
+                <Link to="/club" className="btn btn-primary">
+                  <h1 onClick={() => this.props.setFlow("entrar")}> Entrar </h1>
                 </Link>{" "}
               </div>{" "}
             </div>{" "}

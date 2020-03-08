@@ -6,23 +6,15 @@ import AuthService from "../../auth/AuthService";
 import "./Navbar.css"
 
 class Navbar extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { loggedInUser: null };
-    this.service = new AuthService();
-  }
 
-
-  componentWillReceiveProps(nextProps) {
-    this.setState({ ...this.state, loggedInUser: nextProps["userInSession"] });
-  }
 
   handleLogout = e => {
     this.props.logout();
   };
 
   render() {
-    if (this.state.loggedInUser) {
+    debugger
+    if (this.props.userInSession) {
       return (
         <nav className="nav-style">
           <ul>

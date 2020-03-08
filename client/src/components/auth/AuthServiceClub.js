@@ -11,18 +11,18 @@ class AuthServiceClub {
   
 
 
-  signup = (clubname, password) => {
-    return this.service.post('/clubsignup', {clubname, password})
+  signup = (username, password) => {
+    return this.service.post('/signup', {username, password, role: "club"})
     .then(response => response.data)
   }
 
-  login = (clubname, password) => {
-    return this.service.post('/clublogin', {clubname, password})
+  login = (username, password) => {
+    return this.service.post('/login', {username, password})
     .then(response => response.data)
   }
 
   loggedin = () => {
-    return this.service.get('/currentclub',)
+    return this.service.get('/currentuser',)
     .then(response => response.data)
   }
 

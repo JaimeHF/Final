@@ -9,37 +9,41 @@ import AuthService from "./components/auth/AuthService";
 import User from "./components/user/User";
 import Home from "./components/Home";
 import Club from "./components/club/Club";
-// import axios from "axios"
 import Clubsignup from "./components/auth/Clubsignup";
 import Clublogin from "./components/auth/Clublogin";
 // import Axios from "axios";
-
 import AuthServiceClub from "./components/auth/AuthServiceClub";
 import Userhome from "./components/user/Userhome";
 import Clubhome from "./components/club/Clubhome";
+import Navbarclub from "./components/club/navbar/Navbarclub";
+import Navbar from "./components/user/navbar/Navbar"
+import Post from "./services/Post";
+import Postid from "./components/post/Postid";
+import Match from "./services/Match"
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      loggedInUser: false,
-      loggedInClub: null,
+      loggedInUser: null,
       chosenFlow: null,
       allPost: [],
-      user: null
+      allMatch: [],
+      user: null,
+      post:null
+
     };
     this.service = new AuthService();
     this.serviceClub = new AuthServiceClub();
+    this.post = new Post()
+    this.match = new Match()
   }
 
-  //user
   getUser = userObj => {
     debugger
     this.setState({
       loggedInUser: userObj
     });
-
-    console.log(this.state.loggedInUser);
   };
 
   logout = () => {
@@ -48,54 +52,61 @@ class App extends Component {
     });
   };
 
-  // fetchUser() {
-  //   return this.service
-  //     .loggedin()
-  //     .then(response => {
-  //       this.setState({
-  //         loggedInUser: response,
-  //       });
-  //     })
-  //     .catch(err => {
-  //       this.setState({
-  //         loggedInUser: false,
-  //       });
-  //     });
-  // }
-
-  //club
-
-  getClub = userObj => {
-    debugger
-    this.setState({
-      loggedInClub: userObj
-    });
-  };
-  logout = () => {
-    this.serviceClub.logout().then(() => {
-      this.setState({ loggedInClub: null });
-    });
-  };
-
-  fetchClub() {
-    return this.serviceClub
+  fetchUser() {
+    return this.service
       .loggedin()
       .then(response => {
         this.setState({
-          loggedInClub: response
+          loggedInUser: response
         });
       })
       .catch(err => {
         this.setState({
-          loggedInClub: false
+          loggedInUser: false,
         });
       });
   }
 
-  componentDidMount() {
-    // this.fetchUser()
-    this.fetchClub();
+
+  fetchPost() {
+    debugger
+    return this.post
+      .getAllPost()
+      .then(response => {
+        this.setState({
+          allPost: response
+        });
+      })
   }
+
+  fetchMatch() {
+    debugger
+    return this.match
+      .getAllMatch()
+      .then(response => {
+        this.setState({
+          allMatch: response
+        });
+      })
+  }
+ 
+
+  componentDidMount() {
+    this.fetchUser()
+    this.fetchPost()
+    this.fetchMatch()
+
+  }
+
+  postDetail(){
+    return this.post.getPostDetails()
+  .then(response=>{
+    this.setState({ 
+      post:response
+    })
+  })
+ 
+}
 
   setFlow(flowType) {
     this.setState({
@@ -106,23 +117,31 @@ class App extends Component {
 
   render() {
     debugger
-    if (this.state.loggedInClub || this.state.loggedInUser) {
-      if (this.state.loggedInUser) {
+
+    if (this.state.loggedInUser) {
+      if (this.state.loggedInUser.role === "player") {
         return (
           <div className="App">
             <header className="App-header">
+            <Navbar userInSession={this.state.loggedInUser} logout={this.logout}></Navbar>
              <Redirect to="/User/home" />
               <Switch>
-                <Route exact path="/User/home" render={() => <Userhome />} />
+                <Route exact path="/User/home" render={() => <Userhome allPost={this.state.allPost} allMatch={this.state.allMatch} postDetail={(post)=>this.postDetail(post)} />}  loggedInUser={this.state.loggedInUser} />
+                <Route
+                exact
+                path="/post/:id"
+                render={(props) => <Postid  Post={this.state.Post} fetchPost={this.fetchPost} {...props}/>}
+              />
               </Switch>
             </header>
           </div>
         );
       }
-      if (this.state.loggedInClub) {
+      if (this.state.loggedInUser.role === "club") {
         return (
           <div className="App">
-            <Redirect to="/Club/home" />
+          <Navbarclub logout={this.logout} userInSession={this.state.loggedInUser}></Navbarclub>
+            <Redirect to="/Club/home" userInSession={this.state.loggedInUser} logout={this.logout}/>
             <Switch>
                 <Route exact path="/Club/home" render={() => <Clubhome />} />
               </Switch>
@@ -135,6 +154,7 @@ class App extends Component {
       return (
         <div className="App">
           <header className="App-header">
+          <Redirect to="/"/>
             <Switch>
               <Route
                 exact
@@ -145,14 +165,14 @@ class App extends Component {
                 exact
                 path="/club"
                 render={() => (
-                  <Club allPost={this.state.allPost} getUser={this.getUser} />
+                  <Club  chosenFlow={this.state.chosenFlow} allPost={this.state.allPost} getUser={this.getUser} />
                 )}
               />
               <Route
                 exact
                 path="/user"
                 render={() => (
-                  <User allPost={this.state.allPost} getUser={this.getUser} />
+                  <User chosenFlow={this.state.chosenFlow} allPost={this.state.allPost} getUser={this.getUser} />
                 )}
               />
               <Route
@@ -172,12 +192,12 @@ class App extends Component {
               <Route
                 exact
                 path="/Clubsignup"
-                render={() => <Clubsignup getClub={this.getClub} />}
+                render={() => <Clubsignup getUser={this.getUser} />}
               />
               <Route
                 exact
                 path="/Clublogin"
-                render={() => <Clublogin getClub={this.getClub} />}
+                render={() => <Clublogin getUser={this.getUser} />}
               />
             </Switch>
           </header>
@@ -191,6 +211,6 @@ class App extends Component {
 
 export default App;
 
-// render={() => this.state.loggedInUser ? <Clubhome loggedInUser={this.state.loggedInUser} /> : <Redirect to="/" />}
 
-// render={() => this.state.loggedInUser ? <Redirect to="/club/home" /> : <Login  />}
+ 
+// <Route exact path="/game/:id" render={(props) =><GameDetail fetchGames={this.fetchGames} allGames={this.state.games} {...props}></GameDetail>} />

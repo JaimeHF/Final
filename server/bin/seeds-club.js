@@ -2,7 +2,7 @@ require('dotenv').config();
 
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
-const Club = require("../models/Club");
+const Club = require("../models/subdocuments/Club");
 const Post = require("../models/Post");
 const bcryptSalt = 10;
 
@@ -24,70 +24,70 @@ const arrClub = Array(10)
 
 let clubs =[{
     _id:`${arrClub[0]}`,
-    clubname: "ALICATES FS",
+    username: "ALICATES FS",
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     imgPath: `../public/images/alicates.png`,
     description: "Wooolaaa!! Somos un equipo formado por un grupo de amigos que jugamos la liga local de tres cantos, estamos en la segunda categoria y nuestras intenciones son de ascenso. No solo quedamos para jugar al futbol, despues de cada partido toca un poco de cerveza con el equipo, no todo va a ser cansarse corriendo!!",
   },
   {
     _id:`${arrClub[1]}`,
-    clubname: "COMARCA FS",
+    username: "COMARCA FS",
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     imgPath: `../public/images/comarca.png`,
     description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
   },
   {
     _id:`${arrClub[2]}`,
-    clubname: "C.D. BETIS SAN ISIDRO",
+    username: "C.D. BETIS SAN ISIDRO",
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
      imgPath: `../public/images/Betis-San-Isidro-escudo.jpg`,
     description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
   },
   {
     _id:`${arrClub[3]}`,
-    clubname: "MACABI DE LEVANTAR F7",
+    username: "MACABI DE LEVANTAR F7",
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
      imgPath: `../public/images/macabi.jpeg`,
     description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
   },
   {
     _id:`${arrClub[4]}`,
-    clubname: "BORUSIA DE DONUT F7",
+    username: "BORUSIA DE DONUT F7",
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
      imgPath: `../public/images/donuts.jpg`,
     description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
   },
   {
     _id:`${arrClub[5]}`,
-    clubname: "A.D. GIGANTES",
+    username: "A.D. GIGANTES",
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
      imgPath: `../public/images/GIGANTES.jpg`,
     description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
   },
   {
     _id:`${arrClub[6]}`,
-    clubname: "RACING VILLAVERDE C.F.",
+    username: "RACING VILLAVERDE C.F.",
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
      imgPath: `../public/images/Racing_Villaverde.jpg`,
     description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
   },
   {
     _id:`${arrClub[7]}`,
-    clubname: "CELTIC CASTILLA C.F.",
+    username: "CELTIC CASTILLA C.F.",
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
      imgPath: `../public/images/CELTIC_CASTILLA.png`,
     description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
   },
   {
     _id:`${arrClub[8]}`,
-    clubname: "C.D. ALONSO CANO",
+    username: "C.D. ALONSO CANO",
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
      imgPath: `../public/images/ALONSO .JPG`,
     description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
   },
   {
     _id:`${arrClub[9]}`,
-    clubname: "ASTON BIRRA FS",
+    username: "ASTON BIRRA FS",
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
      imgPath: `../public/images/astonbirra.jpg`,
     description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",

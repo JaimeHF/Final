@@ -9,30 +9,59 @@ class User extends Component {
   
 state={
   loggedInUser:null,
+  allPost:[]
+}
+
+
+fetchPost() {
+  return this.post
+    .getAllPost()
+    .then(response => {
+      this.setState({
+        allPost: response
+      });
+    })
+    .catch(err => {
+      this.setState({
+        loggedInUser: false,
+      });
+    });
+}
+
+componentWillReceiveProps(nextProps) {
+  this.setState({ ...this.state, loggedInUser: nextProps["loggedInUser"] });
 }
 
   render() {
+    if(this.props.chosenFlow==="entrar"){
     return (
       <div>
-      <Navbar userInSession={this.state.loggedInUser} logout={this.logout}/>
+      <Navbar loggedInUser={this.state.loggedInUser} logout={this.logout}/>
       <div className="user">
-      <div className="box">       
-        <h1>wooolaaaa</h1>
-     
+      <div className="box">      
+    
           <div>
-            <Link to="/signup" render={() => <Signup getUser={this.getUser} />}>
-              sigmup
-            </Link>
-          </div>
-          <div>
-            <Link to="/login" render={() => <Login getClub={this.getUser} />}>
-              login
-            </Link>
+          <Login/>
           </div>
         </div>
       </div>
       </div>
-    );
+    );}
+    else {
+      return (
+        <div>
+        <Navbar loggedInUser={this.state.loggedInUser} logout={this.logout}/>
+        <div className="user">
+        <div className="box">      
+      
+            <div>
+            <Signup/>
+            </div>
+          </div>
+        </div>
+        </div>
+      );
+    }
   }
 }
 

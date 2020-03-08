@@ -39,7 +39,7 @@ class Signup extends Component {
 
   render() {
     return(
-      <div className="user">
+      <div >
         <h3>Welcome!, create your account next:</h3>
 
         <form onSubmit={this.handleFormSubmit}>
@@ -55,7 +55,7 @@ class Signup extends Component {
           
           <input type="submit" value="Sign up" />
         </form>
-        <Link  to="/login" >login</Link>
+        <Link  to="/login" ><input type="submit" value="login" /></Link>
 
         <h1>{this.state.error ? 'Error' : ''}</h1>
       </div>

@@ -1,26 +1,17 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import AuthService from "../../auth/AuthService";
+
 // import "./Navbar.css"
 
 class Navbarclub extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { loggedInUser: null };
-    this.service = new AuthService();
-  }
 
-
-  componentWillReceiveProps(nextProps) {
-    this.setState({ ...this.state, loggedInUser: nextProps["userInSession"] });
-  }
 
   handleLogout = e => {
     this.props.logout();
   };
 
   render() {
-    if (this.state.loggedInUser) {
+    if (this.props.userInSession) {
       return (
         <nav className="nav-style">
           <ul>

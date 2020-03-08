@@ -2,7 +2,6 @@ const express = require("express");
 const passport = require('passport');
 const router = express.Router();
 const User = require("../models/User");
-const Club = require("../models/Club")
 const Post = require("../models/Post")
 
 // Bcrypt to encrypt passwords
@@ -12,6 +11,10 @@ const bcryptSalt = 10;
 
 router.get(`/`, (req, res,next)=>{
     Post.find()
+    .populate({
+        path: 'club_id',
+        model: 'User'
+    })
     .then(allPost=> res.json(allPost))
     .catch(err => console.log(err))
 })
@@ -32,18 +35,21 @@ router.get(`/:id`,(req, res, next)=>{
 
 })
 
-router.put(`/editpost/:id`,(req,res,next)=>{
-    let {id} = req.params
-    Post.findByIdAndUpdate(id,{
-        title: req.body.title,
-        description: req.body.description,
-        date: req.body.date,
-    },{
-        new: true
-      })
-      .then((editPost) => {
-        res.json(editPost)
-        // res.json(user)
-      });
-})
+
+
+
+// router.put(`/editpost/:id`,(req,res,next)=>{
+//     let {id} = req.params
+//     Post.findByIdAndUpdate(id,{
+//         title: req.body.title,
+//         description: req.body.description,
+//         date: req.body.date,
+//     },{
+//         new: true
+//       })
+//       .then((editPost) => {
+//         res.json(editPost)
+//         // res.json(user)
+//       });
+// })
 module.exports = router;

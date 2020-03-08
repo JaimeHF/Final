@@ -5,28 +5,28 @@ import AuthServiceClub from './AuthServiceClub';
 class Clublogin extends Component {
   constructor(props) {
     super(props);
-    this.state = { clubname: '', password: '' };
+    this.state = { username: '', password: '' };
     this.service = new AuthServiceClub();
   }
 
   handleFormSubmit = (event) => {
     event.preventDefault();
-    const clubname = this.state.clubname;
+    const username = this.state.username;
     const password = this.state.password;
 
-    this.service.login(clubname, password)
+    this.service.login(username, password)
       .then(response => {
         this.setState({
-          clubname: clubname,
+          username: username,
           password: password,
           error: false
         });
 
-        this.props.getclub(response)
+        this.props.getUser(response)
       })
       .catch(error => {
         this.setState({
-          clubname: clubname,
+          username: username,
           password: password,
           error: true
         });
@@ -41,23 +41,22 @@ class Clublogin extends Component {
   render() {
 
     return (
-    <div className="club">
+    <div >
       <h3>Please, login to our site</h3>
 
       <form onSubmit={this.handleFormSubmit}>
         <fieldset>
           <label>clubname:</label>
-          <input type="text" name="clubname" value={this.state.clubname} onChange={e => this.handleChange(e)} />
+          <input type="text" name="username" value={this.state.clubname} onChange={e => this.handleChange(e)} />
         </fieldset>
-
         <fieldset>
           <label>Password:</label>
           <input type="password" name="password" value={this.state.password} onChange={e => this.handleChange(e)} />
         </fieldset>
 
         <input type="submit" value="Login" />
+        <Link to="/club" ><button onClick={() => this.props.setFlow("crear")} >signup </button></Link>
       </form>
-      <Link to="/Clubsignup"  >signup</Link>
 
       <h1>{this.state.error ? 'JAJAJAJAJ' : ''}</h1>
     </div>)

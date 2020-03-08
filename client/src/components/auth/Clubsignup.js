@@ -5,26 +5,25 @@ import { Link } from "react-router-dom";
 class Clubsignup extends Component {
   constructor(props){
     super(props);
-    this.state = { clubname: '', password: '' };
+    this.state = { usearname: '', password: '' };
     this.service = new AuthServiceClub();
   }
-    
   handleFormSubmit = (event) => {
     event.preventDefault();
-    const clubname = this.state.clubname;
+    const username = this.state.username;
     const password = this.state.password;
 
-    this.service.signup(clubname, password)
+    this.service.signup(username, password)
     .then( response => {
         this.setState({
-            clubname: "", 
+            username: "", 
             password: "",
         });
-        this.props.getclub(response.club)
+        this.props.getUser(response.user)
     })
     .catch(error => {
       this.setState({
-        clubname: clubname,
+        username: username,
         password: password,
         error: true
       });
@@ -35,17 +34,22 @@ class Clubsignup extends Component {
     const {name, value} = event.target;
     this.setState({[name]: value});
   }
+
+  handleChange = (event) => {  
+    const {name, value} = event.target;
+    this.setState({[name]: value});
+  }
       
 
   render() {
     return(
-      <div className="club">
+      <div >
         <h3>Welcome!, create your account next:</h3>
 
         <form onSubmit={this.handleFormSubmit}>
           <fieldset>
             <label>clubname:</label>
-            <input type="text" name="clubname" value={this.state.clubname} onChange={ e => this.handleChange(e)}/>
+            <input type="text" name="usearname" value={this.state.clubname} onChange={ e => this.handleChange(e)}/>
           </fieldset>
           
           <fieldset>
@@ -55,7 +59,7 @@ class Clubsignup extends Component {
           
           <input type="submit" value="Sign up" />
         </form>
-        <Link  to="/Clublogin" >login</Link>
+        <Link to="/club" ><button onClick={() => this.props.setFlow("entrar")} >login</button></Link>
 
         <h1>{this.state.error ? 'yooooooo' : ''}</h1>
       </div>

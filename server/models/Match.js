@@ -7,7 +7,7 @@ const macthSchema = new Schema({
   location: [Number],
   date: Date,
   time: String,
-  TYPE: {
+  type: {
     type: [String],
     enum:[`Futbol Sala`,`Futbol 11`,`Futbol 7`]
   },

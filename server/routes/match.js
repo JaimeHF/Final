@@ -1,9 +1,6 @@
 const express = require("express");
 const passport = require('passport');
 const router = express.Router();
-const User = require("../models/User");
-const Club = require("../models/Club");
-const Post = require("../models/Post");
 const Match = require("../models/Match");
 
 
@@ -31,18 +28,18 @@ router.get(`/:id`,(req, res, next)=>{
 
 })
 
-router.put(`/editmacth/:id`,(req,res,next)=>{
-    let {id} = req.params
-    Match.findByIdAndUpdate(id,{
-        title: req.body.title,
-        description: req.body.description,
-        date: req.body.date,
-    },{
-        new: true
-      })
-      .then((editMatch) => {
-        res.json(editMatch)
-        // res.json(user)
-      });
-})
+// router.put(`/editmacth/:id`,(req,res,next)=>{
+//     let {id} = req.params
+//     Match.findByIdAndUpdate(id,{
+//         title: req.body.title,
+//         description: req.body.description,
+//         date: req.body.date,
+//     },{
+//         new: true
+//       })
+//       .then((editMatch) => {
+//         res.json(editMatch)
+//         // res.json(user)
+//       });
+// })
 module.exports = router;
