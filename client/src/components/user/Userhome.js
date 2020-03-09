@@ -3,15 +3,23 @@ import Navbar from "./navbar/Navbar";
 import { Link } from "react-router-dom";
 import Containpost from "../post/Containpost"
 import Containmatch from "../match/Containmatch";
+import Post from "../../services/Post"
 
 
 
 
 class Userhome extends React.Component {
-
-  state = {
+  constructor(props) {
+    super(props);
+  this.state = {
     chosenFlow: "post",
+    post:null
+    
   }
+  this.post = new Post()
+}
+
+
   setFlow(flowType) {
     this.setState({
       ...this.state,
@@ -19,21 +27,37 @@ class Userhome extends React.Component {
     });
   }
 
+
+  // postDetail(){
+  //   console.log("hola postDetail")
+  //   return this.post.getPostDetails()
+  // .then(response=>{
+  //   this.setState({ 
+  //     post:response
+  //   })
+  // })
+ 
+// }
+
   render() {
-    console.log(this.props.getUser)
     return (
       <div className="homeuser">
-       
+       <div>
         <div className="per">
           <div className="perfil">
             <div>
-              <img src="" alt="foto perfil"/>
+              <img src="{this.props.loggedInUser.playerData.imgPath}" alt="foto perfil"/>
             </div>
             <div>
-              <h1>nombre</h1>
+              <h1>{this.props.loggedInUser.username}</h1>
             </div>
           </div>
-
+        </div>
+        <div>
+          <Link to="/newmatch"  >
+            <p>Organiza un partido</p>
+          </Link>
+        </div>
         </div>
         <div>
         <button onClick={() => this.setFlow("post")} >post futbol</button>
@@ -41,15 +65,14 @@ class Userhome extends React.Component {
         <div>{this.state.chosenFlow === "post" &&
           <div>
             {this.props.allPost.map(post => (
-              <Containpost onClick={() => this.props.postDetail(post)} key={post._id} title={post.title} name={post.club_id.username} img={post.club_id.clubData.imgPath} date={post.date} description={post.description}  ></Containpost>
+    <Containpost key={post._idx}  id={post._id} title={post.title} name={post.club_id.username} img={post.club_id.clubData.imgPath} date={post.date} description={post.description}  > </Containpost>
             ))}
           </div>}
         </div>
-
         <div>{this.state.chosenFlow === "match" &&
           <div>
             {this.props.allMatch.map(match => (
-              <Containmatch onClick={() => this.props.postDetail(match)} key={match._id} id={match._id} name={match.matchname} location={match.location} price={match.price} date={match.date} type={match.type}  ></Containmatch>
+              <Containmatch  key={match._idx} id={match._id} name={match.macthname}  location={match.location} price={match.price} date={match.date} type={match.TYPE} user={match.user_id} ></Containmatch>
             ))}
           </div>}
         </div>

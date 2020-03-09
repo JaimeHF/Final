@@ -4,6 +4,8 @@ import Signup from "../auth/Signup";
 import Login from "../auth/Login";
 import Navbar from "./navbar/Navbar";
 
+import "./user.scss"
+
 class User extends React.Component {
 
   state = {
@@ -39,15 +41,19 @@ class User extends React.Component {
     this.setState({ ...this.state, loggedInUser: nextProps["loggedInUser"] });
   }
 
+  
+
   render() {
-    console.log(this.getUser)
+    console.log(this.state.loggedInUser)
     return (
       <div >
         {/* <Navbar loggedInUser={this.state.loggedInUser} logout={this.logout} /> */}
         <div className="login">
-          <div className="left">
+          <div className="izq">
             <div>
-              <img src="" alt="logotipo" />
+            <Link to="/">
+            <img src="https://res.cloudinary.com/dwwfzwx93/image/upload/v1583768097/logo-white_x2_rwsvdj.png" alt="logotipo"/>
+            </Link>
             </div>
             <div className="loco">
               <h1>Locos por el deporte, éste es vuestro sitio. ¡Bienvenidos!</h1>
@@ -63,13 +69,13 @@ class User extends React.Component {
             </div>
 
           </div>
-          <div className="right">
+          <div className="der">
             <div className="user">
               <div >
                 <div className="acces">{this.state.chosenFlow === "login" &&
                   <div >
                     <Login getUser={this.getUser} />
-                    <p onClick={() => this.setFlow("signup")} >¿Aún no tienes cuenta? <span> Regístrate</span> </p>
+                    <p onClick={() => this.setFlow("signup")}  >¿Aún no tienes cuenta? <span> Regístrate</span> </p>
                   </div>}
                 </div>
                 <div className="acces">{this.state.chosenFlow === "signup" &&

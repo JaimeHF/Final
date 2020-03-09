@@ -1,0 +1,61 @@
+.log{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 671px;
+    height: 527px;
+    
+ 
+    img{
+        width: 68.5px;
+        height: 79px;
+        margin-top: 10px;
+    }
+    .datos{
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+     
+
+    .username{
+        width: 483px;
+        height: 56px;
+        border-radius: 8px;
+        border: solid 1px #dedede;
+        background-color: #ffffff;
+    }
+
+    .password{
+        width: 483px;
+        height: 56px;
+        border-radius: 8px;
+        border: solid 1px #dedede;
+        background-color: #ffffff;
+    }
+
+
+        .bot{
+            width: 224px;
+            height: 56px;
+            border-radius: 100px;
+            background-image: linear-gradient(to top, #aad239, #2ca10f);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Montserrat;
+            font-size: 20px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 2.03;
+            letter-spacing: normal;
+            color: #ffffff;
+            
+        
+    }
+}
+}

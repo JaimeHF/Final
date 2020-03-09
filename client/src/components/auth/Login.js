@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import AuthService from './AuthService'
 import { Link } from "react-router-dom";
-
+import "./login.scss"
 class Login extends Component {
   constructor(props) {
     super(props);
@@ -44,7 +44,7 @@ class Login extends Component {
     return (
       <div className="log">
         <div>
-        <img src="" alt="icono"/>
+        <img src="https://res.cloudinary.com/dwwfzwx93/image/upload/v1583768117/illustration-player_x2_cqgfvq.png" alt="icono"/>
         </div>
         <div>
           <h3 className="acceso">Acceaso para jugador</h3>

@@ -15,7 +15,9 @@ export default class Match {
 
 
     getMatchDetails = id => this.service.get(`/${id}`)
-    .then(response => response.data)
+    .then(response => {
+        return response.data
+    })
 
 
     newMatch = Macth => this.service.post(`/newmatch`, Macth)

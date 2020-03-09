@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import AuthService from './AuthService'
 import { Link } from "react-router-dom";
+import "./login.scss"
 
 class Signup extends Component {
   constructor(props){
@@ -40,7 +41,7 @@ class Signup extends Component {
     return(
       <div className="log">
       <div>
-      <img src="" alt="icono"/>
+      <img src="https://res.cloudinary.com/dwwfzwx93/image/upload/v1583768117/illustration-player_x2_cqgfvq.png" alt="icono"/>
       </div>
       <div>
         <h3 className="acceso">Registro como jugador</h3>

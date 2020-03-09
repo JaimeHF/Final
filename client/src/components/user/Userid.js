@@ -1,29 +1,25 @@
 import React from "react";
 import moment from "moment";
-import Post from "../../services/Post";
 import { Link } from "react-router-dom";
+import Player from "../../services/User";
 
 
-class Postid extends React.Component {
+class Userid extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      title:null,
-        description:null,
-      date:null,
-         club_id:null,
+        username:null,
+
       };
-    this.post = new Post();
+      this.player = new Player();
     // this.club = new AuthServiceClub()
   }
 
   postDetail(id) {
-    return this.post.getPostDetails(id).then(response => {
+    return this.player.getPlayerDetails(id).then(response => {
       this.setState({
-        title: response.title,
-        description:response.description,
-        date: response.date,
-        club_id:response.club_id,
+        username: response.username,
+  
 
       });
     });
@@ -34,28 +30,26 @@ class Postid extends React.Component {
   };
 
   render() {
-    const { title, date, description,club_id } = this.state
+    const { username, date, description,club_id } = this.state
     return (
       <div className="Postid">
       <Link to="/User/home">back</Link>
         <h1>Postid</h1>
         <img src="" alt="foto club" />
-        <Link to={`/club/${this.props.id}`} >     
-           <div>
-          <h1>{title}</h1>
-        </div>
-        </Link>
         <div>
+          <h1>{username}</h1>
+        </div>
+        {/* <div>
           <p></p>
         </div>
         <div>
           <h1>{moment(date).format("DD/MM/YYYY")}</h1>
           <p>{description} </p>
-        </div>
+        </div> */}
         
       </div>
     );
   }
 }
 
-export default Postid;
+export default Userid;

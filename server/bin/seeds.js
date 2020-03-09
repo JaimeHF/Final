@@ -24,7 +24,7 @@ let clubs = [{
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     role: "club",
     clubData: {
-      imgPath: `../images/alicates.png`,
+      imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766638/alicates_jmlhbo.png`,
       description: "Wooolaaa!! Somos un equipo formado por un grupo de amigos que jugamos la liga local de tres cantos, estamos en la segunda categoria y nuestras intenciones son de ascenso. No solo quedamos para jugar al futbol, despues de cada partido toca un poco de cerveza con el equipo, no todo va a ser cansarse corriendo!!",
     }
   },
@@ -33,7 +33,7 @@ let clubs = [{
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     role: "club",
     clubData: {
-      imgPath: `../public/images/comarca.png`,
+      imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766640/comarca_ucdii1.png`,
       description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
     }
   },
@@ -42,7 +42,7 @@ let clubs = [{
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     role: "club",
     clubData: {
-      imgPath: `../Betis-San-Isidro-escudo.jpg`,
+      imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766638/Betis-San-Isidro-escudo_tgy9er.jpg`,
       description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
     }
   },
@@ -51,7 +51,7 @@ let clubs = [{
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     role: "club",
     clubData: {
-      imgPath: `../public/images/macabi.jpeg`,
+      imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766640/macabi_a4yzfj.jpg`,
       description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
     }
   },
@@ -60,7 +60,7 @@ let clubs = [{
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
   role: "club",
   clubData: {
-    imgPath: `../public/images/donuts.jpg`,
+    imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766640/donuts_rh7yop.jpg`,
     description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
   }
   },
@@ -69,7 +69,7 @@ let clubs = [{
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
   role: "club",
   clubData:{
-    imgPath: `../public/images/GIGANTES.jpg`,
+    imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766640/GIGANTES_xbxei2.jpg`,
     description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
   }},
   {
@@ -77,7 +77,7 @@ let clubs = [{
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
   role: "club",
   clubData:{
-    imgPath: `../public/images/Racing_Villaverde.jpg`,
+    imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766641/Racing_Villaverde_czmqqi.jpg`,
     description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
   }},
   {
@@ -85,7 +85,7 @@ let clubs = [{
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
   role: "club",
   clubData:{
-    imgPath: `../public/images/CELTIC_CASTILLA.png`,
+    imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766638/CELTIC_CASTILLA_iucbas.jpg`,
     description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
    } },
   {
@@ -93,7 +93,7 @@ let clubs = [{
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
   role: "club",
   clubData:{
-    imgPath: `../public/images/ALONSO .JPG`,
+    imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766638/ALONSO_memxdr.jpg`,
     description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
  } },
   {
@@ -101,7 +101,7 @@ let clubs = [{
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
   role: "club",
   clubData:{
-    imgPath: `../public/images/astonbirra.jpg`,
+    imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766638/astonbirra_olvkrp.gif`,
     description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
   }},
 ]
@@ -111,7 +111,7 @@ let players = [{
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     role: "player",
     playerData: {
-      imgPath: `../images/paco huerto.jpeg`,
+      imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766641/paco_huerto_grlc7t.jpg`,
       position: [`Defensa`, `Lateral`],
     }
   },
@@ -120,7 +120,7 @@ let players = [{
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     role: "player",
     playerData: {
-      imgPath: `../images/macco.jpeg`,
+      imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766641/macco_dgbbk3.jpg`,
       position: [`Lateral`, `Extremo`],
     }
   },
@@ -128,28 +128,28 @@ let players = [{
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     role: "player",
     playerData: {
-    imgPath: `../images/castolo.jpeg`,
+    imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766638/castolo_gkj37k.jpg`,
     position:`Delantero`,
   }},
   {    username: "JULIEN FAUBERT",
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     role: "player",
     playerData: {
-    imgPath: `../images/faubert.jpeg`,
+    imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766640/faubert_cai9cv.jpg`,
     position:[`Delantero`,`Centrocampista`]
   }},
   {    username: "ROYSTON DRENTHE",
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     role: "player",
     playerData: {
-    imgPath: `../images/drenthe+.jpeg`,
+    imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766640/drenthe_e9d97c.jpg`,
     position:`Lateral`,
   }},
   {    username: "DENILSON",
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     role: "player",
     playerData: {
-    imgPath: `../images/denilson.jpeg`,
+    imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766639/denilson_qxelqd.jpg`,
     position:[`Extremo`,`Delantero`]
   }},
   {    username: "MANOLO CABEZA",
@@ -163,21 +163,21 @@ let players = [{
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     role: "player",
     playerData: {
-    imgPath: `../images/magico.jpeg`,
+    imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766640/magico_nhnznw.jpg`,
     position:[`Extremo`,`Centrocampista`]
   }},
   {    username: "JARIC",
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     role: "player",
     playerData: {
-    imgPath: `../images/jaric.jpg`,
+    imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766640/jaric_cwz0rc.jpg`,
     position:`Lateral`,
   }},
   {    username: "BRUCE HARPER",
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     role: "player",
     playerData: {
-    imgPath: `../images/bruce.jpeg`,
+    imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766638/bruce_haeri6.jpg`,
     position:`Extremo`,
   }},
   {
@@ -185,7 +185,7 @@ let players = [{
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     role: "player",
     playerData: {
-    imgPath: `../images/mark.jpeg`,
+    imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766641/mark_ddjgew.jpg`,
     position:`Centrocampista`,
   }},
   {
@@ -193,7 +193,7 @@ let players = [{
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     role: "player",
     playerData: {
-    imgPath: `../images/oliver.jpeg`,
+    imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766641/oliver_f1kpga.jpg`,
     position:`Delantero`,
   }},
   {
@@ -201,7 +201,7 @@ let players = [{
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     role: "player",
     playerData: {
-    imgPath: `../images/donmanue.jpeg`,
+    imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766639/donmanue_xdrroo.jpg`,
     position:`Centrocampista`,
   }},
   {
@@ -209,7 +209,7 @@ let players = [{
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     role: "player",
     playerData: {
-    imgPath: `../images/stremer.jpegç`,
+    imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766642/stremer_oayq5j.jpg`,
     position:`Defensa`,
   }},
   {
@@ -217,7 +217,7 @@ let players = [{
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     role: "player",
     playerData: {
-    imgPath: `../images/sol.jpeg`,
+    imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766642/sol_xrpi5s.jpg`,
     position:`Lateral`,
   }},
   {
@@ -225,7 +225,7 @@ let players = [{
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     role: "player",
     playerData: {
-    imgPath: `../images/pedro.jpeg`,
+    imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766641/pedro_fp8so4.jpg`,
     position:`Extremo`,
   }},
   {
@@ -233,7 +233,7 @@ let players = [{
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     role: "player",
     playerData: {
-    imgPath: `../images/vicente.jpeg`,
+    imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766642/vicente_ui8w9g.jpg`,
     position:`Extremo`,
   }},
   {
@@ -241,7 +241,7 @@ let players = [{
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     role: "player",
     playerData: {
-    imgPath: `../images/rui.jpeg`,
+    imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766641/rui_ywzhyc.jpg`,
     position:`Centrocampista`,
   }},
   {
@@ -249,7 +249,7 @@ let players = [{
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     role: "player",
     playerData: {
-    imgPath: `../images/petit.jpeg`,
+    imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766641/petit_lddgka.jpg`,
     position:`Centrocampista`,
   }},
   {

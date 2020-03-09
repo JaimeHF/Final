@@ -33,9 +33,11 @@ class Club extends React.Component {
     return (
       <div >
         <div className="login">
-          <div className="left">
+          <div className="izq">
             <div>
-              <img src="" alt="logotipo" />
+            <Link to="/">
+            <img src="https://res.cloudinary.com/dwwfzwx93/image/upload/v1583768097/logo-white_x2_rwsvdj.png" alt="logotipo"/>
+            </Link>
             </div>
             <div className="loco">
               <h1>Locos por el deporte, éste es vuestro sitio. ¡Bienvenidos!</h1>
@@ -51,7 +53,7 @@ class Club extends React.Component {
             </div>
 
           </div>
-          <div className="right">
+          <div className="der">
             <div className="user">
               <div >
                 <div className="acces">{this.state.chosenFlow === "login" &&

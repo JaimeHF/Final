@@ -13,15 +13,18 @@ class Navbar extends Component {
   };
 
   render() {
-    debugger
+    // debugger
     if (this.props.userInSession) {
       return (
-        <nav className="nav-style">
-          <ul>
-            <li>
-              <h1 onClick={this.handleLogout}>Logout</h1>
-            </li>
-          </ul>
+        <nav className="navbar" >
+         
+          <div>
+                <Link to="/User/home"> <img src="https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766640/logo-color_x2_plcr4s.png" alt=""/> </Link>
+              </div>  
+            <div>
+              <h1 onClick={this.handleLogout}>Cerrar sesion</h1>
+            </div>
+        
         </nav>
       );
     } else {
@@ -30,7 +33,7 @@ class Navbar extends Component {
           <nav className="nav-style">
             <ul>
             <li>
-                <Link to="/">Home(aqui logo)</Link>
+                <Link to="/"><img src="https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766640/logo-color_x2_plcr4s.png" alt=""/> </Link>
               </li>  
               <li>
                 <Link to="/club">club</Link>

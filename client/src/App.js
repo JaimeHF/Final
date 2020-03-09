@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./App.css";
 import "./App.scss"
 import { Switch, Route, Redirect } from "react-router-dom";
 // import Navbar from "./components/navbar/Navbar";
@@ -21,6 +20,10 @@ import Navbar from "./components/user/navbar/Navbar"
 import Post from "./services/Post";
 import Postid from "./components/post/Postid";
 import Match from "./services/Match"
+import Matchid from "./components/match/Matchid"
+import Userid from "./components/user/Userid"
+import Clubid from "./components/club/Clubid"
+import Newmatch from "./components/match/Newmatch";
 
 class App extends Component {
   constructor(props) {
@@ -41,7 +44,7 @@ class App extends Component {
   }
 
   getUser = userObj => {
-    debugger
+    // debugger
     this.setState({
       loggedInUser: userObj
     });
@@ -70,7 +73,7 @@ class App extends Component {
 
 
   fetchPost() {
-    debugger
+    // debugger
     return this.post
       .getAllPost()
       .then(response => {
@@ -81,7 +84,7 @@ class App extends Component {
   }
 
   fetchMatch() {
-    debugger
+    // debugger
     return this.match
       .getAllMatch()
       .then(response => {
@@ -117,7 +120,7 @@ class App extends Component {
   }
 
   render() {
-    debugger
+    // debugger
 
     if (this.state.loggedInUser) {
       if (this.state.loggedInUser.role === "player") {
@@ -125,13 +128,33 @@ class App extends Component {
           <div className="App">
             <header className="App-header">
             <Navbar userInSession={this.state.loggedInUser} logout={this.logout}></Navbar>
-             <Redirect to="/User/home" />
+             <Redirect to="/User/home"  loggedInUser={this.state.loggedInUser}/>
               <Switch>
-                <Route exact path="/User/home" render={() => <Userhome allPost={this.state.allPost} allMatch={this.state.allMatch} postDetail={(post)=>this.postDetail(post)} />}  loggedInUser={this.state.loggedInUser} />
+                <Route exact path="/User/home" render={() => <Userhome allPost={this.state.allPost} allMatch={this.state.allMatch} postDetail={(post)=>this.postDetail(post)} loggedInUser={this.state.loggedInUser}/>}   />
                 <Route
                 exact
                 path="/post/:id"
                 render={(props) => <Postid  Post={this.state.Post} fetchPost={this.fetchPost} {...props}/>}
+              />
+                <Route
+                exact
+                path="/match/:id"
+                render={(props) => <Matchid  match={this.state.Match} fetchPost={this.fetchPost} {...props}/>}
+              />
+               <Route
+                exact
+                path="/user/:id"
+                render={(props) => <Userid  user={this.state.User} fetchPost={this.fetchPost} {...props}/>}
+              />
+              <Route
+                exact
+                path="/club/:id"
+                render={(props) => <Clubid  user={this.state.User} fetchPost={this.fetchPost} {...props}/>}
+              />
+              <Route
+                exact
+                path="/newmatch"
+                render={(props) => <Newmatch  Post={this.state.Post} fetchPost={this.fetchPost} {...props}/>}
               />
               </Switch>
             </header>

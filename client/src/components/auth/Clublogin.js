@@ -43,7 +43,7 @@ class Clublogin extends Component {
     return (
       <div className="log">
         <div>
-          <img src="" alt="icono" />
+          <img src="https://res.cloudinary.com/dwwfzwx93/image/upload/v1583768116/illustration-club_x2_qul4t7.png" alt="icono" />
         </div>
         <div>
           <h3 className="acceso">Acceso como club/equipo</h3>
