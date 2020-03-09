@@ -1,74 +1,82 @@
-import React  from "react";
-import "./club.css";
+import React from "react";
 import Clubsignup from "../auth/Clubsignup";
 import Clublogin from "../auth/Clublogin";
 import Navbarclub from "./navbar/Navbarclub";
+import { Link } from "react-router-dom";
 
 
 
 class Club extends React.Component {
-  
-  state={
+
+  state = {
     loggedInUser: null,
-    chosenFlow: null
+    chosenFlow: "login",
   }
-  
+
   componentWillReceiveProps(nextProps) {
-    this.setState({ ...this.state, loggedInUser: nextProps["loggedInUser"],chosenFlow: nextProps["chosenFlow"] });
+    this.setState({ ...this.state, loggedInUser: nextProps["loggedInUser"], chosenFlow: nextProps["chosenFlow"] });
   }
   setFlow(flowType) {
     this.setState({
       ...this.state,
-      flowChosen: flowType
+      chosenFlow: flowType
     });
   }
 
   componentDidMount() {
- 
+
 
   }
 
-      render() {
-        debugger
-        if(this.state.chosenFlow==="entrar" ){
-        return (
-          
-<div>
-        <Navbarclub loggedInUser={this.state.loggedInUser} logout={this.logout}/>
-<div className="club">
-          
+  render() {
 
-  <div className="box">
-  <h1>Club login </h1>
-    <div>
-    <Clublogin setFlow={flow => this.setFlow(flow)}/>
-    </div>
-    <div>
-    
-    
-    </div>
-  </div>
-</div>
-</div>
-        )}
-        else{
-          return (   
+    return (
+      <div >
+        <div className="login">
+          <div className="left">
             <div>
-            <Navbarclub loggedInUser={this.state.loggedInUser} logout={this.logout}/>
-            <div className="club">
-              <div className="box">
-              <h1>Club signup</h1>
-                <div>
-                <Clubsignup setFlow={flow => this.setFlow(flow)} />
+              <img src="" alt="logotipo" />
+            </div>
+            <div className="loco">
+              <h1>Locos por el deporte, éste es vuestro sitio. ¡Bienvenidos!</h1>
+            </div>
+            <div className="encuentra">
+              <p>Encuentra partidos, conecta con otros jugadores y mantente activo con tu deporte favorito.</p>
+            </div>
+            <div>
+              <div>  
+                <Link to="/user">user</Link>
+               </div>
+              
+            </div>
+
+          </div>
+          <div className="right">
+            <div className="user">
+              <div >
+                <div className="acces">{this.state.chosenFlow === "login" &&
+                  <div >
+                    <Clublogin getUser={this.getUser} />
+                    <p onClick={() => this.setFlow("signup")} >¿Aún no tienes cuenta? <span> Regístrate</span> </p>
+                  </div>}
                 </div>
-                <div>
+                <div className="acces">{this.state.chosenFlow === "signup" &&
+                  <div>
+                    <Clubsignup getUser={this.getUser} />
+                    <p onClick={() => this.setFlow("login")} >¿Ya tienes cuenta? <span>Accede</span> </p>
+                  </div>}
                 </div>
               </div>
             </div>
-            </div>
-                    )}
-        }
-      }
+          </div>
+        </div>
+      </div>
+  
+
+      )
+    }
+  }
+
 
 
 export default Club;

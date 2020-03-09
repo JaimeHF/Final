@@ -41,25 +41,36 @@ class Clublogin extends Component {
   render() {
 
     return (
-    <div >
-      <h3>Please, login to our site</h3>
+      <div className="log">
+        <div>
+          <img src="" alt="icono" />
+        </div>
+        <div>
+          <h3 className="acceso">Acceso como club/equipo</h3>
+        </div>
+        <form onSubmit={this.handleFormSubmit} >
+          <div className="datos">
+            <div>
+              <fieldset>
+                {/* <label>Username:</label> */}
+                <input className="username" type="text" name="username" placeholder="Introduce tu nombre de usuario" value={this.state.username} onChange={e => this.handleChange(e)} />
+              </fieldset>
+            </div>
+            <div>
+              <fieldset>
+                {/* <label>Password:</label> */}
+                <input type="password" name="password" className="password" placeholder="Introduce tu contraseña" value={this.state.password} onChange={e => this.handleChange(e)} />
+              </fieldset>
+            </div>
+            <div className="botonlo">
+              <input className="bot" type="submit" value="Acceder" />
+            </div>
+          </div>
+        </form>
 
-      <form onSubmit={this.handleFormSubmit}>
-        <fieldset>
-          <label>clubname:</label>
-          <input type="text" name="username" value={this.state.clubname} onChange={e => this.handleChange(e)} />
-        </fieldset>
-        <fieldset>
-          <label>Password:</label>
-          <input type="password" name="password" value={this.state.password} onChange={e => this.handleChange(e)} />
-        </fieldset>
 
-        <input type="submit" value="Login" />
-        <Link to="/club" ><button onClick={() => this.props.setFlow("crear")} >signup </button></Link>
-      </form>
-
-      <h1>{this.state.error ? 'JAJAJAJAJ' : ''}</h1>
-    </div>)
+        <h1>{this.state.error ? 'Error' : ''}</h1>
+      </div>)
   }
 }
 

@@ -20,11 +20,22 @@ class Userhome extends React.Component {
   }
 
   render() {
-    console.log(this.props)
+    console.log(this.props.getUser)
     return (
-      <div>
-        <h1>woooolaaaaaaa</h1>
+      <div className="homeuser">
+       
+        <div className="per">
+          <div className="perfil">
+            <div>
+              <img src="" alt="foto perfil"/>
+            </div>
+            <div>
+              <h1>nombre</h1>
+            </div>
+          </div>
 
+        </div>
+        <div>
         <button onClick={() => this.setFlow("post")} >post futbol</button>
         <button onClick={() => this.setFlow("match")} >buscar partidos de futbol</button>
         <div>{this.state.chosenFlow === "post" &&
@@ -41,6 +52,7 @@ class Userhome extends React.Component {
               <Containmatch onClick={() => this.props.postDetail(match)} key={match._id} id={match._id} name={match.matchname} location={match.location} price={match.price} date={match.date} type={match.type}  ></Containmatch>
             ))}
           </div>}
+        </div>
         </div>
 
       </div>

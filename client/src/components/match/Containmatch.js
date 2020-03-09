@@ -9,7 +9,7 @@ class Containmacth extends React.Component {
     debugger
     return (
 
-        <div className="containpost">
+        <div className="container">
         
         <Link to={`/post/${this.props.id}`}>
             <div>

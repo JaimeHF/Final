@@ -10,6 +10,7 @@ class Login extends Component {
   }
 
   handleFormSubmit = (event) => {
+    debugger
     event.preventDefault();
     const username = this.state.username;
     const password = this.state.password;
@@ -39,28 +40,38 @@ class Login extends Component {
   }
 
   render() {
-
+    debugger
     return (
-    <div >
-      <h3>Please, login to our site</h3>
+      <div className="log">
+        <div>
+        <img src="" alt="icono"/>
+        </div>
+        <div>
+          <h3 className="acceso">Acceaso para jugador</h3>
+        </div>
+        <form onSubmit={this.handleFormSubmit} >
+          <div className="datos">
+          <div>
+          <fieldset>
+            {/* <label>Username:</label> */}
+            <input className="username" type="text" name="username" placeholder="Introduce tu nombre de usuario" value={this.state.username} onChange={e => this.handleChange(e)} />
+          </fieldset>
+          </div>
+        <div>
+          <fieldset>
+            {/* <label>Password:</label> */}
+            <input type="password" name="password" className="password" placeholder="Introduce tu contraseña" value={this.state.password} onChange={e => this.handleChange(e)} />
+          </fieldset>
+          </div>
+        <div className="botonlo">
+          <input className="bot" type="submit" value="Acceder" />
+          </div>
+          </div>
+        </form>
 
-      <form onSubmit={this.handleFormSubmit} >
-        <fieldset>
-          <label>Username:</label>
-          <input type="text" name="username" value={this.state.username} onChange={e => this.handleChange(e)} />
-        </fieldset>
 
-        <fieldset>
-          <label>Password:</label>
-          <input type="password" name="password" value={this.state.password} onChange={e => this.handleChange(e)} />
-        </fieldset>
-
-        <input type="submit" value="Login" />
-      </form>
-      <Link to="/signup" ><input type="submit" value="Sign up" /></Link>
-
-      <h1>{this.state.error ? 'Error' : ''}</h1>
-    </div>)
+        <h1>{this.state.error ? 'Error' : ''}</h1>
+      </div>)
   }
 }
 

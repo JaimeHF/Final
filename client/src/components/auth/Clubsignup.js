@@ -3,7 +3,7 @@ import AuthServiceClub from './AuthServiceClub'
 import { Link } from "react-router-dom";
 
 class Clubsignup extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = { usearname: '', password: '' };
     this.service = new AuthServiceClub();
@@ -14,55 +14,66 @@ class Clubsignup extends Component {
     const password = this.state.password;
 
     this.service.signup(username, password)
-    .then( response => {
+      .then(response => {
         this.setState({
-            username: "", 
-            password: "",
+          username: "",
+          password: "",
         });
         this.props.getUser(response.user)
-    })
-    .catch(error => {
-      this.setState({
-        username: username,
-        password: password,
-        error: true
-      });
-    })
+      })
+      .catch(error => {
+        this.setState({
+          username: username,
+          password: password,
+          error: true
+        });
+      })
   }
 
-  handleChange = (event) => {  
-    const {name, value} = event.target;
-    this.setState({[name]: value});
+  handleChange = (event) => {
+    const { name, value } = event.target;
+    this.setState({ [name]: value });
   }
-
-  handleChange = (event) => {  
-    const {name, value} = event.target;
-    this.setState({[name]: value});
-  }
-      
 
   render() {
-    return(
-      <div >
-        <h3>Welcome!, create your account next:</h3>
-
-        <form onSubmit={this.handleFormSubmit}>
-          <fieldset>
-            <label>clubname:</label>
-            <input type="text" name="usearname" value={this.state.clubname} onChange={ e => this.handleChange(e)}/>
-          </fieldset>
-          
-          <fieldset>
-            <label>Password:</label>
-            <input type="password" name="password" value={this.state.password} onChange={ e => this.handleChange(e)} />
-          </fieldset>
-          
-          <input type="submit" value="Sign up" />
-        </form>
-        <Link to="/club" ><button onClick={() => this.props.setFlow("entrar")} >login</button></Link>
-
-        <h1>{this.state.error ? 'yooooooo' : ''}</h1>
+    return (
+      <div className="log">
+      <div>
+      <img src="" alt="icono"/>
       </div>
+      <div>
+        <h3 className="acceso">Registro como club/equipo</h3>
+      </div>
+      <form onSubmit={this.handleFormSubmit} >
+        <div className="datos">
+        <div>
+        <fieldset>
+          {/* <label>Username:</label> */}
+          <input className="username" type="text" name="username" placeholder="Introduce tu nombre de usuario" value={this.state.username} onChange={e => this.handleChange(e)} />
+        </fieldset>
+        </div>
+        <div>
+        <fieldset>
+          {/* <label>Username:</label> */}
+          <input className="username" type="text" name="email" placeholder="Introduce tu correo electronico" value={this.state.username} onChange={e => this.handleChange(e)} />
+        </fieldset>
+        </div>
+      <div>
+        <fieldset>
+          {/* <label>Password:</label> */}
+          <input type="password" name="password" className="password" placeholder="Introduce tu contraseña" value={this.state.password} onChange={e => this.handleChange(e)} />
+        </fieldset>
+        </div>
+      <div className="botonlo">
+        <input className="bot" type="submit" value="Acceder" />
+        </div>
+        </div>
+      </form>
+
+
+      <h1>{this.state.error ? 'Error' : ''}</h1>
+    </div>
+    
     )
   }
 }

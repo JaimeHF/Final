@@ -1,0 +1,372 @@
+*{
+    box-sizing: border-box;
+}
+
+
+////inicio
+.home{
+    width: 100vw;
+    height: 100vh;
+    // background-image: url("/photo-1552667466-07770ae110d0.jpeg");
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    color:black;
+    margin: 0 auto;
+
+    .left{
+        width: 33.5%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+
+        .loco{
+            width: 395px;
+            height: 148px;
+            font-family: Montserrat;
+            font-size: 36px;
+            font-weight: 600;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.42;
+            letter-spacing: normal;
+            // color: #ffffff;
+        }
+
+        .encuentra{
+            width: 348px;
+            height: 129px;
+            font-family: Montserrat;
+            font-size: 16px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.68;
+            letter-spacing: normal;
+            // color: #ffffff;
+        }
+    }
+
+    .right{
+        width: 63.5%;
+        height: 100%;
+        
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        
+
+        .escoge{
+            height: 47px;
+            font-family: Montserrat;
+            font-size: 25px;
+            font-weight: 600;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 2.03;
+            letter-spacing: normal;
+            color: #5b5b5b;
+        }
+        .down{
+            display: flex;
+            flex-direction: column;
+            height: 50%;
+            justify-content: space-between;
+
+
+
+        .jugador{
+            width: 671px;
+            // height: 225px;
+            border-radius: 24px;
+            box-shadow: 4px 4px 20px 0 #e7e7e7;
+            background-color: #ffffff;
+            display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+
+        .siere{
+            width: 398px;
+            height: 54px;
+            font-family: Montserrat;
+            font-size: 14px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 2.03;
+            letter-spacing: normal;
+            color: #5b5b5b;
+        }
+
+
+        .acced{
+            width: 160px;
+            height: 40px;
+            border-radius: 100px;
+            background-image: linear-gradient(to top, #aad239, #2ca10f);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            
+            .accede{
+                // width: 58px;
+                // height: 28px;
+                font-family: Montserrat;
+                font-size: 25px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 2.03;
+                letter-spacing: normal;
+                color: #ffffff;
+            }
+        }
+            
+        }
+
+        .Club{
+            width: 671px;
+            // height: 225px;
+            border-radius: 24px;
+            box-shadow: 4px 4px 20px 0 #e7e7e7;
+            background-color: #ffffff;
+            display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+
+        .sipe{
+            width: 398px;
+            height: 54px;
+            font-family: Montserrat;
+            font-size: 14px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 2.03;
+            letter-spacing: normal;
+            color: #5b5b5b;
+        }
+
+        .acced{
+            width: 160px;
+            height: 40px;
+            border-radius: 100px;
+            background-image: linear-gradient(to top, #aad239, #2ca10f);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            
+            .accede{
+                // width: 58px;
+                // height: 28px;
+                font-family: Montserrat;
+                font-size: 25px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 2.03;
+                letter-spacing: normal;
+                color: #ffffff;
+            }
+        }
+            
+        }
+    }
+    }
+}
+
+
+
+
+////
+/////acceso tanto user como club
+.login{
+    width: 100vw;
+    height: 100vh;
+    // background-image: url("/photo-1552667466-07770ae110d0.jpeg");
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    color:black;
+    margin: 0 auto;
+
+
+.left{
+    width: 33.5%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+
+    .loco{
+        width: 395px;
+        height: 148px;
+        font-family: Montserrat;
+        font-size: 36px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.42;
+        letter-spacing: normal;
+        // color: #ffffff;
+    }
+
+    .encuentra{
+        width: 348px;
+        height: 129px;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.68;
+        letter-spacing: normal;
+        // color: #ffffff;
+    }
+}
+.right{
+    width: 63.5%;
+    height: 100%;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    
+
+
+.user{
+    
+        width: 671px;
+        height: 570px;
+        border-radius: 24px;
+        box-shadow: 4px 4px 20px 0 #e7e7e7;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+    .log{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 671px;
+        height: 527px;
+     
+
+        .datos{
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+         
+    
+        .username{
+            width: 483px;
+            height: 56px;
+            border-radius: 8px;
+            border: solid 1px #dedede;
+            background-color: #ffffff;
+        }
+
+        .password{
+            width: 483px;
+            height: 56px;
+            border-radius: 8px;
+            border: solid 1px #dedede;
+            background-color: #ffffff;
+        }
+  
+
+            .bot{
+                width: 224px;
+                height: 56px;
+                border-radius: 100px;
+                background-image: linear-gradient(to top, #aad239, #2ca10f);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: Montserrat;
+                font-size: 20px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 2.03;
+                letter-spacing: normal;
+                color: #ffffff;
+                
+            
+        }
+    }
+}
+}
+}
+}
+
+
+
+
+//////
+//////pantalla usuario
+
+.homeuser{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f8f8f8;
+    width: 100vw;
+    
+
+    .per{
+        display: flex;
+        justify-content: center;
+        align-items: initial;
+      
+  
+
+        
+   
+    .perfil{
+        width: 259px;
+        height: 395px;
+        border-radius: 8px;
+        box-shadow: 4px 4px 10px 0 rgba(231, 231, 231, 0.3);
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+            //   position: fixed;
+    }
+
+    }
+    .container{
+        width: 925px;
+        height: 260px;
+        border-radius: 8px;
+        background-color: #ffffff;
+        text-decoration: none;
+
+    }
+
+}
+

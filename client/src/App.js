@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
+import "./App.scss"
 import { Switch, Route, Redirect } from "react-router-dom";
 // import Navbar from "./components/navbar/Navbar";
 import Signup from "./components/auth/Signup";
@@ -165,14 +166,14 @@ class App extends Component {
                 exact
                 path="/club"
                 render={() => (
-                  <Club  chosenFlow={this.state.chosenFlow} allPost={this.state.allPost} getUser={this.getUser} />
+                  <Club  chosenFlow={this.state.chosenFlow}  getUser={this.getUser} />
                 )}
               />
               <Route
                 exact
                 path="/user"
                 render={() => (
-                  <User chosenFlow={this.state.chosenFlow} allPost={this.state.allPost} getUser={this.getUser} />
+                  <User chosenFlow={this.state.chosenFlow}  getUser={this.getUser} />
                 )}
               />
               <Route

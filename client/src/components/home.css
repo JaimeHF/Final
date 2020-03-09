@@ -1,11 +1,14 @@
-body{
-    background-image: url("/public/photo-1552667466-07770ae110d0.jpeg");
-}
+
 
 .name{
     background-color: blue;
 }
 
 .containpost{
-    border: saddlebrown solid;
+    width: 60%;
+    height: 10%;
+    border: black solid;
+    text-decoration: none;
+    color:black;
+    margin: 10px;
 }
