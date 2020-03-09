@@ -46,7 +46,7 @@ class Userhome extends React.Component {
         <div className="per">
           <div className="perfil">
             <div>
-              <img src="{this.props.loggedInUser.playerData.imgPath}" alt="foto perfil"/>
+              <img src={this.props.loggedInUser.playerData.imgPath} alt="foto perfil"/>
             </div>
             <div>
               <h1>{this.props.loggedInUser.username}</h1>
@@ -65,7 +65,7 @@ class Userhome extends React.Component {
         <div>{this.state.chosenFlow === "post" &&
           <div>
             {this.props.allPost.map(post => (
-    <Containpost key={post._idx}  id={post._id} title={post.title} name={post.club_id.username} img={post.club_id.clubData.imgPath} date={post.date} description={post.description}  > </Containpost>
+            <Containpost key={post._idx}  id={post._id} title={post.title} name={post.club_id.username} img={post.club_id.clubData.imgPath} date={post.date} description={post.description}  > </Containpost>
             ))}
           </div>}
         </div>

@@ -23,6 +23,7 @@ import Match from "./services/Match"
 import Matchid from "./components/match/Matchid"
 import Userid from "./components/user/Userid"
 import Clubid from "./components/club/Clubid"
+import Newpost from "./components/post/Newpost"
 import Newmatch from "./components/match/Newmatch";
 
 class App extends Component {
@@ -146,7 +147,7 @@ class App extends Component {
                 path="/user/:id"
                 render={(props) => <Userid  user={this.state.User} fetchPost={this.fetchPost} {...props}/>}
               />
-              <Route
+                             <Route
                 exact
                 path="/club/:id"
                 render={(props) => <Clubid  user={this.state.User} fetchPost={this.fetchPost} {...props}/>}
@@ -167,7 +168,12 @@ class App extends Component {
           <Navbarclub logout={this.logout} userInSession={this.state.loggedInUser}></Navbarclub>
             <Redirect to="/Club/home" userInSession={this.state.loggedInUser} logout={this.logout}/>
             <Switch>
-                <Route exact path="/Club/home" render={() => <Clubhome />} />
+                <Route exact path="/Club/home" render={() => <Clubhome loggedInUser={this.state.loggedInUser}/>} />
+                <Route
+                exact
+                path="/newpost"
+                render={(props) => <Newpost  Post={this.state.Post} fetchPost={this.fetchPost} loggedInUser={this.state.loggedInUser}{...props}/>}
+              />
               </Switch>
             <header className="App-header">
             </header>

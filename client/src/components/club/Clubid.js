@@ -18,16 +18,15 @@ class Clubid extends React.Component {
     return this.club.getClubDetails(id)
     .then(response => {
       this.setState({
-        username: response.username,
-  
-
+        username: response,
+        
       });
     });
   }
 
   componentDidMount = () => {
     this.clubDetail(this.props.match.params.id);
-    console.log(this.props.match.params)
+    console.log(this.props.match.params.id)
   };
 
   render() {

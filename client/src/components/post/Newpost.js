@@ -1,6 +1,6 @@
 import React from "react";
 import moment from "moment";
-import Match from "../../services/Match"
+import Post from "../../services/Post"
 
 class Newmatch extends React.Component {
 
@@ -8,35 +8,33 @@ class Newmatch extends React.Component {
     super(props);
     this.state = {
       
-      macthname: "",
-      price: "",
-      location: "",
+      title: "",
+      description: "",
+      location: [],
       date: "",
-      time: "",
-      type: "",
+      club_id:""
+
     };
-    this.match = new Match();
+    this.post = new Post();
   }
 
   handleFormSubmit = (event) => {
     debugger
     event.preventDefault();
-    const macthname = this.state.macthname;
-    const price = this.state.price;
+    const title = this.state.title;
+    const description = this.state.description;
     const location = this.state.location;
     const date = this.state.date;
-    const time = this.state.time;
-    const type = this.state.type;
+    const club_id = this.props.loggedInUser._id
 
-    this.match.newMatch(macthname, price, location, date, time, type)
+    this.post.newPost(title, description, location, date,club_id)
       .then(response => {
         this.setState({
-          macthname: macthname,
-          price: price,
+          title: title,
+          description: description,
           location: location,
           date: date,
-          time: time,
-          type: type,
+          club_id:club_id,
           error: false
         });
 
@@ -44,12 +42,11 @@ class Newmatch extends React.Component {
       })
       .catch(error => {
         this.setState({
-          macthname: macthname,
-          price: price,
+          title: title,
+          description: description,
           location: location,
           date: date,
-          time: time,
-          type: type,
+          club_id:club_id,
           error: true
         });
       })
@@ -60,26 +57,29 @@ class Newmatch extends React.Component {
     this.setState({ [name]: value });
   }
 
+  componentDidMount(){
+    this.setState({ ...this.state, club_id:this.props.loggedInUser._id})
+  }
   render() {
-    debugger
+    console.log(this.props.loggedInUser._id)
     return (
       <div className="">
         <div>
           <img src="" alt="icono" />
         </div>
         <div>
-          <h3 className="">Acceaso para jugador</h3>
+          <h3 className="">Crear posdt</h3>
         </div>
         <form onSubmit={this.handleFormSubmit} >
           <div className="">
             <div>
               <fieldset>
-                <input className="macthname" type="text" name="macthname" placeholder="Dale un nombre al partido" value={this.state.macthname} onChange={e => this.handleChange(e)} />
+                <input className="title" type="text" name="title" placeholder="Dale un nombre al partido" value={this.state.title} onChange={e => this.handleChange(e)} />
               </fieldset>
             </div>
             <div>
               <fieldset>
-                <input type="time" name="time" className="" value={this.state.time} onChange={e => this.handleChange(e)} />
+                <input type="text" name="description" className="" value={this.state.description} onChange={e => this.handleChange(e)} />
               </fieldset>
             </div>
             <div>
@@ -88,16 +88,8 @@ class Newmatch extends React.Component {
               </fieldset>
             </div>
             <div>
-              <fieldset>
-                <input type="number" name="price" className="data" placeholder="precio" value={this.state.number} onChange={e => this.handleChange(e)} />
-              </fieldset>
             </div>
             <div>
-              <select value={this.state.type}>
-                <option value="Futbol Sala">Futbol Sala</option>
-                <option value="Futbol 7">Futbol 7</option>
-                <option value="Futbol 11">Futbol 11</option>
-              </select>
             </div>
 
 

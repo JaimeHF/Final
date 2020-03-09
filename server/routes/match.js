@@ -14,6 +14,8 @@ router.get(`/`, (req, res,next)=>{
 
 
 router.post(`/newmacth`, (req, res, next)=>{
+    console.log("estoy en la ruta de back")
+    console.log(req.body);
     Match.create(req.body)
     .then(newMatch => res.json(newMatch))
     .catch(err =>console.log(err))

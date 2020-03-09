@@ -34,7 +34,7 @@ class Userid extends React.Component {
     return (
       <div className="Postid">
       <Link to="/User/home">back</Link>
-        <h1>Postid</h1>
+        <h1>Userid</h1>
         <img src="" alt="foto club" />
         <div>
           <h1>{username}</h1>

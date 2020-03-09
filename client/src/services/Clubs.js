@@ -14,7 +14,9 @@ export default class Club {
 
 
     getClubDetails = id => this.service.get(`/${id}`)
+            
         .then(response => {
+            console.log(id)
             return response.data
         })
 

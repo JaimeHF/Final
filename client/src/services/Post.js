@@ -19,8 +19,10 @@
           })
 
 
-      newMacth = Macth => this.service.post(`/newpost`, Macth)
-          .then(response => response.data)
+      newPost = (title, description, location, date,club_id) => this.service.post(`/newpost`, {title, description, location, date,club_id})
+          .then(response => {
+                return response.data
+    })
 
 
   }
