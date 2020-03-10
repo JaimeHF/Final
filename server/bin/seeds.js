@@ -9,7 +9,7 @@ const bcryptSalt = 10;
 
 
 mongoose
-  .connect(`${process.env.DB_LOCAL}`, {
+  .connect(`${process.env.DBURL}`, {
     useNewUrlParser: true
   })
   .then(x => {
