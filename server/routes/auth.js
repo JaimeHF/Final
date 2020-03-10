@@ -88,16 +88,16 @@ router.post("/signup", (req, res, next) => {
 
 
 
-router.get('/currentuser', (req, res, next) => {
-  if (req.user) {
-    res.status(200).json(req.user);
-    return;
-  } else {
-    res.status(403).json({
-      message: 'Unauthorized'
-    })
-  }
-})
+// router.get('/currentuser', (req, res, next) => {
+//   if (req.user) {
+//     res.status(200).json(req.user);
+//     return;
+//   } else {
+//     res.status(403).json({
+//       message: 'Unauthorized'
+//     })
+//   }
+// })
 
 
 
