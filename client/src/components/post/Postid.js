@@ -39,7 +39,7 @@ class Postid extends React.Component {
       <div className="Postid">
         <Link to="/User/home">back</Link>
         <h1>Postid</h1>
-        <img src={this.props.img} alt="foto club" />
+        <img src="" alt="foto club" />
         <Link to={`/club/${club_id}`} >
           <div>
             <h1>{title}</h1>

@@ -26,7 +26,7 @@ class Containpost extends React.Component {
     console.log(this.props.img)
     return (
       <div>
-        <Link to={`/post/${this.props.id}`}  img={this.props.img} >
+        <Link to={`/post/${this.props.id}`} >
         <div className="container">
           <div>
             <p>{moment(this.props.date).format("DD/MM/YYYY")}</p>
