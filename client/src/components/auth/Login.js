@@ -72,7 +72,7 @@ class Login extends Component {
         </form>
 
 
-        <h1>{this.state.error ? 'Error' : ''}</h1>
+        {/* <h1>{this.state.error ? 'Error' : ''}</h1> */}
       </div>)
   }
 }
