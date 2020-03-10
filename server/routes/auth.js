@@ -24,11 +24,10 @@ const login = (req, user) => {
   })
 }
 
+
+
 router.post('/login', (req, res, next) => {
   passport.authenticate('local', (err, theUser, failureDetails) => {
-
-    
-  
 
     // Check for errors
     if (err) next(new Error('Something went wrong'));
@@ -181,16 +180,16 @@ router.post("/clubsignup", (req, res, next) => {
   });
 });
 
-// router.get('/currentclub', (req, res, next) => {
-//   if (req.club) {
-//     res.status(200).json(req.club);
-//     return;
-//   } else {
-//     res.status(403).json({
-//       message: 'Unauthorized'
-//     })
-//   }
-// })
+router.get('/currentclub', (req, res, next) => {
+  if (req.club) {
+    res.status(200).json(req.club);
+    return;
+  } else {
+    res.status(403).json({
+      message: 'Unauthorized'
+    })
+  }
+})
 
 
 

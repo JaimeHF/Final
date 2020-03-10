@@ -1,6 +1,7 @@
 import React from "react";
 import moment from "moment";
 import Match from "../../services/Match"
+import { Redirect } from "react-router-dom";
 
 class Newmatch extends React.Component {
 
@@ -10,10 +11,12 @@ class Newmatch extends React.Component {
       
       macthname: "",
       price: "",
-      location: "",
+      // location: "",
       date: "",
       time: "",
       type: "",
+      userCreate_id:"",
+      user_id:""
     };
     this.match = new Match();
   }
@@ -23,44 +26,58 @@ class Newmatch extends React.Component {
     event.preventDefault();
     const macthname = this.state.macthname;
     const price = this.state.price;
-    const location = this.state.location;
+    // const location = this.state.location;
     const date = this.state.date;
     const time = this.state.time;
     const type = this.state.type;
+    const userCreate_id= this.props.loggedInUser._id
+    const user_id = this.props.loggedInUser._id
+    
 
-    this.match.newMatch(macthname, price, location, date, time, type)
+    this.match.newMatch(macthname, price, date, time, type,userCreate_id,user_id)
       .then(response => {
         this.setState({
           macthname: macthname,
           price: price,
-          location: location,
+          // location: location,
           date: date,
           time: time,
-          type: type,
+          type: type.value,
+          userCreate_id:userCreate_id,
+          user_id:user_id,
           error: false
         });
 
-        this.props.getUser(response)
+      this.goBack()
       })
       .catch(error => {
         this.setState({
           macthname: macthname,
           price: price,
-          location: location,
+          // location: location,
           date: date,
           time: time,
           type: type,
+          userCreate_id:userCreate_id,
+          user_id:user_id,
           error: true
         });
       })
   }
+
 
   handleChange = (event) => {
     const { name, value } = event.target;
     this.setState({ [name]: value });
   }
 
+  componentDidMount(){
+    this.setState({ ...this.state, userCreate_id:this.props.loggedInUser._id,user_id:this.props.loggedInUser._id })
+  }
+
   render() {
+
+    console.log(this.props.loggedInUser._id)
     debugger
     return (
       <div className="">
@@ -93,7 +110,7 @@ class Newmatch extends React.Component {
               </fieldset>
             </div>
             <div>
-              <select value={this.state.type}>
+              <select value={this.state.type} name="type" onChange={e => this.handleChange(e)}>
                 <option value="Futbol Sala">Futbol Sala</option>
                 <option value="Futbol 7">Futbol 7</option>
                 <option value="Futbol 11">Futbol 11</option>
@@ -106,9 +123,6 @@ class Newmatch extends React.Component {
             </div>
           </div>
         </form>
-
-
-        <h1>{this.state.error ? 'Error' : ''}</h1>
       </div>)
   }
 

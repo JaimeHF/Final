@@ -1,17 +1,14 @@
 import React, { Component } from "react";
 import "./App.scss"
 import { Switch, Route, Redirect } from "react-router-dom";
-// import Navbar from "./components/navbar/Navbar";
 import Signup from "./components/auth/Signup";
 import Login from "./components/auth/Login";
 import AuthService from "./components/auth/AuthService";
-// import Contents from "./components/contents/Contents";
 import User from "./components/user/User";
 import Home from "./components/Home";
 import Club from "./components/club/Club";
 import Clubsignup from "./components/auth/Clubsignup";
 import Clublogin from "./components/auth/Clublogin";
-// import Axios from "axios";
 import AuthServiceClub from "./components/auth/AuthServiceClub";
 import Userhome from "./components/user/Userhome";
 import Clubhome from "./components/club/Clubhome";
@@ -45,11 +42,12 @@ class App extends Component {
   }
 
   getUser = userObj => {
-    // debugger
+
     this.setState({
       loggedInUser: userObj
     });
   };
+
 
   logout = () => {
     this.service.logout().then(() => {
@@ -121,8 +119,6 @@ class App extends Component {
   }
 
   render() {
-    // debugger
-
     if (this.state.loggedInUser) {
       if (this.state.loggedInUser.role === "player") {
         return (
@@ -140,7 +136,7 @@ class App extends Component {
                 <Route
                 exact
                 path="/match/:id"
-                render={(props) => <Matchid  match={this.state.Match} fetchPost={this.fetchPost} {...props}/>}
+                render={(props) => <Matchid  match={this.state.Match} fetchPost={this.fetchPost} loggedInUser={this.state.loggedInUser} {...props}/>}
               />
                <Route
                 exact
@@ -155,7 +151,7 @@ class App extends Component {
               <Route
                 exact
                 path="/newmatch"
-                render={(props) => <Newmatch  Post={this.state.Post} fetchPost={this.fetchPost} {...props}/>}
+                render={(props) => <Newmatch  Post={this.state.Post} fetchPost={this.fetchPost} loggedInUser={this.state.loggedInUser} {...props}/>}
               />
               </Switch>
             </header>
@@ -181,6 +177,7 @@ class App extends Component {
         );
       }
     } else {
+      
       return (
         <div className="App">
           <header className="App-header">
@@ -215,7 +212,7 @@ class App extends Component {
                 path="/login"
                 render={() => (
                   <Login
-                    getUser={this.getUser}
+                    getUser={ this.getUser} 
                   />
                 )}
               />
@@ -240,7 +237,3 @@ class App extends Component {
 // }
 
 export default App;
-
-
- 
-// <Route exact path="/game/:id" render={(props) =><GameDetail fetchGames={this.fetchGames} allGames={this.state.games} {...props}></GameDetail>} />

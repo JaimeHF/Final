@@ -8,11 +8,11 @@ class Postid extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      title:null,
-        description:null,
-      date:null,
-         club_id:null,
-      };
+      title: null,
+      description: null,
+      date: null,
+      club_id: null,
+    };
     this.post = new Post();
     // this.club = new AuthServiceClub()
   }
@@ -21,9 +21,9 @@ class Postid extends React.Component {
     return this.post.getPostDetails(id).then(response => {
       this.setState({
         title: response.title,
-        description:response.description,
+        description: response.description,
         date: response.date,
-        club_id:response.club_id,
+        club_id: response.club_id,
 
       });
     });
@@ -34,16 +34,16 @@ class Postid extends React.Component {
   };
 
   render() {
-    const { title, date, description,club_id } = this.state
+    const { title, date, description, club_id } = this.state
     return (
       <div className="Postid">
-      <Link to="/User/home">back</Link>
+        <Link to="/User/home">back</Link>
         <h1>Postid</h1>
-        <img src="" alt="foto club" />
-        <Link to={`/club/${club_id}`} >     
-           <div>
-          <h1>{title}</h1>
-        </div>
+        <img src={this.props.img} alt="foto club" />
+        <Link to={`/club/${club_id}`} >
+          <div>
+            <h1>{title}</h1>
+          </div>
         </Link>
         <div>
           <p></p>
@@ -52,7 +52,7 @@ class Postid extends React.Component {
           <h1>{moment(date).format("DD/MM/YYYY")}</h1>
           <p>{description} </p>
         </div>
-        
+
       </div>
     );
   }

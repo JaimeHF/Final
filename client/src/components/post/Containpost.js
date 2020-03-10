@@ -22,16 +22,20 @@ class Containpost extends React.Component {
   // };
 
   render() {
+    console.log("yoooo")
+    console.log(this.props.img)
     return (
-  
       <div>
-        <Link to={`/post/${this.props.id}`}   >
+        <Link to={`/post/${this.props.id}`}  img={this.props.img} >
         <div className="container">
           <div>
             <p>{moment(this.props.date).format("DD/MM/YYYY")}</p>
           </div>
           <div>
           <h3>{this.props.title}</h3>
+          </div>
+          <div>
+            <img src={this.props.img} alt=""/>
           </div>
           <div>
             <p>{this.props.name}</p>

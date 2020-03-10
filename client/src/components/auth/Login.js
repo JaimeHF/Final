@@ -9,18 +9,20 @@ class Login extends Component {
     this.service = new AuthService();
   }
 
+
   handleFormSubmit = (event) => {
-    debugger
+    // debugger
     event.preventDefault();
     const username = this.state.username;
     const password = this.state.password;
 
     this.service.login(username, password)
       .then(response => {
+        // debugger
         this.setState({
           username: username,
           password: password,
-          error: false
+          error: false,
         });
 
         this.props.getUser(response)
@@ -40,7 +42,7 @@ class Login extends Component {
   }
 
   render() {
-    debugger
+    // debugger
     return (
       <div className="log">
         <div>

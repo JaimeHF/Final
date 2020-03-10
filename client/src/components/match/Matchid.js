@@ -2,6 +2,9 @@ import React from "react";
 import moment from "moment";
 import Match from "../../services/Match";
 import { Link } from "react-router-dom";
+import User from "../../services/User";
+import Player from "../user/Player";
+
 
 
 class Matchid extends React.Component {
@@ -12,12 +15,14 @@ class Matchid extends React.Component {
         price: null,
         date: null,
         time: null,
-        userCreated_id: null,
+        userCreated_id: "",
         TYPE: null,
-        user_id: null,
+        user_id: [],
         location: null,
+        username:null,
     };
     this.match = new Match();
+    this.user = new User()
   }
 
   matchDetail(id) {
@@ -36,12 +41,26 @@ class Matchid extends React.Component {
     });
   }
 
+
+
+  // addOne=(id)=>{
+  //     return this.match.addOne(id).then(response=>{
+  //       this.setState({
+  //         ...this.state,
+  //         user_id:this.props.loggedInUser._id
+
+  //       })
+  //     })
+  // }
+
   componentDidMount = () => {
     this.matchDetail(this.props.match.params.id);
+    
   };
 
   render() {
-    const { macthname,price,date,time,userCreated_id,user_id,location,TYPE } = this.state
+    const { macthname,price,date,time,userCreated_id,user_id,location,TYPE, username,imgPath } = this.state
+    console.log(user_id)
     return (
       <div className="Postid">
         <h1>Postid</h1>
@@ -60,10 +79,9 @@ class Matchid extends React.Component {
           <h1>{userCreated_id}</h1>
         </div>
         <div>
-        
-        <Link to={`/user/${this.props.id}`}>
-          <h1>{user_id}</h1>
-          </Link>
+        {this.state.user_id.map(user => (
+          <Player user={user}> </Player>
+           ))}   
           <div>
           <h1>{location}</h1>
         </div>
@@ -74,7 +92,9 @@ class Matchid extends React.Component {
         <div>
           <h1>{moment(date).format("DD/MM/YYYY")}</h1>
           <p>{this.props.description} </p>
-        </div>
+        </div>{this.props.loggedInUser._id === "match" &&
+        <button type="submit" onSubmit={this.addOne}>Apuntarse</button>
+        }
       </div>
     );
   }

@@ -58,13 +58,13 @@ class Club extends React.Component {
               <div >
                 <div className="acces">{this.state.chosenFlow === "login" &&
                   <div >
-                    <Clublogin getUser={this.getUser} />
+                    <Clublogin getUser={this.props.getUser} />
                     <p onClick={() => this.setFlow("signup")} >¿Aún no tienes cuenta? <span> Regístrate</span> </p>
                   </div>}
                 </div>
                 <div className="acces">{this.state.chosenFlow === "signup" &&
                   <div>
-                    <Clubsignup getUser={this.getUser} />
+                    <Clubsignup getUser={this.props.getUser} />
                     <p onClick={() => this.setFlow("login")} >¿Ya tienes cuenta? <span>Accede</span> </p>
                   </div>}
                 </div>

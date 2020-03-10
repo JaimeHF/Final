@@ -305,7 +305,7 @@ let players = [{
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     role: "player",
     playerData: {
-    imgPath: `../images/flappy.png`,
+    imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1582131476/folder-name/flappy.png.png`,
     position:`Defensa`,
   }},
   {

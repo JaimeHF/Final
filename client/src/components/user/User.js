@@ -13,6 +13,7 @@ class User extends React.Component {
     allPost: [],
     chosenFlow: "login",
   }
+  
 
 
   setFlow(flowType) {
@@ -44,7 +45,6 @@ class User extends React.Component {
   
 
   render() {
-    console.log(this.state.loggedInUser)
     return (
       <div >
         {/* <Navbar loggedInUser={this.state.loggedInUser} logout={this.logout} /> */}
@@ -74,13 +74,13 @@ class User extends React.Component {
               <div >
                 <div className="acces">{this.state.chosenFlow === "login" &&
                   <div >
-                    <Login getUser={this.getUser} />
+                    <Login  getUser={this.props.getUser} />
                     <p onClick={() => this.setFlow("signup")}  >¿Aún no tienes cuenta? <span> Regístrate</span> </p>
                   </div>}
                 </div>
                 <div className="acces">{this.state.chosenFlow === "signup" &&
                   <div>
-                    <Signup getUser={this.getUser} />
+                    <Signup  getUser={this.props.getUser}/>
                     <p onClick={() => this.setFlow("login")} >¿Ya tienes cuenta? <span>Accede</span> </p>
                   </div>}
                 </div>

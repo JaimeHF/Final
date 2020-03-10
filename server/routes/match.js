@@ -24,24 +24,30 @@ router.post(`/newmacth`, (req, res, next)=>{
 router.get(`/:id`,(req, res, next)=>{
     let {id} = req.params
      Match.findById(id)
+     .populate({
+      path: 'club_id',
+      model: 'User'
+  })
         .then((macth) => {
           res.json(macth)
         });
 
 })
 
-// router.put(`/editmacth/:id`,(req,res,next)=>{
-//     let {id} = req.params
-//     Match.findByIdAndUpdate(id,{
-//         title: req.body.title,
-//         description: req.body.description,
-//         date: req.body.date,
-//     },{
-//         new: true
-//       })
-//       .then((editMatch) => {
-//         res.json(editMatch)
-//         // res.json(user)
-//       });
-// })
+
+router.put(`/editmacth/:id`,(req,res,next)=>{
+    console.log(req.params)
+    let {id} = req.params
+    Match.findByIdAndUpdate(id,{
+        title: req.body.title,
+        description: req.body.description,
+        date: req.body.date,
+    },{
+        new: true
+      })
+      .then((editMatch) => {
+        res.json(editMatch)
+        // res.json(user)
+      });
+})
 module.exports = router;
