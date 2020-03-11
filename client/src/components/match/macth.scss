@@ -1,0 +1,122 @@
+.containmatch{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 25px;
+    margin-left: 30px;
+    width: 925px;
+    height: 150px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    
+    &:hover{
+        text-decoration: none;
+        border: 1px solid   #ffffff;
+         box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+         border-top-left-radius: 10px;
+         border-bottom-left-radius: 10px;
+         animation-name: example;
+         animation-duration: 0.25s;
+         box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+
+    .conleft{
+        height: 100%;
+        width: 25%;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    flex-direction: column;
+    text-align: center;
+        .dat{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 70%;
+            // height: 2px;
+            font-family: Montserrat;
+            font-size: 18px;
+            // font-weight: 600;
+            // font-stretch: normal;
+            // font-style: normal;
+            // line-height: 2.03;
+            // letter-spacing: normal;
+            color: #5b5b5b;
+        }
+        .price{
+            width: 43px;
+            height: 28px;
+            font-family: Montserrat;
+            font-size: 22px;
+            font-weight: 600;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 2.03;
+            letter-spacing: normal;
+            color: #5b5b5b;
+        }
+    }
+    
+    .concenter{
+        height: 100%;
+        width: 50%;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        display: flex;
+    flex-direction: column;
+    color: #5b5b5b;
+        .title{
+            width: 330px;
+            height: 28px;
+            font-family: Montserrat;
+            font-size: 18px;
+            font-weight: 600;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 2.03;
+            letter-spacing: normal;
+            color: #5b5b5b;
+        }
+    }
+
+
+    .conright{
+        height: 100%;
+        width: 25%;
+        justify-content: space-around;
+        align-items: center;
+        display: flex;
+    flex-direction: column;
+    text-align: center;
+    }
+    
+    .futbol{
+
+        width: 112px;
+        height: 28px;
+        font-family: Montserrat;
+        font-size: 22px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 2.03;
+        letter-spacing: normal;
+        color: #5b5b5b;
+ 
+        
+    }
+    .type{
+        width: 112px;
+        height: 28px;
+        font-family: Montserrat;
+        font-size: 22px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 2.03;
+        letter-spacing: normal;
+        color: #5b5b5b;
+    }
+}

@@ -26,7 +26,7 @@ export default class Match {
 
 
     addOne = (id) =>{
-            return this.match.put(`/editmacth/${id}`, {id})
+            return this.match.put(`/addmacth/${id}`, {id})
             .then(response => {
                 console.log(response)
                 return response.data

@@ -16,7 +16,7 @@ class Navbarclub extends Component {
         <nav className="navbar" >
          
         <div>
-              <Link to="/User/home"> <img src="https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766640/logo-color_x2_plcr4s.png" alt=""/> </Link>
+              <Link to="/Club/home"> <img src="https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766640/logo-color_x2_plcr4s.png" alt=""/> </Link>
             </div>  
           <div>
             <h1 onClick={this.handleLogout}>Cerrar sesion</h1>

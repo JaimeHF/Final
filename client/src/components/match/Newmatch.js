@@ -22,7 +22,7 @@ class Newmatch extends React.Component {
   }
 
   handleFormSubmit = (event) => {
-    debugger
+    // debugger
     event.preventDefault();
     const macthname = this.state.macthname;
     const price = this.state.price;
@@ -78,7 +78,7 @@ class Newmatch extends React.Component {
   render() {
 
     console.log(this.props.loggedInUser._id)
-    debugger
+    
     return (
       <div className="">
         <div>

@@ -42,7 +42,7 @@ class App extends Component {
   }
 
   getUser = userObj => {
-
+    // debugger
     this.setState({
       loggedInUser: userObj
     });
@@ -59,6 +59,7 @@ class App extends Component {
     return this.service
       .loggedin()
       .then(response => {
+        // debugger
         this.setState({
           loggedInUser: response
         });
@@ -119,6 +120,7 @@ class App extends Component {
   }
 
   render() {
+    debugger
     if (this.state.loggedInUser) {
       if (this.state.loggedInUser.role === "player") {
         return (
@@ -164,7 +166,7 @@ class App extends Component {
           <Navbarclub logout={this.logout} userInSession={this.state.loggedInUser}></Navbarclub>
             <Redirect to="/Club/home" userInSession={this.state.loggedInUser} logout={this.logout}/>
             <Switch>
-                <Route exact path="/Club/home" render={() => <Clubhome loggedInUser={this.state.loggedInUser}/>} />
+                <Route exact path="/Club/home" render={() => <Clubhome loggedInUser={this.state.loggedInUser} allPost={this.state.allPost} />}  />
                 <Route
                 exact
                 path="/newpost"

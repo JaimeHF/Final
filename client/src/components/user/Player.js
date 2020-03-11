@@ -17,8 +17,6 @@ class Player extends React.Component {
   }
   playerDetails(id) {
     return this.user.getPlayerDetails(id).then(response => {
-      debugger
-      console.log(response.username)
       this.setState({
         username: response.username,
         imgPath: response.playerData.imgPath,

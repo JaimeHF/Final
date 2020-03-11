@@ -15,8 +15,6 @@ export default class Player {
 
     getPlayerDetails = id => this.service.get(`/${id}`)
         .then(response => {
-            console.log("entro")
-            debugger
             return response.data
         })
 

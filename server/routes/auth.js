@@ -47,6 +47,7 @@ router.post("/signup", (req, res, next) => {
   const username = req.body.username;
   const password = req.body.password;
   const role = req.body.role;
+  const playerData = {}
 
   if (username === "" || password === "") {
     res.json({
@@ -71,7 +72,8 @@ router.post("/signup", (req, res, next) => {
     const newUser = new User({
       username,
       password: hashPass,
-      role
+      role,
+      playerData
     });
 
     newUser.save()
@@ -141,6 +143,7 @@ router.post("/clubsignup", (req, res, next) => {
   const clubname = req.body.clubname;
   const password = req.body.password;
   const role = req.body.role;
+  const clubData = {}
 
   if (clubname === "" || password === "") {
     res.json({
@@ -165,7 +168,8 @@ router.post("/clubsignup", (req, res, next) => {
     const newClub = new Club({
       clubname,
       password: hashPass,
-      role
+      role,
+      clubData
     });
 
     newClub.save()

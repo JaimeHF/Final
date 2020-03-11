@@ -5,7 +5,8 @@ const postSchema = new Schema({
   title: String,
   location: [Number],
   description: String,
-  date: Date,
+  date: {type: Date,
+  default: Date.now},
   club_id: {
     type: Schema.Types.ObjectId, 
     ref: "Club"},

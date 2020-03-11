@@ -7,7 +7,7 @@ const Match = require("../models/Match");
 
 
 router.get(`/`, (req, res,next)=>{
-    Match.find()
+    Match.find().sort({date:1})
     .then(allMatch=> res.json(allMatch))
     .catch(err => console.log(err))
 })
@@ -35,14 +35,12 @@ router.get(`/:id`,(req, res, next)=>{
 })
 
 
-router.put(`/editmacth/:id`,(req,res,next)=>{
+router.put(`/addmacth/:id`,(req,res,next)=>{
     console.log(req.params)
     let {id} = req.params
-    Match.findByIdAndUpdate(id,{
-        title: req.body.title,
-        description: req.body.description,
-        date: req.body.date,
-    },{
+    Match.findByIdAndUpdate(id,{$push:{
+      user_id: req.body.newUser,
+    }},{
         new: true
       })
       .then((editMatch) => {

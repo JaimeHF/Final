@@ -1,4 +1,4 @@
-import "../home.css";
+import "./post.scss"
 import React from "react";
 import { Link, Switch, Route } from "react-router-dom";
 import moment from "moment";
@@ -6,14 +6,14 @@ import Post from "../../services/Post";
 import Postid from "../post/Postid";
 
 class Containpost extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      postData: null,
-      postId: null
-    };
-    this.post = new Post();
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     postData: null,
+  //     postId: null
+  //   };
+  //   this.post = new Post();
+  // }
 
   // componentDidMount = () => {
   //   this.setState({
@@ -22,22 +22,21 @@ class Containpost extends React.Component {
   // };
 
   render() {
-    console.log("yoooo")
-    console.log(this.props.img)
+    // console.log(this.props.img)
     return (
       <div>
-        <Link to={`/post/${this.props.id}`} >
-        <div className="container">
-          <div>
+        <Link to={`/post/${this.props.id}`} img={this.props.img} className="containpost" >
+        <div className="containpos">
+          <div className="date">
             <p>{moment(this.props.date).format("DD/MM/YYYY")}</p>
           </div>
-          <div>
+          <div className="title">
           <h3>{this.props.title}</h3>
           </div>
           <div>
-            <img src={this.props.img} alt=""/>
+            <img src="" alt=""/>
           </div>
-          <div>
+          <div className="equi">
             <p>{this.props.name}</p>
           </div>
       </div>

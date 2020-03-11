@@ -72,3 +72,184 @@
 }
 }
 }
+
+
+
+//////
+//////pantalla usuario
+
+
+
+.homeuser{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #f8f8f8;
+    width: 100vw;
+    // width: 1440px;
+    // height: 900px;
+    text-decoration: none;
+
+    
+    
+    .per{
+        display: flex;
+        justify-content: start;
+        flex-direction: column;
+        .perall{
+            position: fixed;
+            top: 103px;
+            left: 87px;
+        
+      
+        .np{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 259px;
+            height: 56px;
+            border-radius: 100px;
+            background-image: linear-gradient(to top, #aad239, #2ca10f);
+            margin-top: 50px;
+            h1{
+                width: 107.5px;
+                height: 28px;
+                font-family: Montserrat;
+                font-size: 18px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 2.03;
+                letter-spacing: normal;
+                color: #ffffff;
+            }
+          }
+
+        
+   
+    .perfil{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 259px;
+        height: 395px;
+        border-radius: 8px;
+        box-shadow: 4px 4px 10px 0 rgba(231, 231, 231, 0.3);
+        background-color: #ffffff;
+        img{
+            width: 95px;
+            height: 95px;
+          
+        }
+            //   position: fixed;
+          
+            }
+    }
+    }
+    }
+    .po{
+        margin-top: 150px;
+        .sup{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            top:60px;
+            width: 100%;
+            height: 320px;
+            position: fixed;
+            background-color: #f8f8f8;
+            padding-left: 20px;
+            .bus{
+                display: flex;
+                // justify-content: ;
+                align-items: center;
+                flex-direction: row;
+                
+            .depo{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 199px;
+                height: 199px;
+                border-radius: 8px;
+                box-shadow: 4px 4px 20px 0 rgba(231, 231, 231, 0.3);
+                background-color: #ffffff;
+                margin-right: 40px;
+                &:hover{
+                    text-decoration: none;
+                    border: 1px solid   #ffffff;
+                     box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+                     border-top-left-radius: 10px;
+                     border-bottom-left-radius: 10px;
+                     animation-name: example;
+                     animation-duration: 0.25s;
+                     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+                }
+            }
+        }
+        .pob{
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            align-items: center;
+            // 
+            // top:60px;
+            // width: 100%;
+            // height: 120px;
+            background-color: #f8f8f8;
+
+         
+           button{
+            background-color: #f8f8f8;
+                margin-right: 20px;
+                width: 121px;
+                height: 28px;
+                font-family: Montserrat;
+                font-size: 18px;
+                font-weight: 600;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 2.03;
+                letter-spacing: normal;
+                color: #5b5b5b;
+                border:none;
+               &:hover{
+                    background-image: linear-gradient(to top, #d2ca39, #2ca10f);
+                                
+                }
+            }
+        }
+    }
+    .componentes{
+        margin-top: 250px;
+    }
+   
+}
+
+  
+
+
+.navbar{
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    position: fixed;
+
+    h1{
+        width: 91px;
+        height: 28px;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 2.03;
+        letter-spacing: normal;
+        color: #5b5b5b;
+    }
+}

@@ -10,7 +10,7 @@ const bcryptSalt = 10;
 
 
 router.get(`/`, (req, res,next)=>{
-    Post.find()
+    Post.find().sort({date:-1})
     .populate({
         path: 'club_id',
         model: 'User'

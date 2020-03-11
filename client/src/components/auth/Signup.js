@@ -72,7 +72,7 @@ class Signup extends Component {
         </div>
         </div>
       </form>
-      <h1>borrar</h1>
+     
 
       {/* <h1>{this.state.error ? 'Error' : ''}</h1> */}
     </div>

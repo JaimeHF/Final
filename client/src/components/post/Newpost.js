@@ -11,7 +11,7 @@ class Newmatch extends React.Component {
       title: "",
       description: "",
       location: [],
-      date: "",
+      // date: "",
       club_id:""
 
     };
@@ -19,21 +19,21 @@ class Newmatch extends React.Component {
   }
 
   handleFormSubmit = (event) => {
-    debugger
+    // debugger
     event.preventDefault();
     const title = this.state.title;
     const description = this.state.description;
     const location = this.state.location;
-    const date = this.state.date;
+    // const date = this.state.date;
     const club_id = this.props.loggedInUser._id
 
-    this.post.newPost(title, description, location, date,club_id)
+    this.post.newPost(title, description, location,club_id)
       .then(response => {
         this.setState({
           title: title,
           description: description,
           location: location,
-          date: date,
+          // date: date,
           club_id:club_id,
           error: false
         });
@@ -45,7 +45,7 @@ class Newmatch extends React.Component {
           title: title,
           description: description,
           location: location,
-          date: date,
+          // date: date,
           club_id:club_id,
           error: true
         });
@@ -79,14 +79,14 @@ class Newmatch extends React.Component {
             </div>
             <div>
               <fieldset>
-                <input type="text" name="description" className="" value={this.state.description} onChange={e => this.handleChange(e)} />
-              </fieldset>
+              <textarea type="text" name="description" id="" rows="6" cols="30" maxlength="300" class="textito" placeholder="Escribe aquí.." onChange={e => this.handleChange(e)}/>
+               </fieldset>
             </div>
-            <div>
+            {/* <div>
               <fieldset>
                 <input type="date" name="date" className="" placeholder="Introduce tu contraseña" value={this.state.date} onChange={e => this.handleChange(e)} />
               </fieldset>
-            </div>
+            </div> */}
             <div>
             </div>
             <div>
@@ -99,8 +99,6 @@ class Newmatch extends React.Component {
           </div>
         </form>
 
-
-        <h1>{this.state.error ? 'Error' : ''}</h1>
       </div>)
   }
 

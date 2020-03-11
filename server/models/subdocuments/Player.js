@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const playerSchema = new Schema({
   imgPath: {
     type: String,
-    default: `../images/default.png`
+    default: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583865232/default_wye5xb.png`
   },
   position: {
     type: [String],

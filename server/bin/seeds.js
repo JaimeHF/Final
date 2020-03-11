@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('dotenv').config({ path: '/Users/jhf/Desktop/ironhack/Final/server/.env' });
 
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
