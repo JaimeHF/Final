@@ -3,7 +3,6 @@ import moment from "moment";
 import Post from "../../services/Post";
 import { Link } from "react-router-dom";
 import Club from "../../services/Clubs";
-import Maps from "../Maps/Maps"
 
 
 class Postid extends React.Component {
