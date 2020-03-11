@@ -370,7 +370,10 @@ User.deleteMany().then(() => Post.deleteMany()).then(()=>Match.deleteMany())
       {
        macthname: "PARTIDO DE DOMINGO",
       price: 2.5,
-      location: [40.4375097,-3.6606042],
+      coord: {
+        lat: 40.4375097,
+        lng: -3.6606042
+      },
       date: "2020-03-15",
       time:"18:00",
       type:`Futbol 7`,
@@ -380,7 +383,10 @@ User.deleteMany().then(() => Post.deleteMany()).then(()=>Match.deleteMany())
       {
         macthname: "MIERCOLES NOCHE",
        price: 2.5,
-       location: [40.4456018,-3.709284],
+       coord: {
+        lat: 40.4456018,
+        lng: -3.709284
+      },
        date: "2020-03-18",
        time:"21:00",
        type:`Futbol 11`,
@@ -390,7 +396,10 @@ User.deleteMany().then(() => Post.deleteMany()).then(()=>Match.deleteMany())
        {
         macthname: "CLASICO DE VIERNES",
        price: 2.5,
-       location: [40.3954079,-3.7047247],
+       coord: {
+        lat: 40.3954079,
+        lng: -3.7047247
+      },
        date: "2020-03-13",
        time:"22:00",
        type:`Futbol 7`,
@@ -400,7 +409,10 @@ User.deleteMany().then(() => Post.deleteMany()).then(()=>Match.deleteMany())
        {
         macthname: "LUNES MAÑANA",
        price: 2.5,
-       location: [40.6125205,-3.7168026],
+       coord: {
+        lat: 40.6125205,
+        lng: -3.7168026
+      },
        date: "2020-03-16",
        time:"10:00",
        type:`Futbol Sala`,
@@ -410,7 +422,10 @@ User.deleteMany().then(() => Post.deleteMany()).then(()=>Match.deleteMany())
        {
         macthname: "CLASICO DE VIERNES",
        price: 2.5,
-       location: [40.3954079,-3.7047247],
+       coord: {
+        lat: 40.3954079,
+        lng: -3.7047247
+      },
        date: "2020-03-20",
        time:"22:00",
        type:`Futbol 7`,
@@ -427,116 +442,180 @@ User.deleteMany().then(() => Post.deleteMany()).then(()=>Match.deleteMany())
   .then((createdClubs) => {
     let posts = [{
         title: "VEN A PROBAR SUERTE",
-        location: [40.4462334, -3.7091072],
+        coord: {
+          lat: 40.4462334,
+          lng: -3.7091072
+        },
         description: "C.D. ALONSO CANO anuncia que con el comienzo de la pretenmporada el proximo dia 15 de agosto ha decidido abrir sus puertas a todo el mundo que quiera venir a entrenar y probas suerte para conseguir plaza en el equipo para la temporada.Somos un equipo con un muy buen ambiente y lo primordial venir con muchas ganas de pasarlo bien y trabajar",
         date: new Date(2020, 07, 10),
         club_id: createdClubs[8]._id
       },
       {
         title: "SE BUSCA PORTERO",
+        coord: {
+          lat: 40.5597218,
+          lng: -3.6268323,
+        },
         description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
         date: "2020-06-17",
         club_id: createdClubs[0]._id
       },
       {
         title: "COMIENZA PLAZO DE PRUEBAS PARA EL PRIMER EQUIPO",
-        location: [40.4032248, -3.6685674],
+        coord: {
+          lat: 40.4032248,
+          lng: -3.6685674
+        },
         description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
         date: "2020-07-20",
         club_id: createdClubs[7]._id
       },
       {
         title: "SE BUSCA DELANTERO GOLEADOR Y HABIL EN EL TERCER TIEMPO",
+        coord: {
+          lat: 40.4460268,
+          lng: -3.7082682,
+        },
         description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
         date: "2020-01-20",
         club_id: createdClubs[9]._id
       },
       {
         title: "NUEVO EQUIPO BUSCA",
+        coord: {
+          lat: 40.4092892,
+          lng: -3.6012756,
+        },
         description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
         date: "2020-06-20",
         club_id: createdClubs[3]._id
       },
       {
         title: "SE BUSCA PORTERO",
+        coord: {
+          lat: 40.4134395,
+          lng: -3.6714485,
+        },
         description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
         date: "2020-02-20",
         club_id: createdClubs[4]._id
       },
       {
         title: "COMIENZA UNA NUEVA AVENTURA",
-        location: [40.3969897, -3.7357897],
+        coord: {
+          lat: 40.3969897,
+          lng: -3.7357897
+        },
         description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
         date: "2020-07-01",
         club_id: createdClubs[2]._id
       },
       {
         title: "COMIENZA UNA NUEVA AVENTURA",
-        location: [40.3969897, -3.7357897],
+        coord: {
+          lat: 40.3969897,
+          lng: -3.7357897
+        },
         description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
         date: "2019-07-01",
         club_id: createdClubs[2]._id
       },
       {
         title: "ABIERTO ENTRENAMIENTOS PARA NUEVOS INTEGANTES",
-        location: [40.3953098, -3.704617],
+        coord: {
+          lat: 40.3953098,
+          lng: 3.704617
+        },
         description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
         date: "2020-07-20",
         club_id: createdClubs[5]._id
       },
       {
         title: "ABIERTO ENTRENAMIENTOS PARA NUEVOS INTEGANTES",
-        location: [40.3953098, -3.704617],
+        coord: {
+          lat: 40.3953098,
+          lng: -3.704617
+        },
         description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
         date: "2019-07-20",
         club_id: createdClubs[5]._id
       },
       {
         title: "SE BUSCA EQUIPO PARA JUGAR ESTE VERANO",
+        coord: {
+          lat: 40.5597218,
+          lng: -3.6268323,
+        },
          description:"Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
          date: "2020-07-01",
          club_id: createdClubs[0]._id
     },
       {
         title: "NO TE QUEDES SIN DEMOSTRAR LO QUE VALES",
-        location: [40.3736818, -3.7296272],
+        coord: {
+          lat: 40.3736818,
+          lng: -3.7296272
+        },
         description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
         date: "2020-07-10",
         club_id: createdClubs[6]._id
       },
       {
         title: "EN BUSCA DE DEFENSA CONTUNDENTE",
+        coord: {
+          lat: 40.4460268,
+          lng: -3.7082682,
+        },
         description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
         date: "2020-08-13",
         club_id: createdClubs[9]._id
       },
       {
         title: "COMIENZO ENTRENMIENTOS",
-        location: [40.4462334, -3.7091072],
+        coord: {
+          lat: 40.4462334,
+          lng: -3.7091072
+        },
         description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
         date: "2020-06-30",
         club_id: createdClubs[8]._id
       },
       {
         title: "SE BUSCA PORTERO",
+        coord: {
+          lat: 40.4460268,
+          lng: -3.7082682,
+        },
         description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
         date: "2019-04-20",
         club_id: createdClubs[9]._id
       },
       {
         title: "NUEVO EQUIPO",
+        coord: {
+          lat: 40.4460268,
+          lng: -3.7082682,
+        },
         description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
         date: "2020-06-22",
         club_id: createdClubs[9]._id
       },
       {
         title: "SE BUSCA PORTERO DA IGUAL EL NIVEL",
+        coord: {
+          lat: 40.5597218,
+          lng: -3.6268323,
+        },
         description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
         date: "2020-03-20",
         club_id: createdClubs[0]._id
       },
       {
         title: "BUSCO EQUIPO CONTRA EL QUE JUGAR",
+        coord: {
+          lat: 37.3845307,
+          lng: -6.0152011,
+        },
         description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
         date: "2020-03-20",
         club_id: createdClubs[1]._id

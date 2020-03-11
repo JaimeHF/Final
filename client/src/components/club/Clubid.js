@@ -2,51 +2,59 @@ import React from "react";
 import moment from "moment";
 import { Link } from "react-router-dom";
 import Club from "../../services/Clubs";
+import "./club.scss"
 
 
 class Clubid extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-        username:null,
+      username: null,
+      imgPath: null,
+      description: null
 
-      };
-      this.club = new Club();
+    };
+    this.club = new Club();
   }
 
   clubDetail(id) {
     return this.club.getClubDetails(id)
-    .then(response => {
-      this.setState({
-        username: response,
-        
+      .then(response => {
+        this.setState({
+          username: response.username,
+          imgPath: response.clubData.imgPath,
+          description: response.clubData.description
+
+        });
       });
-    });
   }
 
   componentDidMount = () => {
     this.clubDetail(this.props.match.params.id);
-    console.log(this.props.match.params.id)
   };
 
   render() {
-    const { username, date, description,club_id } = this.state
+    const { description, imgPath, username } = this.state
     return (
-      <div className="Postid">
-      <Link to="/User/home">back</Link>
-        <h1>Clubdetail</h1>
-        <img src="" alt="foto club" />
-        <div>
-          <h1>{username}</h1>
+      <div className="Clubid">
+        <div className="clubleft">
+          <div>
+            <img src={imgPath} alt="foto club" className="do"/>
+          </div>
+          <div className="envia">
+            <div>
+              <p className="pip">Enviar  mensaje</p>
+            </div>
+          </div>
         </div>
-        {/* <div>
-          <p></p>
+        <div className="clubright">
+          <div>
+            <p className="clname">{username}</p>
+          </div>
+          <div>
+            <p className="tion">{description} </p>
+          </div>
         </div>
-        <div>
-          <h1>{moment(date).format("DD/MM/YYYY")}</h1>
-          <p>{description} </p>
-        </div> */}
-        
       </div>
     );
   }

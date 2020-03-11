@@ -3,6 +3,7 @@ import moment from "moment";
 import Post from "../../services/Post";
 import { Link } from "react-router-dom";
 import Club from "../../services/Clubs";
+import Maps from "../Maps/Maps"
 
 
 class Postid extends React.Component {
@@ -14,7 +15,9 @@ class Postid extends React.Component {
       date: null,
       club_id: null,
       imgPath: null,
-      username:null
+      username: null,
+      lng: null,
+      lat: null
     };
     this.post = new Post();
     this.club = new Club()
@@ -28,13 +31,17 @@ class Postid extends React.Component {
         description: response.description,
         date: response.date,
         club_id: response.club_id,
+        lat: response.coord.lat,
+        lng: response.coord.lng
 
-      },()=>{this.clubDetail(this.state.club_id)});
+
+
+      }, () => { this.clubDetail(this.state.club_id) });
     });
   }
 
-  clubDetail(id){
-    return this.club.getClubDetails(id).then(response=>{
+  clubDetail(id) {
+    return this.club.getClubDetails(id).then(response => {
       debugger
       this.setState({
         imgPath: response.clubData.imgPath,
@@ -49,34 +56,42 @@ class Postid extends React.Component {
   };
 
   render() {
-    const { title, date, description, club_id, imgPath, username} = this.state
+    const { title, date, description, club_id, imgPath, username, lng, lat } = this.state
     return (
       <div className="Postid">
-        <div className="Postidall">
+       <div className="Postidall">
           <div className="postleft">
-            <Link to="/User/home">back</Link>
-            <div>
-              <Link to={`/club/${club_id}`} className="">
+            <div className="datito">
+              <p >{moment(date).format("DD/MM/YYYY")}</p>
+            </div>
+            <div >
                 <div>
-                  <h1>{title}</h1>
+                  <p className="tit">{title}</p >
                 </div>
-              </Link>
             </div>
-              <div>
-                <h1>{moment(date).format("DD/MM/YYYY")}</h1>
-              </div>
+          
             <div>
-              <p>{username}</p>
+              <p className="nom">{username}</p>
             </div>
             <div>
               <div>
-                <p>{description} </p>
+                <p className="desc">{description} </p>
               </div>
             </div>
           </div>
           <div className="postright">
-          <div>
-              <img src={imgPath} alt="foto club" />
+            <div >
+              <img src={imgPath} alt="foto club" className="escudo" />
+            </div>
+            <div className="mapa">
+              <img src="" alt="supuesto mapa"/>
+            </div>
+            <div className="ficha">
+            <Link to={`/club/${club_id}`} >
+                <div>
+                  <p className="pp">Ficha del club</p>
+                </div>
+              </Link>
             </div>
           </div>
         </div>

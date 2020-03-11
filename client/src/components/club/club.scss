@@ -1,0 +1,81 @@
+.Clubid{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+
+
+    .clubleft{
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+
+        .do{
+            width:350px ;
+            height: 400px;
+        }
+        .envia{
+
+            width: 176px;
+            height: 56px;
+            border-radius: 100px;
+            border: solid 1px #27ae60;
+            background-image: linear-gradient(to top, #aad239, #2ca10f);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .pip{
+                margin-top: 10px;
+                width: 100px;
+                height: 28px;
+                font-family: Montserrat;
+                font-size: 14px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 2.03;
+                letter-spacing: normal;
+                color: #ffffff;
+            }
+        }
+    }
+
+    .clubright{
+        display: flex;
+        flex-direction: column;
+        // justify-content: space-around;
+        align-items: center;
+        height: 80%;
+        width: 50%;
+        .clname{
+            width: 613px;
+            height: 53px;
+            font-family: Montserrat;
+            font-size: 26px;
+            font-weight: 600;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 2.03;
+            letter-spacing: normal;
+            color: #5b5b5b;
+            margin-bottom: 60px;
+        }
+        .tion{
+            width: 613px;
+            height: 53px;
+            font-family: Montserrat;
+            font-size: 22px;
+            font-weight: 600;
+            // font-stretch: normal;
+            // font-style: normal;
+            // line-height: 2.03;
+            // letter-spacing: normal;
+            color: #5b5b5b;
+        }
+
+    }
+}

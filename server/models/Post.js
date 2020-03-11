@@ -3,7 +3,10 @@ const Schema   = mongoose.Schema;
 
 const postSchema = new Schema({
   title: String,
-  location: [Number],
+  coord: {
+    lat: Number,
+    lng: Number
+  },
   description: String,
   date: {type: Date,
   default: Date.now},

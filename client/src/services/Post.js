@@ -19,7 +19,7 @@
           })
 
 
-      newPost = (title, description, location, club_id) => this.service.post(`/newpost`, {title, description, location, club_id})
+      newPost = (title, description, coord, club_id) => this.service.post(`/newpost`, {title, description, coord, club_id})
           .then(response => {
                 return response.data
     })
