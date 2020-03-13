@@ -4,6 +4,7 @@ import Match from "../../services/Match";
 import User from "../../services/User";
 import Player from "../user/Player";
 import "./macth.scss"
+import { Link } from "react-router-dom";
 
 
 
@@ -22,6 +23,7 @@ class Matchid extends React.Component {
       location: null,
       username: null,
       isAdd: null,
+      description:null,
     };
     this.match = new Match();
     this.user = new User()
@@ -35,28 +37,17 @@ class Matchid extends React.Component {
         price: response.price,
         date: response.date,
         time: response.time,
-        userCreate_id: response.userCreate_id,
+        username: response.userCreate_id.username,
         type: response.type,
         user_id: response.user_id,
         location: response.location,
         description: response.description,
-      },()=>{this.userDetail(this.state.userCreate_id)})
+      })
     });
   }
 
-  userDetail(id){
-    return this.user.getPlayerDetails(id)
-    .then(response=>{
-      this.setState({
-        username:response.username
-      })
-    })
-  }
-
-
   addOne = () => {
     console.log("entro")
-    debugger
     this.match.addOne(this.state._id, { newUser: this.props.loggedInUser._id })
     .then(response => {
       this.setState({
@@ -72,6 +63,7 @@ class Matchid extends React.Component {
   };
 
   render() {
+    console.log(this.state)
     const { macthname, price, date, time, type, username, description } = this.state
     return (
       <div className="paco">
@@ -109,11 +101,13 @@ class Matchid extends React.Component {
               <p>{description}</p>
             </div>
             <div >
+            <Link to={`/match/${this.state._id}`} >
               {this.state.user_id.some(e=>e===this.props.loggedInUser._id) ? (
                 <button  onClick={this.exit} className="maclefbos">Salirae</button>
               ) : (
                   <button  onClick={this.addOne} className="maclefbos">Apuntarse</button>
                 )}
+</Link>
             </div>
           </div>
 

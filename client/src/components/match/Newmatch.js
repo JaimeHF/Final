@@ -1,6 +1,7 @@
 import React from "react";
 import Match from "../../services/Match"
 import "./macth.scss"
+import { Link } from "react-router-dom";
 
 class Newmatch extends React.Component {
 
@@ -17,7 +18,8 @@ class Newmatch extends React.Component {
       userCreate_id:"",
       user_id:"",
       description:"",
-      calc:0
+      calc:0,
+      description:null
     };
     this.match = new Match();
   }
@@ -138,7 +140,7 @@ class Newmatch extends React.Component {
               <textarea type="text" name="description" id="" rows="6" cols="30" maxLength="300" className="textito" placeholder="Escribe aquí.." onChange={e => this.handleChange(e)}/>
                </fieldset>
             <div className="botsub">
-              <input className="bosub" type="submit" value="Crear" />
+              <input className="bosub" type="submit" value="Crear"/>
             </div>
             </div>
         </form>

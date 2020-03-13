@@ -18,19 +18,16 @@ export default class Match {
     })
 
 
-    newMatch = (macthname, price, date, time, type,userCreate_id,user_id) =>{
-        return this.match.post(`/newmacth`, {macthname, price, date, time, type,userCreate_id,user_id})
+    newMatch = (macthname, price, date, time, type,userCreate_id,user_id,description) =>{
+        return this.match.post(`/newmacth`, {macthname, price, date, time, type,userCreate_id,user_id,description})
         .then(response => {
             return response.data
         })}
 
 
     addOne = (id,userId) =>{
-        debugger
             return this.match.put(`/addmacth/${id}`, userId)
             .then(response => {
-                console.log("lo llevo")
-                console.log(response)
                 return response.data
             })}
     

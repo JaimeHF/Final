@@ -61,7 +61,6 @@ class Newmatch extends React.Component {
     this.setState({ ...this.state, club_id: this.props.loggedInUser._id })
   }
   render() {
-    console.log(this.props.loggedInUser._id)
     return (
       <div className="newpost">
         <div className="newpos">
@@ -89,7 +88,7 @@ class Newmatch extends React.Component {
               <div>
               </div>
               <div className="">
-                <input className="newpossubm" type="submit" value="Acceder" />
+                <input className="newpossubm" type="submit" value="Crear" />
               </div>
             </div>
           </form>

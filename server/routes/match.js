@@ -37,9 +37,6 @@ router.get(`/:id`,(req, res, next)=>{
 
 
 router.put(`/addmacth/:id`,(req,res,next)=>{
-  debugger
-    console.log(req.params)
-    console.log("estoy aqui")
     Match.findByIdAndUpdate(req.params.id,{$push:{
       user_id: req.body.newUser,
     }},{

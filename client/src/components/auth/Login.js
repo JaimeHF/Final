@@ -48,7 +48,7 @@ class Login extends Component {
         <img src="https://res.cloudinary.com/dwwfzwx93/image/upload/v1583768117/illustration-player_x2_cqgfvq.png" alt="icono"/>
         </div>
         <div>
-          <h3 className="acceso">Acceaso para jugador</h3>
+          <h3 className="acceso">Acceso para jugador</h3>
         </div>
         <form onSubmit={this.handleFormSubmit} >
           <div className="datos">

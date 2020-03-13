@@ -34,7 +34,7 @@ let clubs = [{
     role: "club",
     clubData: {
       imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766640/comarca_ucdii1.png`,
-      description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
+      description: "Wooolaaa!! Somos un equipo formado por un grupo de amigos que jugamos la liga local de sevilla, estamos en la segunda categoria y nuestras intenciones son las de jugar y pasarlo bien, nos interesa mas juntarnos que el propio futbol. No solo quedamos para jugar al futbol, despues de cada partido toca un poco de cerveza con el equipo, no todo va a ser cansarse corriendo!!",
     }
   },
   {
@@ -43,7 +43,7 @@ let clubs = [{
     role: "club",
     clubData: {
       imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766638/Betis-San-Isidro-escudo_tgy9er.jpg`,
-      description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
+      description: "Somos un grupo de personas a las que nos ha unido nuestra afición por el deporte, especialmente el fútbo.Nuestra filosofía de equipo está basada en el compromiso, hacer las cosas bien, sin prisas y apoyándonos los unos en los otros y que todos puedan participar en el desarrollo diario de todos nuestros equipos. Ésta es la única manera en la que entendemos este proyecto.Y todo esto siempre acompañado de buen humor, de diversión, de disciplina, de trabajo, de alegrías y de penas, pero sobre todo de ilusión.Todo esto lo llevamos a la práctica tanto en los días de entrenamiento como en los fines de semana de partido; tanto en el campo de juego como fuera de él.",
     }
   },
   {
@@ -52,7 +52,7 @@ let clubs = [{
     role: "club",
     clubData: {
       imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766640/macabi_a4yzfj.jpg`,
-      description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
+      description: "Somos un grupo de personas a las que nos ha unido nuestra afición por el deporte, especialmente el fútbo.Nuestra filosofía de equipo está basada en el compromiso, hacer las cosas bien, sin prisas y apoyándonos los unos en los otros y que todos puedan participar en el desarrollo diario de todos nuestros equipos. Ésta es la única manera en la que entendemos este proyecto.Y todo esto siempre acompañado de buen humor, de diversión, de disciplina, de trabajo, de alegrías y de penas, pero sobre todo de ilusión.Todo esto lo llevamos a la práctica tanto en los días de entrenamiento como en los fines de semana de partido; tanto en el campo de juego como fuera de él.",
     }
   },
   {
@@ -61,7 +61,7 @@ let clubs = [{
   role: "club",
   clubData: {
     imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766640/donuts_rh7yop.jpg`,
-    description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
+    description: "Somos un grupo de personas a las que nos ha unido nuestra afición por el deporte, especialmente el fútbo.Nuestra filosofía de equipo está basada en el compromiso, hacer las cosas bien, sin prisas y apoyándonos los unos en los otros y que todos puedan participar en el desarrollo diario de todos nuestros equipos. Ésta es la única manera en la que entendemos este proyecto.Y todo esto siempre acompañado de buen humor, de diversión, de disciplina, de trabajo, de alegrías y de penas, pero sobre todo de ilusión.Todo esto lo llevamos a la práctica tanto en los días de entrenamiento como en los fines de semana de partido; tanto en el campo de juego como fuera de él.",
   }
   },
   {
@@ -70,7 +70,7 @@ let clubs = [{
   role: "club",
   clubData:{
     imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766640/GIGANTES_xbxei2.jpg`,
-    description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
+    description: "Somos un grupo de personas a las que nos ha unido nuestra afición por el deporte, especialmente el fútbo.Nuestra filosofía de equipo está basada en el compromiso, hacer las cosas bien, sin prisas y apoyándonos los unos en los otros y que todos puedan participar en el desarrollo diario de todos nuestros equipos. Ésta es la única manera en la que entendemos este proyecto.Y todo esto siempre acompañado de buen humor, de diversión, de disciplina, de trabajo, de alegrías y de penas, pero sobre todo de ilusión.Todo esto lo llevamos a la práctica tanto en los días de entrenamiento como en los fines de semana de partido; tanto en el campo de juego como fuera de él.",
   }},
   {
     username: "RACING VILLAVERDE C.F.",
@@ -78,7 +78,7 @@ let clubs = [{
   role: "club",
   clubData:{
     imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766641/Racing_Villaverde_czmqqi.jpg`,
-    description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
+    description: "Somos un grupo de personas a las que nos ha unido nuestra afición por el deporte, especialmente el fútbo.Nuestra filosofía de equipo está basada en el compromiso, hacer las cosas bien, sin prisas y apoyándonos los unos en los otros y que todos puedan participar en el desarrollo diario de todos nuestros equipos. Ésta es la única manera en la que entendemos este proyecto.Y todo esto siempre acompañado de buen humor, de diversión, de disciplina, de trabajo, de alegrías y de penas, pero sobre todo de ilusión.Todo esto lo llevamos a la práctica tanto en los días de entrenamiento como en los fines de semana de partido; tanto en el campo de juego como fuera de él.",
   }},
   {
     username: "CELTIC CASTILLA C.F.",
@@ -86,7 +86,7 @@ let clubs = [{
   role: "club",
   clubData:{
     imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766638/CELTIC_CASTILLA_iucbas.jpg`,
-    description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
+    description: "Somos un grupo de personas a las que nos ha unido nuestra afición por el deporte, especialmente el fútbo.Nuestra filosofía de equipo está basada en el compromiso, hacer las cosas bien, sin prisas y apoyándonos los unos en los otros y que todos puedan participar en el desarrollo diario de todos nuestros equipos. Ésta es la única manera en la que entendemos este proyecto.Y todo esto siempre acompañado de buen humor, de diversión, de disciplina, de trabajo, de alegrías y de penas, pero sobre todo de ilusión.Todo esto lo llevamos a la práctica tanto en los días de entrenamiento como en los fines de semana de partido; tanto en el campo de juego como fuera de él.",
    } },
   {
     username: "C.D. ALONSO CANO",
@@ -94,7 +94,7 @@ let clubs = [{
   role: "club",
   clubData:{
     imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766638/ALONSO_memxdr.jpg`,
-    description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
+    description: "Somos un grupo de personas a las que nos ha unido nuestra afición por el deporte, especialmente el fútbo.Nuestra filosofía de equipo está basada en el compromiso, hacer las cosas bien, sin prisas y apoyándonos los unos en los otros y que todos puedan participar en el desarrollo diario de todos nuestros equipos. Ésta es la única manera en la que entendemos este proyecto.Y todo esto siempre acompañado de buen humor, de diversión, de disciplina, de trabajo, de alegrías y de penas, pero sobre todo de ilusión.Todo esto lo llevamos a la práctica tanto en los días de entrenamiento como en los fines de semana de partido; tanto en el campo de juego como fuera de él.",
  } },
   {
     username: "ASTON BIRRA FS",
@@ -102,7 +102,7 @@ let clubs = [{
   role: "club",
   clubData:{
     imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766638/astonbirra_olvkrp.gif`,
-    description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
+    description: "Somos un grupo de personas a las que nos ha unido nuestra afición por el deporte, especialmente el fútbo.Nuestra filosofía de equipo está basada en el compromiso, hacer las cosas bien, sin prisas y apoyándonos los unos en los otros y que todos puedan participar en el desarrollo diario de todos nuestros equipos. Ésta es la única manera en la que entendemos este proyecto.Y todo esto siempre acompañado de buen humor, de diversión, de disciplina, de trabajo, de alegrías y de penas, pero sobre todo de ilusión.Todo esto lo llevamos a la práctica tanto en los días de entrenamiento como en los fines de semana de partido; tanto en el campo de juego como fuera de él.",
   }},
 ]
 
@@ -580,7 +580,7 @@ User.deleteMany().then(() => Post.deleteMany()).then(()=>Match.deleteMany())
           lng: -3.7091072
         },
         description: "C.D. ALONSO CANO anuncia que con el comienzo de la pretenmporada el proximo dia 15 de agosto ha decidido abrir sus puertas a todo el mundo que quiera venir a entrenar y probas suerte para conseguir plaza en el equipo para la temporada.Somos un equipo con un muy buen ambiente y lo primordial venir con muchas ganas de pasarlo bien y trabajar",
-        date: new Date(2020, 07, 10),
+        date: new Date(2020, 02, 10),
         club_id: createdClubs[8]._id
       },
       {
@@ -589,8 +589,8 @@ User.deleteMany().then(() => Post.deleteMany()).then(()=>Match.deleteMany())
           lat: 40.5597218,
           lng: -3.6268323,
         },
-        description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
-        date: "2020-06-17",
+        description: "Equipo de futbol  que jugamos los juegos deportivos municipales los domingos por la mañana. jugamos tanto amistosos como la liga por la zona sur, carabanchel, leganes, alcorcon... buscamos gente con un buen nivel, hemos ganado la liga varios años, somos un equipo serio y competitivo. un portero y un par de jugadores de campo un extremo carrilero ofensivo y un mediocentro organizador. veniros a probar un amistoso, la liga comienza pronto!!!",
+        date: "2020-01-17",
         club_id: createdClubs[0]._id
       },
       {
@@ -599,8 +599,8 @@ User.deleteMany().then(() => Post.deleteMany()).then(()=>Match.deleteMany())
           lat: 40.4032248,
           lng: -3.6685674
         },
-        description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
-        date: "2020-07-20",
+        description: "El CELTIC CASTILLA C.F. realizará durante estas semanas las pruebas a los jugadores que puedan estar interesados en formar parte de la plantilla de cara a la próxima temporada. El ambicioso reto es el del ascenso el próximo curso  y, para ello, el club  pretende hacer un gran equipo con alguna incorporación que ayude a conseguirlo. El club además harán todo el esfuerzo posible para que los jugadores tengan la motivación de jugar con su escudo y, para ello, están acordando ayudas con diferentes empresas e instituciones con las que dar el salto de categoría.Asimismo, seguirán con la base de la temporada anterior apostando de nuevo por jugadores comprometidos y especialmente por los formados en el propio club, más ahora que el equipo juvenil consiguió el pasado fin de semana su permanencia en División de Honor, su máxima categoría. Las pruebas se realizarán los próximos martes, de 21 a 22:30 horas, y jueves, de 20:30 a 22:30 horas.",
+        date: "2020-02-20",
         club_id: createdClubs[7]._id
       },
       {
@@ -609,7 +609,7 @@ User.deleteMany().then(() => Post.deleteMany()).then(()=>Match.deleteMany())
           lat: 40.4460268,
           lng: -3.7082682,
         },
-        description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
+        description: "Equipo de futbol  que jugamos los juegos deportivos municipales los domingos por la mañana. jugamos tanto amistosos como la liga por la zona sur, carabanchel, leganes, alcorcon... buscamos gente con un buen nivel, hemos ganado la liga varios años, somos un equipo serio y competitivo. un portero y un par de jugadores de campo un extremo carrilero ofensivo y un mediocentro organizador. veniros a probar un amistoso, la liga comienza pronto!!!",
         date: "2020-01-20",
         club_id: createdClubs[9]._id
       },
@@ -619,8 +619,8 @@ User.deleteMany().then(() => Post.deleteMany()).then(()=>Match.deleteMany())
           lat: 40.4092892,
           lng: -3.6012756,
         },
-        description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
-        date: "2020-06-20",
+        description: "Equipo de futbol 7 que jugamos los juegos deportivos municipales los domingos por la mañana. jugamos tanto amistosos como la liga por la zona sur, carabanchel, leganes, alcorcon... buscamos gente con un buen nivel, hemos ganado la liga varios años, somos un equipo serio y competitivo. un portero y un par de jugadores de campo un extremo carrilero ofensivo y un mediocentro organizador. veniros a probar un amistoso, la liga comienza pronto!!!",
+        date: "2020-01-20",
         club_id: createdClubs[3]._id
       },
       {
@@ -629,7 +629,7 @@ User.deleteMany().then(() => Post.deleteMany()).then(()=>Match.deleteMany())
           lat: 40.4134395,
           lng: -3.6714485,
         },
-        description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
+        description: "Equipo de futbol 7 que jugamos los juegos deportivos municipales los domingos por la mañana. jugamos tanto amistosos como la liga por la zona sur, carabanchel, leganes, alcorcon... buscamos gente con un buen nivel, hemos ganado la liga varios años, somos un equipo serio y competitivo. un portero y un par de jugadores de campo un extremo carrilero ofensivo y un mediocentro organizador. veniros a probar un amistoso, la liga comienza pronto!!!",
         date: "2020-02-20",
         club_id: createdClubs[4]._id
       },
@@ -639,8 +639,8 @@ User.deleteMany().then(() => Post.deleteMany()).then(()=>Match.deleteMany())
           lat: 40.3969897,
           lng: -3.7357897
         },
-        description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
-        date: "2020-07-01",
+        description: "El  realizará durante estas semanas las pruebas a los jugadores que puedan estar interesados en formar parte de la plantilla de cara a la próxima temporada. El ambicioso reto es el del ascenso el próximo curso  y, para ello, el club  pretende hacer un gran equipo con alguna incorporación que ayude a conseguirlo. El club además harán todo el esfuerzo posible para que los jugadores tengan la motivación de jugar con su escudo y, para ello, están acordando ayudas con diferentes empresas e instituciones con las que dar el salto de categoría.Asimismo, seguirán con la base de la temporada anterior apostando de nuevo por jugadores comprometidos y especialmente por los formados en el propio club, más ahora que el equipo juvenil consiguió el pasado fin de semana su permanencia en División de Honor, su máxima categoría. Las pruebas se realizarán los próximos martes, de 21 a 22:30 horas, y jueves, de 20:30 a 22:30 horas.",
+        date: "2020-02-01",
         club_id: createdClubs[2]._id
       },
       {
@@ -649,8 +649,8 @@ User.deleteMany().then(() => Post.deleteMany()).then(()=>Match.deleteMany())
           lat: 40.3969897,
           lng: -3.7357897
         },
-        description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
-        date: "2019-07-01",
+        description: "El C.D. BETIS SAN ISIDRO realizará durante estas semanas las pruebas a los jugadores que puedan estar interesados en formar parte de la plantilla de cara a la próxima temporada. El ambicioso reto es el del ascenso el próximo curso  y, para ello, el club  pretende hacer un gran equipo con alguna incorporación que ayude a conseguirlo. El club además harán todo el esfuerzo posible para que los jugadores tengan la motivación de jugar con su escudo y, para ello, están acordando ayudas con diferentes empresas e instituciones con las que dar el salto de categoría.Asimismo, seguirán con la base de la temporada anterior apostando de nuevo por jugadores comprometidos y especialmente por los formados en el propio club, más ahora que el equipo juvenil consiguió el pasado fin de semana su permanencia en División de Honor, su máxima categoría. Las pruebas se realizarán los próximos martes, de 21 a 22:30 horas, y jueves, de 20:30 a 22:30 horas.",
+        date: "2019-02-01",
         club_id: createdClubs[2]._id
       },
       {
@@ -659,8 +659,8 @@ User.deleteMany().then(() => Post.deleteMany()).then(()=>Match.deleteMany())
           lat: 40.3953098,
           lng: 3.704617
         },
-        description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
-        date: "2020-07-20",
+        description: "El  A.D. GIGANTESrealizará durante estas semanas las pruebas a los jugadores que puedan estar interesados en formar parte de la plantilla de cara a la próxima temporada. El ambicioso reto es el del ascenso el próximo curso  y, para ello, el club  pretende hacer un gran equipo con alguna incorporación que ayude a conseguirlo. El club además harán todo el esfuerzo posible para que los jugadores tengan la motivación de jugar con su escudo y, para ello, están acordando ayudas con diferentes empresas e instituciones con las que dar el salto de categoría.Asimismo, seguirán con la base de la temporada anterior apostando de nuevo por jugadores comprometidos y especialmente por los formados en el propio club, más ahora que el equipo juvenil consiguió el pasado fin de semana su permanencia en División de Honor, su máxima categoría. Las pruebas se realizarán los próximos martes, de 21 a 22:30 horas, y jueves, de 20:30 a 22:30 horas.",
+        date: "2020-01-20",
         club_id: createdClubs[5]._id
       },
       {
@@ -669,8 +669,8 @@ User.deleteMany().then(() => Post.deleteMany()).then(()=>Match.deleteMany())
           lat: 40.3953098,
           lng: -3.704617
         },
-        description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
-        date: "2019-07-20",
+        description: "El A.D. GIGANTES realizará durante estas semanas las pruebas a los jugadores que puedan estar interesados en formar parte de la plantilla de cara a la próxima temporada. El ambicioso reto es el del ascenso el próximo curso  y, para ello, el club  pretende hacer un gran equipo con alguna incorporación que ayude a conseguirlo. El club además harán todo el esfuerzo posible para que los jugadores tengan la motivación de jugar con su escudo y, para ello, están acordando ayudas con diferentes empresas e instituciones con las que dar el salto de categoría.Asimismo, seguirán con la base de la temporada anterior apostando de nuevo por jugadores comprometidos y especialmente por los formados en el propio club, más ahora que el equipo juvenil consiguió el pasado fin de semana su permanencia en División de Honor, su máxima categoría. Las pruebas se realizarán los próximos martes, de 21 a 22:30 horas, y jueves, de 20:30 a 22:30 horas.",
+        date: "2019-02-20",
         club_id: createdClubs[5]._id
       },
       {
@@ -679,8 +679,8 @@ User.deleteMany().then(() => Post.deleteMany()).then(()=>Match.deleteMany())
           lat: 40.5597218,
           lng: -3.6268323,
         },
-         description:"Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
-         date: "2020-07-01",
+         description:"Pos eso, estamos buscando equipos contra los que jugar par los parones de liga y los meses de verano que sean serios y busquen la practica deportiva y nada marrulleros",
+         date: "2020-01-01",
          club_id: createdClubs[0]._id
     },
       {
@@ -689,8 +689,8 @@ User.deleteMany().then(() => Post.deleteMany()).then(()=>Match.deleteMany())
           lat: 40.3736818,
           lng: -3.7296272
         },
-        description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
-        date: "2020-07-10",
+        description: "El RACING VILLAVERDE C.F. realizará durante estas semanas las pruebas a los jugadores que puedan estar interesados en formar parte de la plantilla de cara a la próxima temporada. El ambicioso reto es el del ascenso el próximo curso  y, para ello, el club  pretende hacer un gran equipo con alguna incorporación que ayude a conseguirlo. El club además harán todo el esfuerzo posible para que los jugadores tengan la motivación de jugar con su escudo y, para ello, están acordando ayudas con diferentes empresas e instituciones con las que dar el salto de categoría.Asimismo, seguirán con la base de la temporada anterior apostando de nuevo por jugadores comprometidos y especialmente por los formados en el propio club, más ahora que el equipo juvenil consiguió el pasado fin de semana su permanencia en División de Honor, su máxima categoría. Las pruebas se realizarán los próximos martes, de 21 a 22:30 horas, y jueves, de 20:30 a 22:30 horas.",
+        date: "2020-01-10",
         club_id: createdClubs[6]._id
       },
       {
@@ -699,8 +699,8 @@ User.deleteMany().then(() => Post.deleteMany()).then(()=>Match.deleteMany())
           lat: 40.4460268,
           lng: -3.7082682,
         },
-        description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
-        date: "2020-08-13",
+        description: "Equipo de futbol sala que jugamos los juegos deportivos municipales los domingos por la mañana. jugamos tanto amistosos como la liga por la zona sur, carabanchel, leganes, alcorcon... buscamos gente con un buen nivel, hemos ganado la liga varios años, somos un equipo serio y competitivo. un portero y un par de jugadores de campo un extremo carrilero ofensivo y un mediocentro organizador. veniros a probar un amistoso, la liga comienza pronto!!!",
+        date: "2020-01-13",
         club_id: createdClubs[9]._id
       },
       {
@@ -709,8 +709,8 @@ User.deleteMany().then(() => Post.deleteMany()).then(()=>Match.deleteMany())
           lat: 40.4462334,
           lng: -3.7091072
         },
-        description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
-        date: "2020-06-30",
+        description: "El C.D. ALONSO CANO realizará durante estas semanas las pruebas a los jugadores que puedan estar interesados en formar parte de la plantilla de cara a la próxima temporada. El ambicioso reto es el del ascenso el próximo curso  y, para ello, el club  pretende hacer un gran equipo con alguna incorporación que ayude a conseguirlo. El club además harán todo el esfuerzo posible para que los jugadores tengan la motivación de jugar con su escudo y, para ello, están acordando ayudas con diferentes empresas e instituciones con las que dar el salto de categoría.Asimismo, seguirán con la base de la temporada anterior apostando de nuevo por jugadores comprometidos y especialmente por los formados en el propio club, más ahora que el equipo juvenil consiguió el pasado fin de semana su permanencia en División de Honor, su máxima categoría. Las pruebas se realizarán los próximos martes, de 21 a 22:30 horas, y jueves, de 20:30 a 22:30 horas.",
+        date: "2020-01-30",
         club_id: createdClubs[8]._id
       },
       {
@@ -719,18 +719,18 @@ User.deleteMany().then(() => Post.deleteMany()).then(()=>Match.deleteMany())
           lat: 40.4460268,
           lng: -3.7082682,
         },
-        description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
+        description: "Equipo de futbol  que jugamos los juegos deportivos municipales los domingos por la mañana. jugamos tanto amistosos como la liga por la zona sur, carabanchel, leganes, alcorcon... buscamos gente con un buen nivel, hemos ganado la liga varios años, somos un equipo serio y competitivo. un portero y un par de jugadores de campo un extremo carrilero ofensivo y un mediocentro organizador. veniros a probar un amistoso, la liga comienza pronto!!!",
         date: "2019-04-20",
         club_id: createdClubs[9]._id
       },
       {
-        title: "NUEVO EQUIPO",
+        title: "EQUIPO EN REMODELACION",
         coord: {
           lat: 40.4460268,
           lng: -3.7082682,
         },
-        description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
-        date: "2020-06-22",
+        description: "Equipo de futbol  que jugamos los juegos deportivos municipales los domingos por la mañana. jugamos tanto amistosos como la liga por la zona sur, carabanchel, leganes, alcorcon... buscamos gente con un buen nivel, hemos ganado la liga varios años, somos un equipo serio y competitivo. un portero y un par de jugadores de campo un extremo carrilero ofensivo y un mediocentro organizador. veniros a probar un amistoso, la liga comienza pronto!!!",
+        date: "2020-02-22",
         club_id: createdClubs[9]._id
       },
       {
@@ -739,8 +739,8 @@ User.deleteMany().then(() => Post.deleteMany()).then(()=>Match.deleteMany())
           lat: 40.5597218,
           lng: -3.6268323,
         },
-        description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
-        date: "2020-03-20",
+        description: "Equipo de futbol  que jugamos los juegos deportivos municipales los domingos por la mañana. jugamos tanto amistosos como la liga por la zona sur, carabanchel, leganes, alcorcon... buscamos gente con un buen nivel, hemos ganado la liga varios años, somos un equipo serio y competitivo. un portero y un par de jugadores de campo un extremo carrilero ofensivo y un mediocentro organizador. veniros a probar un amistoso, la liga comienza pronto!!!",
+        date: "2020-01-20",
         club_id: createdClubs[0]._id
       },
       {
@@ -749,8 +749,8 @@ User.deleteMany().then(() => Post.deleteMany()).then(()=>Match.deleteMany())
           lat: 37.3845307,
           lng: -6.0152011,
         },
-        description: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos curae ullamcorper per cursus ad cubilia nulla vulputate urna sed, facilisi sociis pharetra vehicula velit magnis morbi nisi diam ornare eget bibendum malesuada ultricies tortor a. Non urna sociosqu molestie arcu montes volutpat dignissim eleifend leo pharetra, mus himenaeos imperdiet libero class cum taciti lacus fringilla. Malesuada nisl maecenas ornare euismod nisi rhoncus eleifend enim cum magnis aenean nunc erat, nostra senectus volutpat augue cubilia tempor neque morbi mus ut ad sem.",
-        date: "2020-03-20",
+        description: "Pos eso, estamos buscando equipos contra los que jugar par los parones de liga y los meses de verano que sean serios y busquen la practica deportiva y nada marrulleros",
+        date: "2020-01-20",
         club_id: createdClubs[1]._id
       },
     ]
