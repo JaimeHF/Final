@@ -30,8 +30,6 @@ class Postid extends React.Component {
         description: response.description,
         date: response.date,
         club_id: response.club_id,
-        lat: response.coord.lat,
-        lng: response.coord.lng
 
 
 
