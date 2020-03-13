@@ -7,30 +7,10 @@ class Containmacth extends React.Component {
   state = {
     user: []
   }
-  count() {
-    //   if(this.props.type ===` Futbol Sala` ){
-    //   let x = (this.props.user).lenght/10
-    // }else if (this.props.type ===`Futbol 11`){
-    //   let x = (this.props.user).lenght/22
-    // }else if(this.props.type ===`Futbol 7`){
-    //   let x = (this.props.user).lenght/14
-    // }
-  }
-
-
-
-
-
-  // componentDidMount(){
-  //   this.allUser(this.props.user)
-  // }
 
   render() {
 
     return (
-
-      
-
         <Link to={`/match/${this.props.id}`} className="containmatch">
      
             <div className="conleft">

@@ -17,7 +17,6 @@ class Matchid extends React.Component {
       price: null,
       date: null,
       time: null,
-      userCreate_id:null,
       type: null,
       user_id: [],
       location: null,
@@ -87,12 +86,12 @@ class Matchid extends React.Component {
                   <p>{type} </p>
                 </div>
                 <div>
-                  <p>{price}Euros</p>
+                  <p>{price} €</p>
                 </div>
               </div>
               </div>
               <div>
-              <p>Partido creado por:  {username} </p>
+              <p>Partido creado por:  {this.state.username} </p>
             </div>
             </div>
 

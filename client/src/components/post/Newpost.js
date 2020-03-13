@@ -36,7 +36,7 @@ class Newmatch extends React.Component {
           // date: date,
           club_id: club_id,
           error: false
-        });
+        },() => this.props.history.push('/Club/home'));
 
         this.props.getUser(response)
       })

@@ -51,7 +51,7 @@ class Newmatch extends React.Component {
           user_id:user_id,
           description: description,
           error: false
-        });
+        }, () => this.props.history.push('/User/home'));
 
       })
       .catch(error => {
