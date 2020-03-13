@@ -53,7 +53,7 @@ class Postid extends React.Component {
   };
 
   render() {
-    const { title, date, description, club_id, imgPath, username, lng, lat } = this.state
+    const { title, date, description, club_id, imgPath, username } = this.state
     return (
       <div className="Postid">
        <div className="Postidall">
