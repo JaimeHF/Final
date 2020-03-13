@@ -2,6 +2,7 @@ const express = require("express");
 const passport = require('passport');
 const router = express.Router();
 const Match = require("../models/Match");
+const User = require ("../models/User")
 
 
 
@@ -25,7 +26,7 @@ router.get(`/:id`,(req, res, next)=>{
     let {id} = req.params
      Match.findById(id)
      .populate({
-      path: 'club_id',
+      path: 'userCreate_id',
       model: 'User'
   })
         .then((macth) => {
@@ -36,13 +37,18 @@ router.get(`/:id`,(req, res, next)=>{
 
 
 router.put(`/addmacth/:id`,(req,res,next)=>{
+  debugger
     console.log(req.params)
-    let {id} = req.params
-    Match.findByIdAndUpdate(id,{$push:{
+    console.log("estoy aqui")
+    Match.findByIdAndUpdate(req.params.id,{$push:{
       user_id: req.body.newUser,
     }},{
         new: true
       })
+      .populate({
+        path: 'id',
+        model: 'User'
+    })
       .then((editMatch) => {
         res.json(editMatch)
         // res.json(user)

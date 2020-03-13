@@ -1,9 +1,7 @@
 import "./post.scss"
 import React from "react";
-import { Link, Switch, Route } from "react-router-dom";
+import { Link} from "react-router-dom";
 import moment from "moment";
-import Post from "../../services/Post";
-import Postid from "../post/Postid";
 
 class Containpost extends React.Component {
   // constructor(props) {

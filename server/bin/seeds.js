@@ -113,6 +113,10 @@ let players = [{
     playerData: {
       imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766641/paco_huerto_grlc7t.jpg`,
       position: [`Defensa`, `Lateral`],
+        location:"Madrid",
+  year:22,
+  match: 22,
+  contact:52,
     }
   },
   {
@@ -122,6 +126,10 @@ let players = [{
     playerData: {
       imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766641/macco_dgbbk3.jpg`,
       position: [`Lateral`, `Extremo`],
+        location:"Vicalvaro",
+  year:23,
+  match: 23,
+  contact:25,
     }
   },
   {    username: "CASTOLO",
@@ -130,13 +138,21 @@ let players = [{
     playerData: {
     imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766638/castolo_gkj37k.jpg`,
     position:`Delantero`,
+      location:"Parla",
+  year:24,
+  match: 21,
+  contact:23,
   }},
   {    username: "JULIEN FAUBERT",
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     role: "player",
     playerData: {
-    imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766640/faubert_cai9cv.jpg`,
-    position:[`Delantero`,`Centrocampista`]
+    imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766640/dre.jpg`,
+    position:[`Delantero`,`Centrocampista`],
+      location:"Madrid",
+  year:34,
+  match: 21,
+  contact:20,
   }},
   {    username: "ROYSTON DRENTHE",
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
@@ -144,27 +160,43 @@ let players = [{
     playerData: {
     imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766640/drenthe_e9d97c.jpg`,
     position:`Lateral`,
+      location:"Madrid",
+  year:34,
+  match: 32,
+  contact:14,
   }},
   {    username: "DENILSON",
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     role: "player",
     playerData: {
     imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766639/denilson_qxelqd.jpg`,
-    position:[`Extremo`,`Delantero`]
+    position:[`Extremo`,`Delantero`],
+      location:"Alcobendas",
+  year:26,
+  match: 12,
+  contact:14,
   }},
   {    username: "MANOLO CABEZA",
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     role: "player",
     playerData: {
-    imgPath: `../images/default.png`,
+    imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583865232/default_wye5xb.png`,
     position:`Extremo`,
+      location:"Tres Cantos",
+  year:40,
+  match: 12,
+  contact:13,
   }},
   {    username: "MAGICO GONZALEZ",
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     role: "player",
     playerData: {
     imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766640/magico_nhnznw.jpg`,
-    position:[`Extremo`,`Centrocampista`]
+    position:[`Extremo`,`Centrocampista`],
+      location:"Alcorcon",
+  year:13,
+  match: 2,
+  contact:11,
   }},
   {    username: "JARIC",
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
@@ -172,6 +204,10 @@ let players = [{
     playerData: {
     imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766640/jaric_cwz0rc.jpg`,
     position:`Lateral`,
+      location:"Madrid",
+  year:21,
+  match: 4,
+  contact:11,
   }},
   {    username: "BRUCE HARPER",
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
@@ -179,6 +215,10 @@ let players = [{
     playerData: {
     imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766638/bruce_haeri6.jpg`,
     position:`Extremo`,
+      location:"Madrid",
+  year:21,
+  match: 9,
+  contact:5,
   }},
   {
     username: "MARK LENDER",
@@ -187,6 +227,10 @@ let players = [{
     playerData: {
     imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766641/mark_ddjgew.jpg`,
     position:`Centrocampista`,
+      location:"Madrid",
+  year:33,
+  match: 11,
+  contact:9,
   }},
   {
     username: "OLIVER ATOM",
@@ -195,6 +239,10 @@ let players = [{
     playerData: {
     imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766641/oliver_f1kpga.jpg`,
     position:`Delantero`,
+      location:"San Sebastian de los reyes",
+  year:33,
+  match: 22,
+  contact:8,
   }},
   {
     username: "DON MANUE",
@@ -203,6 +251,10 @@ let players = [{
     playerData: {
     imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766639/donmanue_xdrroo.jpg`,
     position:`Centrocampista`,
+      location:"Madrid",
+  year:32,
+  match: 23,
+  contact:12,
   }},
   {
     username: "STREMER",
@@ -211,6 +263,10 @@ let players = [{
     playerData: {
     imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766642/stremer_oayq5j.jpg`,
     position:`Defensa`,
+      location:"Parla",
+  year:34,
+  match: 43,
+  contact:18,
   }},
   {
     username: "CAMPBELL",
@@ -219,6 +275,10 @@ let players = [{
     playerData: {
     imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766642/sol_xrpi5s.jpg`,
     position:`Lateral`,
+      location:"Fuenlabrada",
+  year:32,
+  match: 23,
+  contact:17,
   }},
   {
     username: "DE PEDRO",
@@ -227,6 +287,10 @@ let players = [{
     playerData: {
     imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766641/pedro_fp8so4.jpg`,
     position:`Extremo`,
+      location:"Alcobendas",
+  year:32,
+  match: 23,
+  contact:16,
   }},
   {
     username: "VICENTE",
@@ -235,6 +299,10 @@ let players = [{
     playerData: {
     imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766642/vicente_ui8w9g.jpg`,
     position:`Extremo`,
+      location:"Madrid",
+  year:34,
+  match: 43,
+  contact:15,
   }},
   {
     username: "RUI COSTA",
@@ -243,6 +311,10 @@ let players = [{
     playerData: {
     imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766641/rui_ywzhyc.jpg`,
     position:`Centrocampista`,
+      location:"Colmenar viejo",
+  year:23,
+  match: 25,
+  contact:14,
   }},
   {
     username: "PETIT",
@@ -251,54 +323,82 @@ let players = [{
     playerData: {
     imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766641/petit_lddgka.jpg`,
     position:`Centrocampista`,
+      location:"Rivas",
+  year:32,
+  match: 53,
+  contact:13,
   }},
   {
     username: "VIERA",
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     role: "player",
     playerData: {
-    imgPath: `../images/viera.jpeg`,
+    imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766643/viera_wysncf.jpg`,
     position:`Centrocampista`,
+      location:"Madrid",
+  year:21,
+  match: 34,
+  contact:12,
   }},
   {
     username: "NEDVED",
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     role: "player",
     playerData: {
-    imgPath: `../images/nedved.jpeg`,
+    imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766641/nedved_rrmbfv.jpg`,
     position:`Centrocampista`,
+      location:"Madrid",
+  year:21,
+  match: 23,
+  contact:11,
   }},
   {
     username: "STANKOVIC",
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     role: "player",
     playerData: {
-    imgPath: `../images/dejan+.jpeg`,
+    imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766639/dejan_np7kes.jpg`,
     position:`Centrocampista`,
+      location:"Madrid",
+  year:32,
+  match: 34,
+  contact:9,
   }},
   {
     username: "JUAN CARLOS VALERON",
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     role: "player",
     playerData: {
-    imgPath: `../images/valeron.jpeg`,
+    imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766642/valeron_hg0yvl.jpg`,
     position:`Centrocampista`,
+      location:"Madrid",
+  year:22,
+  match: 33,
+  contact:8,
   }},
   {
     username: "AMANDA SAN PEDRO",
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     role: "player",
     playerData: {
-    imgPath: `../images/amanda.jpeg`,
+    imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766638/amanda_ffnvq6.jpg`,
     position:`Centrocampista`,
+      location:"Madrid",
+  year:33,
+  match: 21,
+  contact:7,
   }},
   {
     username: "VICKY LOSADA",
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     role: "player",
     playerData: {
-    imgPath: `../images/vicky.jpeg`,
+    imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766642/vicky_l54ewa.jpg`,
     position:`Centrocampista`,
+      location:"Madrid",
+  year:23,
+  match: 23,
+  contact:6,
   }},
   {
     username: "FLAPPY",
@@ -307,38 +407,58 @@ let players = [{
     playerData: {
     imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1582131476/folder-name/flappy.png.png`,
     position:`Defensa`,
+      location:"IRONHACK",
+  year:30,
+  match: 999,
+  contact:999,
   }},
   {
     username: "PEPE REINA",
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     role: "player",
     playerData: {
-    imgPath: `../images/default.png`,
+    imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583865232/default_wye5xb.png`,
     position:`Portero`,
+      location:"Madrid",
+  year:23,
+  match: 23,
+  contact:5,
   }},
   {
     username: "TONI DOBLAS",
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     role: "player",
     playerData: {
-    imgPath: `../public/images/doblas.jpg`,
+    imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766639/doblas_hkllc2.jpg`,
     position:`Portero`,
+      location:"Madrid",
+  year:23,
+  match: 32,
+  contact:4,
   }},
   {
     username: "WATER SAMUEL",
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     role: "player",
     playerData: {
-    imgPath: `../public/images/samuel.jpeg`,
+    imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766642/samuel_nk6t1r.jpg`,
     position:`Defensa`,
+      location:"Madrid",
+  year:40,
+  match: 50,
+  contact:20,
   }},
   {
     username: "CONTRERAS",
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     role: "player",
     playerData: {
-    imgPath: `../public/images/contreras.jpeg`,
+    imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766639/contreras_jpbjt1.jpgg`,
     position:`Portero`,
+      location:"Madrid",
+  year:39,
+  match: 18,
+  contact:2,
   }},
     {
 
@@ -346,16 +466,24 @@ let players = [{
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     role: "player",
     playerData: {
-    imgPath: `../public/images/ivanov.jpeg`,
+    imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766640/ivanov_lobt5e.jpg`,
     position:`Portero`,
+      location:"Madrid",
+  year:23,
+  match: 8,
+  contact:10,
   }},
   {
     username: "FERNANDO HIERRO",
     password: bcrypt.hashSync("123", bcrypt.genSaltSync(bcryptSalt)),
     role: "player",
     playerData: {
-    imgPath: `../public/images/fernando.jpeg`,
+    imgPath: `https://res.cloudinary.com/dwwfzwx93/image/upload/v1583766640/fernando_nxkq5k.jpg`,
     position:`Defensa`,
+      location:"Madrid",
+  year:30,
+  match: 10,
+  contact:5,
   }}
   
 ]
@@ -369,11 +497,12 @@ User.deleteMany().then(() => Post.deleteMany()).then(()=>Match.deleteMany())
     let macthes =[
       {
        macthname: "PARTIDO DE DOMINGO",
-      price: 2.5,
+      price: 3.90,
       coord: {
         lat: 40.4375097,
         lng: -3.6606042
       },
+      description:"1. Prohibido borrarse 24 horas antes, si lo hace sera sancionado y no se le volverá a admitir, al menos que abone su inscripción. 2. Se pide deportividad y juego limpio, cualquier acto verbal o de agregación sera automáticamente expulsado del evento.  3. Si quieres apuntar a tus amigos, primero avisa al organizador, no se aceptan equipos completos.  4. Los jugadores tienen que llevar camiseta negra y blanca, los balones lo ponemos nosotros.  5. La puntualidad nos lo tomamos enserio, por los que si son constante no se le volverá admitir.",
       date: "2020-03-15",
       time:"18:00",
       type:`Futbol 7`,
@@ -382,11 +511,12 @@ User.deleteMany().then(() => Post.deleteMany()).then(()=>Match.deleteMany())
       },
       {
         macthname: "MIERCOLES NOCHE",
-       price: 2.5,
+       price: 4.50,
        coord: {
         lat: 40.4456018,
         lng: -3.709284
       },
+      description:"1. Prohibido borrarse 24 horas antes, si lo hace sera sancionado y no se le volverá a admitir, al menos que abone su inscripción. 2. Se pide deportividad y juego limpio, cualquier acto verbal o de agregación sera automáticamente expulsado del evento.  3. Si quieres apuntar a tus amigos, primero avisa al organizador, no se aceptan equipos completos.  4. Los jugadores tienen que llevar camiseta negra y blanca, los balones lo ponemos nosotros.  5. La puntualidad nos lo tomamos enserio, por los que si son constante no se le volverá admitir.",
        date: "2020-03-18",
        time:"21:00",
        type:`Futbol 11`,
@@ -395,11 +525,12 @@ User.deleteMany().then(() => Post.deleteMany()).then(()=>Match.deleteMany())
        },
        {
         macthname: "CLASICO DE VIERNES",
-       price: 2.5,
+       price: 3,
        coord: {
         lat: 40.3954079,
         lng: -3.7047247
       },
+      description:"1. Prohibido borrarse 24 horas antes, si lo hace sera sancionado y no se le volverá a admitir, al menos que abone su inscripción. 2. Se pide deportividad y juego limpio, cualquier acto verbal o de agregación sera automáticamente expulsado del evento.  3. Si quieres apuntar a tus amigos, primero avisa al organizador, no se aceptan equipos completos.  4. Los jugadores tienen que llevar camiseta negra y blanca, los balones lo ponemos nosotros.  5. La puntualidad nos lo tomamos enserio, por los que si son constante no se le volverá admitir.",
        date: "2020-03-13",
        time:"22:00",
        type:`Futbol 7`,
@@ -408,11 +539,12 @@ User.deleteMany().then(() => Post.deleteMany()).then(()=>Match.deleteMany())
        },
        {
         macthname: "LUNES MAÑANA",
-       price: 2.5,
+       price: 2,
        coord: {
         lat: 40.6125205,
         lng: -3.7168026
       },
+      description:"1. Prohibido borrarse 24 horas antes, si lo hace sera sancionado y no se le volverá a admitir, al menos que abone su inscripción. 2. Se pide deportividad y juego limpio, cualquier acto verbal o de agregación sera automáticamente expulsado del evento.  3. Si quieres apuntar a tus amigos, primero avisa al organizador, no se aceptan equipos completos.  4. Los jugadores tienen que llevar camiseta negra y blanca, los balones lo ponemos nosotros.  5. La puntualidad nos lo tomamos enserio, por los que si son constante no se le volverá admitir.",
        date: "2020-03-16",
        time:"10:00",
        type:`Futbol Sala`,
@@ -421,11 +553,12 @@ User.deleteMany().then(() => Post.deleteMany()).then(()=>Match.deleteMany())
        },
        {
         macthname: "CLASICO DE VIERNES",
-       price: 2.5,
+       price: 3,
        coord: {
         lat: 40.3954079,
         lng: -3.7047247
       },
+      description:"1. Prohibido borrarse 24 horas antes, si lo hace sera sancionado y no se le volverá a admitir, al menos que abone su inscripción. 2. Se pide deportividad y juego limpio, cualquier acto verbal o de agregación sera automáticamente expulsado del evento.  3. Si quieres apuntar a tus amigos, primero avisa al organizador, no se aceptan equipos completos.  4. Los jugadores tienen que llevar camiseta negra y blanca, los balones lo ponemos nosotros.  5. La puntualidad nos lo tomamos enserio, por los que si son constante no se le volverá admitir.",
        date: "2020-03-20",
        time:"22:00",
        type:`Futbol 7`,

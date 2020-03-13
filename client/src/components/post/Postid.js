@@ -3,6 +3,7 @@ import moment from "moment";
 import Post from "../../services/Post";
 import { Link } from "react-router-dom";
 import Club from "../../services/Clubs";
+import "./post.scss"
 
 
 class Postid extends React.Component {
@@ -15,8 +16,7 @@ class Postid extends React.Component {
       club_id: null,
       imgPath: null,
       username: null,
-      lng: null,
-      lat: null
+
     };
     this.post = new Post();
     this.club = new Club()
@@ -65,7 +65,7 @@ class Postid extends React.Component {
             </div>
             <div >
                 <div>
-                  <p className="tit">{title}</p >
+                  <p className="tit">{title}</p>
                 </div>
             </div>
           
@@ -81,9 +81,6 @@ class Postid extends React.Component {
           <div className="postright">
             <div >
               <img src={imgPath} alt="foto club" className="escudo" />
-            </div>
-            <div className="mapa">
-              <img src="" alt="supuesto mapa"/>
             </div>
             <div className="ficha">
             <Link to={`/club/${club_id}`} >

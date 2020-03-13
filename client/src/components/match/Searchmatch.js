@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./navbar/Navbar";
 import { Link } from "react-router-dom";
 import Containmacth from "../match/Containmatch"
+import "./macth.scss"
 
 
 

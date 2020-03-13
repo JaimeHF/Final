@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "./navbar/Navbar";
 import { Link } from "react-router-dom";
 import Containpost from "../post/Containpost"
 import Containmatch from "../match/Containmatch";
@@ -15,7 +14,8 @@ class Userhome extends React.Component {
     this.state = {
       chosenFlow: "post",
       post: null,
-      chooseSport:null
+      chooseSport:null,
+      match:null
 
     }
     this.post = new Post()
@@ -36,31 +36,30 @@ class Userhome extends React.Component {
     });
   }
 
+ 
 
-  // postDetail(){
-  //   console.log("hola postDetail")
-  //   return this.post.getPostDetails()
-  // .then(response=>{
-  //   this.setState({ 
-  //     post:response
-  //   })
-  // })
+  
 
-  // }
-
-  render() {
+  render() { 
     return (
       <div className="homeuser">
         <div className="per">
           <div className="perall">
+              <Link to={`/user/${this.props.loggedInUser._id}`}>
             <div className="perfil">
               <div>
                 <img src={this.props.loggedInUser.playerData.imgPath} alt="foto perfil" />
               </div>
               <div>
-                <h1>{this.props.loggedInUser.username}</h1>
+                <p>{this.props.loggedInUser.username}</p>
+              </div>
+              <div>
+              <div>
+                <p>{this.props.loggedInUser.playerData.location}</p>
+              </div>
               </div>
             </div>
+              </Link>
             <div className="np" >
               <Link to="/newmatch"  >
                 <h1  >Crea partido</h1>
@@ -79,18 +78,17 @@ class Userhome extends React.Component {
               </div>
             </div>
             <div className="bus">
-
-            <div className="depo">
-              <p ><img src="https://res.cloudinary.com/dwwfzwx93/image/upload/v1583933005/illustration-football_x2_muou9a.png" alt=""/></p>
+            <div >
+              <p ><img className="depo" src="https://res.cloudinary.com/dwwfzwx93/image/upload/v1583933005/illustration-football_x2_muou9a.png" alt=""/></p>
             </div>
-            <div className="depo">
-              <p ><img src="https://res.cloudinary.com/dwwfzwx93/image/upload/v1583933005/illustration-paddle_x2_er2sbn.png" alt=""/></p>
+            <div >
+              <p ><img className="depo" src="https://res.cloudinary.com/dwwfzwx93/image/upload/v1583933005/illustration-paddle_x2_er2sbn.png" alt=""/></p>
             </div>
-            <div className="depo">
-              <p ><img src="https://res.cloudinary.com/dwwfzwx93/image/upload/v1583933005/illustration-basket_x2_b5o5ta.png" alt=""/></p>
+            <div >
+              <p ><img className="depo" src="https://res.cloudinary.com/dwwfzwx93/image/upload/v1583933005/illustration-basket_x2_b5o5ta.png" alt=""/></p>
             </div>
-            <div className="depo">
-              <p ><img src="https://res.cloudinary.com/dwwfzwx93/image/upload/v1583933005/illustration-cycle_x2_esbwov.png" alt=""/></p>
+            <div >
+              <p ><img className="depo" src="https://res.cloudinary.com/dwwfzwx93/image/upload/v1583933005/illustration-cycle_x2_esbwov.png" alt=""/></p>
             </div>
             </div>
               <div >
@@ -106,15 +104,15 @@ class Userhome extends React.Component {
           <div className="componentes">
             <div>{this.state.chosenFlow === "post" &&
               <div>
-                {this.props.allPost.map(post => (
-                  <Containpost key={post._idx} id={post._id} title={post.title} name={post.club_id.username} img={post.club_id.clubData.imgPath} date={post.date} description={post.description}  > </Containpost>
+                {this.props.allPost.map((post,idx) => (
+                  <Containpost key={idx} id={post._id} title={post.title} name={post.club_id.username} img={post.club_id.clubData.imgPath} date={post.date} description={post.description}  > </Containpost>
                 ))}
               </div>}
             </div>
             <div>{this.state.chosenFlow === "match" &&
               <div>
-                {this.props.allMatch.map(match => (
-                  <Containmatch key={match._idx} id={match._id} name={match.macthname} time={match.time} location={match.location} price={match.price} date={match.date} type={match.type} user={match.user_id} ></Containmatch>
+                {this.props.allMatch.map((match,idx) => (
+                  <Containmatch key={idx} id={match._id} name={match.macthname} time={match.time} location={match.location} price={match.price} date={match.date} type={match.type} user={match.user_id} ></Containmatch>
                 ))}
               </div>}
             </div>

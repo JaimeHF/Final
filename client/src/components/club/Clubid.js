@@ -1,6 +1,4 @@
 import React from "react";
-import moment from "moment";
-import { Link } from "react-router-dom";
 import Club from "../../services/Clubs";
 import "./club.scss"
 
@@ -11,7 +9,8 @@ class Clubid extends React.Component {
     this.state = {
       username: null,
       imgPath: null,
-      description: null
+      description: null,
+      id:null
 
     };
     this.club = new Club();
@@ -23,14 +22,26 @@ class Clubid extends React.Component {
         this.setState({
           username: response.username,
           imgPath: response.clubData.imgPath,
-          description: response.clubData.description
+          description: response.clubData.description,
+          id:response._id,
+          club:null
 
-        });
+        },()=>{this.isClub()});
       });
   }
 
+isClub=()=>{
+  if(this.state.id === this.props.loggedInUser._id){
+    this.setState({club:"paco"})
+  }else{
+    this.setState({club:"null"})
+  }
+  
+}
+
   componentDidMount = () => {
     this.clubDetail(this.props.match.params.id);
+    // 
   };
 
   render() {
@@ -42,8 +53,12 @@ class Clubid extends React.Component {
             <img src={imgPath} alt="foto club" className="do"/>
           </div>
           <div className="envia">
-            <div>
-              <p className="pip">Enviar  mensaje</p>
+          <div >
+              {this.state.club === "paco" ? (
+                <p   className="pip">Editar</p>
+              ) : (
+                  <p   className="pip">Enviar mensaje</p>
+                )}
             </div>
           </div>
         </div>

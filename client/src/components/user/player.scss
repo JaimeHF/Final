@@ -1,0 +1,32 @@
+.player{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+width: 250px;
+height: 100px;
+border-radius: 8px;
+border: solid 1px #dedede;
+background-color: #ffffff;
+
+
+
+
+    .playername{
+        font-family: Montserrat;
+        font-size: 10px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 2.03;
+        letter-spacing: normal;
+        color: #5b5b5b;
+        height: 1px;
+        
+    }
+
+    .playerimg{
+        width: 50px;
+        height: 50px;
+    }
+}

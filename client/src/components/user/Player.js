@@ -1,9 +1,6 @@
-import "../home.css";
+import "./player.scss"
 import React from "react";
-import { Link, Switch, Route } from "react-router-dom";
-import moment from "moment";
-import Post from "../../services/Post";
-import Postid from "../post/Postid";
+import { Link} from "react-router-dom";
 import User from "../../services/User";
 
 class Player extends React.Component {
@@ -31,16 +28,15 @@ class Player extends React.Component {
   render() {
     return (
   
-      <div>
+      <div className="player">
         <Link to={`/user/${this.props.user}`}   >
-        <div className="">
-          <div>
-          <h3>{this.state.username}</h3>
+        <div className="player">
+        <div > 
+            <img src={this.state.imgPath} alt="" className="playerimg"/>
           </div>
-          <div>
-            <img src={this.state.imgPath} alt=""/>
+          <div className="playername">
+          <p>{this.state.username}</p>
           </div>
-       
       </div>
         </Link>
       </div>

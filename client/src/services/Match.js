@@ -25,9 +25,11 @@ export default class Match {
         })}
 
 
-    addOne = (id) =>{
-            return this.match.put(`/addmacth/${id}`, {id})
+    addOne = (id,userId) =>{
+        debugger
+            return this.match.put(`/addmacth/${id}`, userId)
             .then(response => {
+                console.log("lo llevo")
                 console.log(response)
                 return response.data
             })}

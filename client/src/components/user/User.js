@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Signup from "../auth/Signup";
 import Login from "../auth/Login";
-import Navbar from "./navbar/Navbar";
 
 import "./user.scss"
 

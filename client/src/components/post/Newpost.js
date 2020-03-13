@@ -1,18 +1,18 @@
 import React from "react";
-import moment from "moment";
 import Post from "../../services/Post"
+import "./post.scss"
 
 class Newmatch extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      
+
       title: "",
       description: "",
       location: [],
       // date: "",
-      club_id:""
+      club_id: ""
 
     };
     this.post = new Post();
@@ -27,14 +27,14 @@ class Newmatch extends React.Component {
     // const date = this.state.date;
     const club_id = this.props.loggedInUser._id
 
-    this.post.newPost(title, description, location,club_id)
+    this.post.newPost(title, description, location, club_id)
       .then(response => {
         this.setState({
           title: title,
           description: description,
           location: location,
           // date: date,
-          club_id:club_id,
+          club_id: club_id,
           error: false
         });
 
@@ -46,7 +46,7 @@ class Newmatch extends React.Component {
           description: description,
           location: location,
           // date: date,
-          club_id:club_id,
+          club_id: club_id,
           error: true
         });
       })
@@ -57,48 +57,44 @@ class Newmatch extends React.Component {
     this.setState({ [name]: value });
   }
 
-  componentDidMount(){
-    this.setState({ ...this.state, club_id:this.props.loggedInUser._id})
+  componentDidMount() {
+    this.setState({ ...this.state, club_id: this.props.loggedInUser._id })
   }
   render() {
     console.log(this.props.loggedInUser._id)
     return (
-      <div className="">
-        <div>
-          <img src="" alt="icono" />
-        </div>
-        <div>
-          <h3 className="">Crear posdt</h3>
-        </div>
-        <form onSubmit={this.handleFormSubmit} >
-          <div className="">
-            <div>
-              <fieldset>
-                <input className="title" type="text" name="title" placeholder="Dale un nombre al partido" value={this.state.title} onChange={e => this.handleChange(e)} />
-              </fieldset>
-            </div>
-            <div>
-              <fieldset>
-              <textarea type="text" name="description" id="" rows="6" cols="30" maxlength="300" class="textito" placeholder="Escribe aquí.." onChange={e => this.handleChange(e)}/>
-               </fieldset>
-            </div>
-            {/* <div>
-              <fieldset>
-                <input type="date" name="date" className="" placeholder="Introduce tu contraseña" value={this.state.date} onChange={e => this.handleChange(e)} />
-              </fieldset>
-            </div> */}
-            <div>
-            </div>
-            <div>
-            </div>
-
-
-            <div className="">
-              <input className="" type="submit" value="Acceder" />
-            </div>
+      <div className="newpost">
+        <div className="newpos">
+          <div className="newposleft">
+       <p>Crea un post, lo podras hacer en unos secillos pasos:</p>
+      <p>1) Introduce un titulo para captar la atencion de los jugadores.</p>
+    <p>2) Escribe toda la informacion que quieras hacer llegar a los jugadores y equipos. </p>
+      <p>3) Y para terminar solo tienes que darle al boton Crear.</p>
           </div>
-        </form>
-
+          <div className="newpostright">
+          <form onSubmit={this.handleFormSubmit} >
+            <div className="">
+              <div>
+                <fieldset>
+                  <input className="newposttitle" type="text" name="title" placeholder="Ponle un titulo llamativo" value={this.state.title} onChange={e => this.handleChange(e)} />
+                </fieldset>
+              </div>
+              <div>
+                <fieldset>
+                  <textarea type="text" name="newpostdescription" id="" rows="10" cols="60" maxLength="300" class="textito" placeholder="Escribe aquí.." onChange={e => this.handleChange(e)} />
+                </fieldset>
+              </div>
+              <div>
+              </div>
+              <div>
+              </div>
+              <div className="">
+                <input className="newpossubm" type="submit" value="Acceder" />
+              </div>
+            </div>
+          </form>
+          </div>
+        </div>
       </div>)
   }
 

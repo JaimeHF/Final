@@ -28,7 +28,6 @@ class Containmacth extends React.Component {
   render() {
 
     return (
-      console.log(this.props.type[0]),
 
       
 

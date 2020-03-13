@@ -120,7 +120,6 @@ class App extends Component {
   }
 
   render() {
-    debugger
     if (this.state.loggedInUser) {
       if (this.state.loggedInUser.role === "player") {
         return (
@@ -138,17 +137,17 @@ class App extends Component {
                 <Route
                 exact
                 path="/match/:id"
-                render={(props) => <Matchid  match={this.state.Match} fetchPost={this.fetchPost} loggedInUser={this.state.loggedInUser} {...props}/>}
+                render={(props) => <Matchid  match={this.state.Match}  fetchPost={this.fetchPost} loggedInUser={this.state.loggedInUser} {...props}/>}
               />
                <Route
                 exact
                 path="/user/:id"
-                render={(props) => <Userid  user={this.state.User} fetchPost={this.fetchPost} {...props}/>}
+                render={(props) => <Userid  user={this.state.User} fetchPost={this.fetchPost} {...props} loggedInUser={this.state.loggedInUser}/>}
               />
                              <Route
                 exact
                 path="/club/:id"
-                render={(props) => <Clubid  user={this.state.User} fetchPost={this.fetchPost} {...props}/>}
+                render={(props) => <Clubid  user={this.state.User} fetchPost={this.fetchPost} loggedInUser={this.state.loggedInUser} {...props}/>}
               />
               <Route
                 exact
@@ -171,6 +170,16 @@ class App extends Component {
                 exact
                 path="/newpost"
                 render={(props) => <Newpost  Post={this.state.Post} fetchPost={this.fetchPost} loggedInUser={this.state.loggedInUser}{...props}/>}
+              />
+                 <Route
+                exact
+                path="/post/:id"
+                render={(props) => <Postid  Post={this.state.Post} fetchPost={this.fetchPost} loggedInUser={this.state.loggedInUser} {...props}/>}
+              />
+               <Route
+                exact
+                path="/club/:id"
+                render={(props) => <Clubid  user={this.state.User} fetchPost={this.fetchPost} loggedInUser={this.state.loggedInUser} {...props}/>}
               />
               </Switch>
             <header className="App-header">
